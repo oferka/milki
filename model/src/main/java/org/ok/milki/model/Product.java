@@ -3,7 +3,7 @@ package org.ok.milki.model;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.milki.model.utils.Identifiable;
+import org.ok.milki.model.utils.Identifiable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Field;
 
