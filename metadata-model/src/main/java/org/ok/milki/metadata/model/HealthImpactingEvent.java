@@ -40,5 +40,5 @@ public class HealthImpactingEvent implements Identifiable {
     @Getter
     @NotNull
     @Field(type = FieldType.Object)
-    private Product product;
+    private HealthAspect healthAspect;
 }
