@@ -1,1 +1,4 @@
 /.idea/
+/metadata-model/target/
+/model/target/
+/model-utils/target/
