@@ -1,4 +1,4 @@
-package org.ok.milki.metadata.model;
+package org.ok.milki.metadata.model.product_domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

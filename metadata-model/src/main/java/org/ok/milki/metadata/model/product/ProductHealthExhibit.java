@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.ok.milki.metadata.model.account.AccountHealthAspect;
 import org.ok.milki.model.utils.Identifiable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -41,5 +40,5 @@ public class ProductHealthExhibit implements Identifiable {
     @Getter
     @NotNull
     @Field(type = FieldType.Object)
-    private ProductHealthExhibit productHealthExhibit;
+    private ProductHealthAspect productHealthAspect;
 }
