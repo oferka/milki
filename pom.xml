@@ -8,6 +8,7 @@
         <module>model-utils</module>
         <module>model</module>
         <module>metadata-model</module>
+        <module>metadata-sample</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
