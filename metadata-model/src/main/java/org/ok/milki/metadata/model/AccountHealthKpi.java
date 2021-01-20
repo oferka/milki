@@ -19,8 +19,8 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Keywo
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Document(indexName = "milki_account_kpi")
-public class AccountKpi implements Identifiable {
+@Document(indexName = "milki_account_health_kpi")
+public class AccountHealthKpi implements Identifiable {
 
     @Id
     @Getter
