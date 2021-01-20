@@ -1,10 +1,10 @@
-package org.ok.milki.metadata.model;
+package org.ok.milki.metadata.model.product_domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.ok.milki.metadata.model.customer.CustomerHealthAspect;
+import org.ok.milki.metadata.model.product.ProductHealthAspect;
 import org.ok.milki.model.utils.Identifiable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -20,8 +20,8 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Keywo
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Document(indexName = "milki_health_impacting_event")
-public class HealthImpactingEvent implements Identifiable {
+@Document(indexName = "milki_product_domain_health_impacting_event")
+public class ProductDomainHealthImpactingEvent implements Identifiable {
 
     @Id
     @Getter
@@ -41,5 +41,5 @@ public class HealthImpactingEvent implements Identifiable {
     @Getter
     @NotNull
     @Field(type = FieldType.Object)
-    private CustomerHealthAspect healthAspect;
+    private ProductDomainHealthAspect productDomainHealthAspect;
 }
