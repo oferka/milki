@@ -1,10 +1,10 @@
-package org.ok.milki.metadata.model;
+package org.ok.milki.metadata.model.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.ok.milki.metadata.model.product.Product;
+import org.ok.milki.metadata.model.account.Account;
 import org.ok.milki.model.utils.Identifiable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -20,8 +20,8 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Keywo
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Document(indexName = "milki_product_health_kpi")
-public class ProductHealthKpi implements Identifiable {
+@Document(indexName = "milki_user")
+public class User implements Identifiable {
 
     @Id
     @Getter
@@ -41,5 +41,5 @@ public class ProductHealthKpi implements Identifiable {
     @Getter
     @NotNull
     @Field(type = FieldType.Object)
-    private Product product;
+    private Account account;
 }
