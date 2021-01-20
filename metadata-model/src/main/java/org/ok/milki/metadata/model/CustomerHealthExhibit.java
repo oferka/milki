@@ -19,8 +19,8 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Keywo
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Document(indexName = "milki_health_exhibit")
-public class HealthExhibit implements Identifiable {
+@Document(indexName = "milki_customer_health_exhibit")
+public class CustomerHealthExhibit implements Identifiable {
 
     @Id
     @Getter
@@ -40,5 +40,5 @@ public class HealthExhibit implements Identifiable {
     @Getter
     @NotNull
     @Field(type = FieldType.Object)
-    private HealthAspect healthAspect;
+    private Customer customer;
 }
