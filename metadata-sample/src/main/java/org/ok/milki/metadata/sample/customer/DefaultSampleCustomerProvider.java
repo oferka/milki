@@ -23,7 +23,8 @@ public class DefaultSampleCustomerProvider implements SampleCustomerProvider {
 
     @Override
     public @NotNull List<Customer> getCustomers(@Min(value = 1, message = "Number of customers should not be less than 1") @Max(value = 5, message = "Number of customers should not be greater than 5") int count) {
-        return null;
+        List<Customer> customers = getCustomers();
+        return customers.subList(0, count);
     }
 
     private @NotNull List<Customer> getCustomers() {
