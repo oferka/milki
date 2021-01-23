@@ -1,4 +1,4 @@
-package org.ok.milki.model.utils;
+package org.ok.milki.model.utils.id;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
