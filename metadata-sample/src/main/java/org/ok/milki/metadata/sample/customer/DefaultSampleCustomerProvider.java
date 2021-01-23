@@ -18,7 +18,8 @@ public class DefaultSampleCustomerProvider implements SampleCustomerProvider {
 
     @Override
     public @NotNull Customer getCustomer() {
-        return null;
+        List<Customer> customers = getCustomers();
+        return customers.get(0);
     }
 
     @Override
