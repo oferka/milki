@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "org.ok.milki")
 @Slf4j
 public class MetadataSampleApplication {
 
