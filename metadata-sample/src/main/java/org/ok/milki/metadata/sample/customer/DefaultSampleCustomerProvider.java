@@ -2,12 +2,13 @@ package org.ok.milki.metadata.sample.customer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.ok.milki.metadata.model.customer.Customer;
+import org.ok.milki.utils.id.IdGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.*;
 import java.util.List;
-import java.util.UUID;
 
 import static java.util.Arrays.asList;
 
@@ -15,6 +16,9 @@ import static java.util.Arrays.asList;
 @Slf4j
 @Validated
 public class DefaultSampleCustomerProvider implements SampleCustomerProvider {
+
+    @Autowired
+    private IdGenerator idGenerator;
 
     @Override
     public @NotNull Customer getCustomer() {
@@ -39,10 +43,6 @@ public class DefaultSampleCustomerProvider implements SampleCustomerProvider {
     }
 
     private @NotNull Customer getCustomer(@NotNull @Size(min = 2, max = 64) @NotBlank String name) {
-        return new Customer(getId(), name);
-    }
-
-    private @NotNull String getId() {
-        return UUID.randomUUID().toString();
+        return new Customer(idGenerator.generate(), name);
     }
 }

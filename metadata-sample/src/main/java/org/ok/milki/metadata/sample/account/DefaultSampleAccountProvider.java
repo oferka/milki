@@ -3,12 +3,13 @@ package org.ok.milki.metadata.sample.account;
 import lombok.extern.slf4j.Slf4j;
 import org.ok.milki.metadata.model.account.Account;
 import org.ok.milki.metadata.model.customer.Customer;
+import org.ok.milki.utils.id.IdGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.*;
 import java.util.List;
-import java.util.UUID;
 
 import static java.util.Arrays.asList;
 
@@ -16,6 +17,9 @@ import static java.util.Arrays.asList;
 @Slf4j
 @Validated
 public class DefaultSampleAccountProvider implements SampleAccountProvider {
+
+    @Autowired
+    private IdGenerator idGenerator;
 
     @Override
     public @NotNull Account getAccount(@NotNull Customer customer) {
@@ -40,10 +44,6 @@ public class DefaultSampleAccountProvider implements SampleAccountProvider {
     }
 
     private @NotNull Account getAccount(@NotNull @Size(min = 2, max = 64) @NotBlank String name, @NotNull Customer customer) {
-        return new Account(getId(), name, customer);
-    }
-
-    private @NotNull String getId() {
-        return UUID.randomUUID().toString();
+        return new Account(idGenerator.generate(), name, customer);
     }
 }
