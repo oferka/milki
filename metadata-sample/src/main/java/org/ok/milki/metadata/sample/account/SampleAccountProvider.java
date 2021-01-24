@@ -12,5 +12,5 @@ public interface SampleAccountProvider {
 
     @NotNull Account getAccount(@NotNull Customer customer);
 
-    @NotNull List<Account> getAccounts(@NotNull Customer customer, @Min(value = 1, message = "Number of account should not be less than 1") @Max(value = 5, message = "Number of account should not be greater than 5") int count);
+    @NotNull List<Account> getAccounts(@NotNull Customer customer, @Min(value = 1, message = "Number of accounts should not be less than 1") @Max(value = 5, message = "Number of accounts should not be greater than 5") int count);
 }
