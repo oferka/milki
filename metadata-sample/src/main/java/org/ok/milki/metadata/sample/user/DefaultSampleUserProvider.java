@@ -1,7 +1,6 @@
 package org.ok.milki.metadata.sample.user;
 
 import lombok.extern.slf4j.Slf4j;
-import org.ok.milki.metadata.model.account.Account;
 import org.ok.milki.metadata.model.tenant.Tenant;
 import org.ok.milki.metadata.model.user.User;
 import org.ok.milki.utils.id.IdGenerator;

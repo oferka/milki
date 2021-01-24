@@ -2,19 +2,17 @@ package org.ok.milki.metadata.sample.user;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.ok.milki.metadata.model.account.Account;
 import org.ok.milki.metadata.model.tenant.Tenant;
 import org.ok.milki.metadata.model.user.User;
-import org.ok.milki.metadata.sample.account.SampleAccountProvider;
 import org.ok.milki.metadata.sample.tenant.SampleTenantProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.validation.constraints.NotNull;
-
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 @Slf4j

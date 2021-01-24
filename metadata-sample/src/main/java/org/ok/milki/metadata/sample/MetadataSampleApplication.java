@@ -20,7 +20,7 @@ public class MetadataSampleApplication {
     }
 
     @Bean
-    public CommandLineRunner helloWorld(SampleTenantProvider sampleTenantProvider) {
+    public CommandLineRunner logTenants(SampleTenantProvider sampleTenantProvider) {
         return args -> {
             List<Tenant> tenants = sampleTenantProvider.getTenants(3);
             log(tenants);
