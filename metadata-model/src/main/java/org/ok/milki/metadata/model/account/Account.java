@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.ok.milki.metadata.model.customer.Customer;
+import org.ok.milki.metadata.model.tenant.Tenant;
 import org.ok.milki.model.utils.id.Identifiable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -41,5 +41,5 @@ public class Account implements Identifiable {
     @Getter
     @NotNull
     @Field(type = FieldType.Object)
-    private Customer customer;
+    private Tenant tenant;
 }

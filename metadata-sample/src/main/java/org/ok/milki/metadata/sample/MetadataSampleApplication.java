@@ -1,8 +1,8 @@
 package org.ok.milki.metadata.sample;
 
 import lombok.extern.slf4j.Slf4j;
-import org.ok.milki.metadata.model.customer.Customer;
-import org.ok.milki.metadata.sample.customer.SampleCustomerProvider;
+import org.ok.milki.metadata.model.tenant.Tenant;
+import org.ok.milki.metadata.sample.tenant.SampleTenantProvider;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,16 +20,16 @@ public class MetadataSampleApplication {
     }
 
     @Bean
-    public CommandLineRunner helloWorld(SampleCustomerProvider sampleCustomerProvider) {
+    public CommandLineRunner helloWorld(SampleTenantProvider sampleTenantProvider) {
         return args -> {
-            List<Customer> customers = sampleCustomerProvider.getCustomers(3);
-            log(customers);
+            List<Tenant> tenants = sampleTenantProvider.getTenants(3);
+            log(tenants);
         };
     }
 
-    private void log(@NotNull List<Customer> customers) {
-        for(Customer customer : customers) {
-            log.info(customer.toString());
+    private void log(@NotNull List<Tenant> tenants) {
+        for(Tenant tenant : tenants) {
+            log.info(tenant.toString());
         }
     }
 }

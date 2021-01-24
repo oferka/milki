@@ -2,7 +2,7 @@ package org.ok.milki.metadata.sample.account;
 
 import lombok.extern.slf4j.Slf4j;
 import org.ok.milki.metadata.model.account.Account;
-import org.ok.milki.metadata.model.customer.Customer;
+import org.ok.milki.metadata.model.tenant.Tenant;
 import org.ok.milki.utils.id.IdGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,28 +26,28 @@ public class DefaultSampleAccountProvider implements SampleAccountProvider {
     }
 
     @Override
-    public @NotNull Account getAccount(@NotNull Customer customer) {
-        List<Account> accounts = getAccounts(customer);
+    public @NotNull Account getAccount(@NotNull Tenant tenant) {
+        List<Account> accounts = getAccounts(tenant);
         return accounts.get(0);
     }
 
     @Override
-    public @NotNull List<Account> getAccounts(@NotNull Customer customer, @Min(value = 1, message = "Number of accounts should not be less than 1") @Max(value = 5, message = "Number of accounts should not be greater than 5") int count) {
-        List<Account> accounts = getAccounts(customer);
+    public @NotNull List<Account> getAccounts(@NotNull Tenant tenant, @Min(value = 1, message = "Number of accounts should not be less than 1") @Max(value = 5, message = "Number of accounts should not be greater than 5") int count) {
+        List<Account> accounts = getAccounts(tenant);
         return accounts.subList(0, count);
     }
 
-    private @NotNull List<Account> getAccounts(@NotNull Customer customer) {
+    private @NotNull List<Account> getAccounts(@NotNull Tenant tenant) {
         return asList(
-                getAccount("Account 1", customer),
-                getAccount("Account 2", customer),
-                getAccount("Account 3", customer),
-                getAccount("Account 4", customer),
-                getAccount("Account 5", customer)
+                getAccount("Account 1", tenant),
+                getAccount("Account 2", tenant),
+                getAccount("Account 3", tenant),
+                getAccount("Account 4", tenant),
+                getAccount("Account 5", tenant)
         );
     }
 
-    private @NotNull Account getAccount(@NotNull @Size(min = 2, max = 64) @NotBlank String name, @NotNull Customer customer) {
-        return new Account(idGenerator.generate(), name, customer);
+    private @NotNull Account getAccount(@NotNull @Size(min = 2, max = 64) @NotBlank String name, @NotNull Tenant tenant) {
+        return new Account(idGenerator.generate(), name, tenant);
     }
 }

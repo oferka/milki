@@ -1,4 +1,4 @@
-package org.ok.milki.metadata.model.customer;
+package org.ok.milki.metadata.model.tenant;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,8 +19,8 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Keywo
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Document(indexName = "milki_customer_health_kpi")
-public class CustomerHealthKpi implements Identifiable {
+@Document(indexName = "milki_tenant_health_aspect")
+public class TenantHealthAspect implements Identifiable {
 
     @Id
     @Getter
@@ -40,5 +40,5 @@ public class CustomerHealthKpi implements Identifiable {
     @Getter
     @NotNull
     @Field(type = FieldType.Object)
-    private CustomerHealthAspect customerHealthAspect;
+    private Tenant tenant;
 }

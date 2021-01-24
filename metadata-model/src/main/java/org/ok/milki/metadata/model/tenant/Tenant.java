@@ -1,4 +1,4 @@
-package org.ok.milki.metadata.model.customer;
+package org.ok.milki.metadata.model.tenant;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,7 +8,6 @@ import org.ok.milki.model.utils.id.Identifiable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -19,8 +18,8 @@ import static org.springframework.data.elasticsearch.annotations.FieldType.Keywo
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Document(indexName = "milki_customer_health_exhibit")
-public class CustomerHealthExhibit implements Identifiable {
+@Document(indexName = "milki_tenant")
+public class Tenant implements Identifiable {
 
     @Id
     @Getter
@@ -36,9 +35,4 @@ public class CustomerHealthExhibit implements Identifiable {
     @NotBlank
     @Field(type = Keyword)
     private String name;
-
-    @Getter
-    @NotNull
-    @Field(type = FieldType.Object)
-    private CustomerHealthAspect customerHealthAspect;
 }
