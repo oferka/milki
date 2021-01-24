@@ -17,8 +17,12 @@ import static java.util.Arrays.asList;
 @Validated
 public class DefaultSampleCustomerProvider implements SampleCustomerProvider {
 
+    private final IdGenerator idGenerator;
+
     @Autowired
-    private IdGenerator idGenerator;
+    public DefaultSampleCustomerProvider(IdGenerator idGenerator) {
+        this.idGenerator = idGenerator;
+    }
 
     @Override
     public @NotNull Customer getCustomer() {

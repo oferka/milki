@@ -18,8 +18,12 @@ import static java.util.Arrays.asList;
 @Validated
 public class DefaultSampleAccountProvider implements SampleAccountProvider {
 
+    private final IdGenerator idGenerator;
+
     @Autowired
-    private IdGenerator idGenerator;
+    public DefaultSampleAccountProvider(IdGenerator idGenerator) {
+        this.idGenerator = idGenerator;
+    }
 
     @Override
     public @NotNull Account getAccount(@NotNull Customer customer) {
