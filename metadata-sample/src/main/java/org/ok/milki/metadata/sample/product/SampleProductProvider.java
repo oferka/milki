@@ -1,10 +1,7 @@
 package org.ok.milki.metadata.sample.product;
 
-import lombok.extern.slf4j.Slf4j;
 import org.ok.milki.metadata.model.account.Account;
 import org.ok.milki.metadata.model.product.Product;
-import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
