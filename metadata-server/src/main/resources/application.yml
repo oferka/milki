@@ -10,3 +10,9 @@ management:
     web:
       exposure:
         include: "*"
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.ok.milki: INFO
