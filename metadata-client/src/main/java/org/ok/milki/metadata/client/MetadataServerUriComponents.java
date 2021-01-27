@@ -8,7 +8,7 @@ public interface MetadataServerUriComponents {
 
     String HOST = "localhost";
 
-    int PORT = 57635;
+    int PORT = 8080;
 
     String ROOT_URL = SCHEMA + "://" + HOST + ":" + PORT + "/";
 
