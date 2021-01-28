@@ -11,14 +11,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import javax.validation.constraints.NotNull;
 
+import java.util.List;
+
 import static java.lang.String.format;
+import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.containsString;
 import static org.ok.milki.metadata.model.MetadataPaths.TENANT_PATH;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -63,7 +66,29 @@ class TenantControllerTest {
                 .andReturn();
     }
 
+    @Test
+    public void shouldFindAll() throws Exception {
+        Iterable<Tenant> tenants = getSampleTenants();
+        Iterable<Tenant> savedTenants = tenantRepository.saveAll(tenants);
+        MvcResult mvcResult = mvc.perform(get(format("/%s", TENANT_PATH))
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(log())
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString(savedTenants.iterator().next().getName())))
+                .andReturn();
+        tenantRepository.deleteAll(savedTenants);
+    }
+
     private @NotNull Tenant getSampleTenant() {
-        return new Tenant(idGenerator.generate(), "Tenant 1");
+        return getSampleTenants().iterator().next();
+    }
+
+    private @NotNull Iterable<Tenant> getSampleTenants() {
+        return asList(
+                new Tenant(idGenerator.generate(), "Tenant 1"),
+                new Tenant(idGenerator.generate(), "Tenant 2"),
+                new Tenant(idGenerator.generate(), "Tenant 3")
+        );
     }
 }
