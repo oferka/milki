@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.ok.milki.metadata.server.controller.MetadataController.INVALID_REQUEST_ARGUMENT_REASON;
-
 public abstract class AbstractMetadataController {
+
+    private final String INVALID_REQUEST_ARGUMENT_REASON = "Request data validation error. The provided data violates the validation constraints";
 
     @ResponseStatus(value= HttpStatus.BAD_REQUEST, reason=INVALID_REQUEST_ARGUMENT_REASON)
     @ExceptionHandler(MethodArgumentNotValidException.class)
