@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-
 import java.util.List;
 
 import static org.apache.commons.lang3.StringUtils.EMPTY;
