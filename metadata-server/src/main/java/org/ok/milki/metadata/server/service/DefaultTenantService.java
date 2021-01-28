@@ -30,4 +30,9 @@ public class DefaultTenantService implements TenantService {
     public void delete(@Valid @NotNull Tenant tenant) {
         tenantRepository.delete(tenant);
     }
+
+    @Override
+    public @NotNull Iterable<Tenant> findAll() {
+        return tenantRepository.findAll();
+    }
 }

@@ -10,4 +10,6 @@ public interface TenantService {
     @NotNull Tenant save(@Valid @NotNull Tenant tenant);
 
     void delete(@Valid @NotNull Tenant tenant);
+
+    @NotNull Iterable<Tenant> findAll();
 }

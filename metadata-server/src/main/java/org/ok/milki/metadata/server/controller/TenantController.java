@@ -35,4 +35,10 @@ public class TenantController extends AbstractMetadataController {
         tenantService.delete(tenant);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping(path = EMPTY)
+    public ResponseEntity<Iterable<Tenant>> findAll() {
+        Iterable<Tenant> tenants = tenantService.findAll();
+        return ResponseEntity.ok(tenants);
+    }
 }

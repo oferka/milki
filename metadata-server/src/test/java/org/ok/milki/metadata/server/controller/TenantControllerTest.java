@@ -2,7 +2,6 @@ package org.ok.milki.metadata.server.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestReporter;
 import org.ok.milki.metadata.model.tenant.Tenant;
 import org.ok.milki.metadata.server.repository.TenantRepository;
 import org.ok.milki.utils.id.IdGenerator;
@@ -17,7 +16,6 @@ import javax.validation.constraints.NotNull;
 
 import static java.lang.String.format;
 import static org.hamcrest.Matchers.containsString;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.ok.milki.metadata.model.MetadataPaths.TENANT_PATH;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
