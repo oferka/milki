@@ -13,4 +13,6 @@ public interface MetadataServerUriComponents {
     String ROOT_URL = SCHEMA + "://" + HOST + ":" + PORT + "/";
 
     String METADATA_ROOT_URL = ROOT_URL + METADATA_PATH;
+
+    String TENANT_URL = ROOT_URL + METADATA_PATH;
 }
