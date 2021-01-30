@@ -12,6 +12,7 @@ public class MainViewHeader extends HorizontalLayout {
 
     private final DrawerToggle drawerToggle;
     private final H1 viewTitle;
+    private final Avatar avatar;
 
     public MainViewHeader() {
         setId("header");
@@ -26,7 +27,8 @@ public class MainViewHeader extends HorizontalLayout {
         viewTitle = new H1();
         add(viewTitle);
 
-        add(new Avatar());
+        avatar = new Avatar();
+        add(avatar);
     }
 
     public void setViewTitleText(@NotNull String viewTitleText) {
