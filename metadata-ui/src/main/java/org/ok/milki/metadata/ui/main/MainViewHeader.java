@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 
 public class MainViewHeader extends HorizontalLayout {
 
+    private final DrawerToggle drawerToggle;
     private final H1 viewTitle;
 
     public MainViewHeader() {
@@ -18,9 +19,13 @@ public class MainViewHeader extends HorizontalLayout {
         setWidthFull();
         setSpacing(false);
         setAlignItems(FlexComponent.Alignment.CENTER);
-        add(new DrawerToggle());
+
+        drawerToggle = new DrawerToggle();
+        add(drawerToggle);
+
         viewTitle = new H1();
         add(viewTitle);
+
         add(new Avatar());
     }
 
