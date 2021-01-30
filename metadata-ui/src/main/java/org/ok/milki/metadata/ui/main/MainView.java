@@ -3,8 +3,6 @@ package org.ok.milki.metadata.ui.main;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentUtil;
 import com.vaadin.flow.component.applayout.AppLayout;
-import com.vaadin.flow.component.applayout.DrawerToggle;
-import com.vaadin.flow.component.avatar.Avatar;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.H1;
@@ -27,27 +25,16 @@ import java.util.Optional;
 public class MainView extends AppLayout {
 
     private final Tabs menu;
-    private H1 viewTitle;
+    private final MainViewHeader mainViewHeader;
 
     public MainView() {
         setPrimarySection(Section.DRAWER);
-        addToNavbar(true, createHeaderContent());
+
+        mainViewHeader = new MainViewHeader();
+        addToNavbar(true, mainViewHeader);
+
         menu = createMenu();
         addToDrawer(createDrawerContent(menu));
-    }
-
-    private Component createHeaderContent() {
-        HorizontalLayout layout = new HorizontalLayout();
-        layout.setId("header");
-        layout.getThemeList().set("dark", true);
-        layout.setWidthFull();
-        layout.setSpacing(false);
-        layout.setAlignItems(FlexComponent.Alignment.CENTER);
-        layout.add(new DrawerToggle());
-        viewTitle = new H1();
-        layout.add(viewTitle);
-        layout.add(new Avatar());
-        return layout;
     }
 
     private Component createDrawerContent(Tabs menu) {
@@ -93,7 +80,7 @@ public class MainView extends AppLayout {
     protected void afterNavigation() {
         super.afterNavigation();
         getTabForComponent(getContent()).ifPresent(menu::setSelectedTab);
-        viewTitle.setText(getCurrentPageTitle());
+        mainViewHeader.setViewTitleText(getCurrentPageTitle());
     }
 
     private Optional<Tab> getTabForComponent(Component component) {
