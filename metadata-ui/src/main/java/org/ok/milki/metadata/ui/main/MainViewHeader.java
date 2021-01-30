@@ -15,7 +15,7 @@ public class MainViewHeader extends HorizontalLayout {
     private final Avatar avatar;
 
     public MainViewHeader() {
-        setId("header");
+        setId("main-view-header");
         getThemeList().set("dark", true);
         setWidthFull();
         setSpacing(false);
