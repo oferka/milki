@@ -21,9 +21,6 @@ import com.vaadin.flow.server.PWA;
 
 import java.util.Optional;
 
-/**
- * The main view is a top-level placeholder for other views.
- */
 @CssImport("./styles/views/main/main-view.css")
 @PWA(name = "Milki", shortName = "Milki", enableInstallPrompt = false)
 @JsModule("./styles/shared-styles.js")
@@ -79,7 +76,10 @@ public class MainView extends AppLayout {
     }
 
     private Component[] createMenuItems() {
-        return new Tab[]{createTab("Hello World", HelloWorldView.class), createTab("About", AboutView.class)};
+        return new Tab[] {
+                createTab("Hello World", HelloWorldView.class),
+                createTab("About", AboutView.class)
+        };
     }
 
     private static Tab createTab(String text, Class<? extends Component> navigationTarget) {
