@@ -2,7 +2,6 @@ package org.ok.milki.metadata.ui.main;
 
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
@@ -13,7 +12,7 @@ public class MainViewHeader extends HorizontalLayout {
 
     private final DrawerToggle drawerToggle;
     private final MainViewTitle mainViewTitle;
-    private final MainViewAvatar avatar;
+    private final MainViewAvatar mainViewAvatar;
 
     public MainViewHeader() {
         setId("main-view-header");
@@ -28,8 +27,8 @@ public class MainViewHeader extends HorizontalLayout {
         mainViewTitle = new MainViewTitle();
         add(mainViewTitle);
 
-        avatar = new MainViewAvatar();
-        add(avatar);
+        mainViewAvatar = new MainViewAvatar();
+        add(mainViewAvatar);
     }
 
     public void setViewTitleText(@NotNull String viewTitleText) {
