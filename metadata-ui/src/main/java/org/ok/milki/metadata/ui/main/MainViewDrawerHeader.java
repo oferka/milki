@@ -1,7 +1,6 @@
 package org.ok.milki.metadata.ui.main;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
@@ -9,6 +8,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 public class MainViewDrawerHeader extends HorizontalLayout {
 
     private final MainViewDrawerHeaderImage mainViewDrawerHeaderImage;
+    private final MainViewDrawerHeaderTitle mainViewDrawerHeaderTitle;
 
     public MainViewDrawerHeader() {
         setId("main-view-drawer-header");
@@ -17,6 +17,7 @@ public class MainViewDrawerHeader extends HorizontalLayout {
         mainViewDrawerHeaderImage = new MainViewDrawerHeaderImage();
         add(mainViewDrawerHeaderImage);
 
-        add(new H1("My Project"));
+        mainViewDrawerHeaderTitle = new MainViewDrawerHeaderTitle();
+        add(mainViewDrawerHeaderTitle);
     }
 }
