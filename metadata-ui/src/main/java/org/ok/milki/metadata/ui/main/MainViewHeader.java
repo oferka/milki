@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 public class MainViewHeader extends HorizontalLayout {
 
     private final DrawerToggle drawerToggle;
-    private final H1 viewTitle;
+    private final MainViewTitle mainViewTitle;
     private final MainViewAvatar avatar;
 
     public MainViewHeader() {
@@ -25,14 +25,14 @@ public class MainViewHeader extends HorizontalLayout {
         drawerToggle = new DrawerToggle();
         add(drawerToggle);
 
-        viewTitle = new H1();
-        add(viewTitle);
+        mainViewTitle = new MainViewTitle();
+        add(mainViewTitle);
 
         avatar = new MainViewAvatar();
         add(avatar);
     }
 
     public void setViewTitleText(@NotNull String viewTitleText) {
-        viewTitle.setText(viewTitleText);
+        mainViewTitle.setViewTitleText(viewTitleText);
     }
 }
