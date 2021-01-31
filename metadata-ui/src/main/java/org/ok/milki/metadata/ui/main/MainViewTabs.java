@@ -17,7 +17,6 @@ public class MainViewTabs extends Tabs {
         setId("main-view-tabs");
         setOrientation(Tabs.Orientation.VERTICAL);
         addThemeVariants(TabsVariant.LUMO_MINIMAL);
-        setId("tabs");
         add(createItems());
     }
 
