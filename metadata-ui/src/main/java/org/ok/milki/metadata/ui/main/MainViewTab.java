@@ -11,7 +11,6 @@ public class MainViewTab extends Tab {
 
     public MainViewTab(String id, String text, Class<? extends Component> navigationTarget) {
         setId(id);
-        setClassName("main-view-tab");
         add(new RouterLink(text, navigationTarget));
         ComponentUtil.setData(this, Class.class, navigationTarget);
     }
