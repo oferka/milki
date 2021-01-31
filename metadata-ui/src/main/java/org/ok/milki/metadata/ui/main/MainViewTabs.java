@@ -17,21 +17,14 @@ public class MainViewTabs extends Tabs {
         setId("main-view-tabs");
         setOrientation(Tabs.Orientation.VERTICAL);
         addThemeVariants(TabsVariant.LUMO_MINIMAL);
-        add(createItems());
+        add(createTabs());
     }
 
-    private Component[] createItems() {
+    private Component[] createTabs() {
         return new Tab[] {
-                createItem("Hello World", HelloWorldView.class),
-                createItem("About", AboutView.class)
+                new MainViewTab("hello-world-tab", "Hello World", HelloWorldView.class),
+                new MainViewTab("about-tab", "About", AboutView.class)
         };
-    }
-
-    private Tab createItem(String text, Class<? extends Component> navigationTarget) {
-        final Tab tab = new Tab();
-        tab.add(new RouterLink(text, navigationTarget));
-        ComponentUtil.setData(tab, Class.class, navigationTarget);
-        return tab;
     }
 
     public void selectTab(Component content) {
