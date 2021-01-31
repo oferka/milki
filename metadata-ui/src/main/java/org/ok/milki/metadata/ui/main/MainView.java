@@ -1,5 +1,6 @@
 package org.ok.milki.metadata.ui.main;
 
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.JsModule;
@@ -27,8 +28,8 @@ public class MainView extends AppLayout {
     @Override
     protected void afterNavigation() {
         super.afterNavigation();
-        mainViewDrawer.afterNavigation(getContent());
-        mainViewHeader.setViewTitleText(getCurrentPageTitle());
+        mainViewDrawer.selectTab(getContent());
+        mainViewHeader.setTitleText(getCurrentPageTitle());
     }
 
     private String getCurrentPageTitle() {

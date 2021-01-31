@@ -12,7 +12,7 @@ public class MainViewTitle extends H1 {
         setId("main-view-title");
     }
 
-    public void setViewTitleText(@NotNull String viewTitleText) {
-        setText(viewTitleText);
+    public void setTitleText(@NotNull String titleText) {
+        setText(titleText);
     }
 }

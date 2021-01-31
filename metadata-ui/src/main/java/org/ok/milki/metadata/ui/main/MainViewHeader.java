@@ -30,7 +30,7 @@ public class MainViewHeader extends HorizontalLayout {
         add(mainViewAvatar);
     }
 
-    public void setViewTitleText(@NotNull String viewTitleText) {
-        mainViewTitle.setViewTitleText(viewTitleText);
+    public void setTitleText(@NotNull String titleText) {
+        mainViewTitle.setTitleText(titleText);
     }
 }

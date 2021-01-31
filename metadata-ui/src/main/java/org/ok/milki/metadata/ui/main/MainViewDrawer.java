@@ -63,7 +63,7 @@ public class MainViewDrawer extends VerticalLayout {
         return tab;
     }
 
-    public void afterNavigation(Component content) {
+    public void selectTab(Component content) {
         getTabForComponent(content).ifPresent(menu::setSelectedTab);
     }
 
