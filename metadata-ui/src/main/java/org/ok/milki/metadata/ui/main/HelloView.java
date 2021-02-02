@@ -2,6 +2,8 @@ package org.ok.milki.metadata.ui.main;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
@@ -19,6 +21,7 @@ public class HelloView extends HorizontalLayout {
     public static final String ROUTE = "hello";
     public static final String VIEW_ID = "hello-view";
     public static final String VIEW_NAME = "Hello";
+    public static final Icon VIEW_ICON = VaadinIcon.EDIT.create();
 
     private final TextField name;
     private final Button sayHello;

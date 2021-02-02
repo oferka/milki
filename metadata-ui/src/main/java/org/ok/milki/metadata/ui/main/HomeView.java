@@ -2,6 +2,8 @@ package org.ok.milki.metadata.ui.main;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.PageTitle;
@@ -19,6 +21,7 @@ public class HomeView extends HorizontalLayout {
     public static final String ROUTE = "home";
     public static final String VIEW_ID = "home-view";
     public static final String VIEW_NAME = "Home";
+    public static final Icon VIEW_ICON = VaadinIcon.EDIT.create();
 
     public HomeView() {
         setId(VIEW_ID);

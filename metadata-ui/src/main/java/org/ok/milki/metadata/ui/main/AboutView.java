@@ -2,6 +2,8 @@ package org.ok.milki.metadata.ui.main;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
@@ -15,6 +17,7 @@ public class AboutView extends Div {
     public static final String ROUTE = "about";
     public static final String VIEW_ID = "about-view";
     public static final String VIEW_NAME = "About";
+    public static final Icon VIEW_ICON = VaadinIcon.EDIT.create();
 
     public AboutView() {
         setId(VIEW_ID);
