@@ -12,7 +12,7 @@ import com.vaadin.flow.router.RouterLink;
 public class MainViewTab extends Tab {
 
     public MainViewTab(String id, String text, Class<? extends Component> navigationTarget, Icon icon) {
-        setId(id);
+        setId(id + "-tab");
         RouterLink routerLink = createRouterLink(text, navigationTarget, icon);
         add(routerLink);
         ComponentUtil.setData(this, Class.class, navigationTarget);
