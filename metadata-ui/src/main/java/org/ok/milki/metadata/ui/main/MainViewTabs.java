@@ -21,9 +21,9 @@ public class MainViewTabs extends Tabs {
 
     private Component[] createTabs() {
         return new Tab[] {
-                new MainViewTab("home-tab", "Home", HomeView.class),
-                new MainViewTab("hello-world-tab", "Hello World", HelloWorldView.class),
-                new MainViewTab("about-tab", "About", AboutView.class)
+                new MainViewTab(HomeView.VIEW_ID, HomeView.VIEW_NAME, HomeView.class),
+                new MainViewTab(HelloView.VIEW_ID, HelloView.VIEW_NAME, HelloView.class),
+                new MainViewTab(AboutView.VIEW_ID, AboutView.VIEW_NAME, AboutView.class)
         };
     }
 

@@ -5,12 +5,19 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "about", layout = MainView.class)
-@PageTitle("About")
+import static org.ok.milki.metadata.ui.main.AboutView.ROUTE;
+import static org.ok.milki.metadata.ui.main.AboutView.VIEW_NAME;
+
+@Route(value = ROUTE, layout = MainView.class)
+@PageTitle(VIEW_NAME)
 public class AboutView extends Div {
 
+    public static final String ROUTE = "about";
+    public static final String VIEW_ID = "about-view";
+    public static final String VIEW_NAME = "About";
+
     public AboutView() {
-        setId("about-view");
-        add(new Text("Content placeholder"));
+        setId(VIEW_ID);
+        add(new Text(VIEW_NAME));
     }
 }

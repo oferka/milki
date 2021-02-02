@@ -8,16 +8,23 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "hello", layout = MainView.class)
-@PageTitle("Hello World")
-@CssImport("./styles/views/helloworld/hello-world-view.css")
-public class HelloWorldView extends HorizontalLayout {
+import static org.ok.milki.metadata.ui.main.HelloView.ROUTE;
+import static org.ok.milki.metadata.ui.main.HelloView.VIEW_NAME;
 
-    private TextField name;
-    private Button sayHello;
+@Route(value = ROUTE, layout = MainView.class)
+@PageTitle(VIEW_NAME)
+@CssImport("./styles/views/hello/hello-view.css")
+public class HelloView extends HorizontalLayout {
 
-    public HelloWorldView() {
-        setId("hello-world-view");
+    public static final String ROUTE = "hello";
+    public static final String VIEW_ID = "hello-view";
+    public static final String VIEW_NAME = "Hello";
+
+    private final TextField name;
+    private final Button sayHello;
+
+    public HelloView() {
+        setId(VIEW_ID);
         name = new TextField("Your name");
         sayHello = new Button("Say hello");
         add(name, sayHello);
