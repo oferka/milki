@@ -21,7 +21,7 @@ public class HomeView extends HorizontalLayout {
     public static final String ROUTE = "home";
     public static final String VIEW_ID = "home-view";
     public static final String VIEW_NAME = "Home";
-    public static final Icon VIEW_ICON = VaadinIcon.EDIT.create();
+    public static final Icon VIEW_ICON = VaadinIcon.HOME_O.create();
 
     public HomeView() {
         setId(VIEW_ID);
