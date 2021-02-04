@@ -6,6 +6,9 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.tabs.TabsVariant;
+import org.ok.milki.metadata.ui.about.AboutView;
+import org.ok.milki.metadata.ui.hello.HelloView;
+import org.ok.milki.metadata.ui.home.HomeView;
 
 import java.util.Optional;
 

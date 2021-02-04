@@ -1,4 +1,4 @@
-package org.ok.milki.metadata.ui.main;
+package org.ok.milki.metadata.ui.home;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.dependency.CssImport;
@@ -9,8 +9,9 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
+import org.ok.milki.metadata.ui.main.MainView;
 
-import static org.ok.milki.metadata.ui.main.HomeView.ROUTE;
+import static org.ok.milki.metadata.ui.home.HomeView.ROUTE;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(HomeView.VIEW_NAME)
