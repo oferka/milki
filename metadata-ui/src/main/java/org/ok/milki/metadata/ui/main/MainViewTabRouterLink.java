@@ -18,7 +18,6 @@ public class MainViewTabRouterLink extends RouterLink {
         setRoute(navigationTarget);
 
         HorizontalLayout content = new HorizontalLayout();
-        icon.setSize("24px");
         Span span = new Span(text);
         content.add(icon, span);
         content.setVerticalComponentAlignment(FlexComponent.Alignment.CENTER, icon, span);
