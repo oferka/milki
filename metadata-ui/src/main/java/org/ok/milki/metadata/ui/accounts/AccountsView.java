@@ -20,7 +20,7 @@ public class AccountsView extends HorizontalLayout {
     public static final String ROUTE = "accounts";
     public static final String VIEW_ID = "accounts-view";
     public static final String VIEW_NAME = "Accounts";
-    public static final Icon VIEW_ICON = VaadinIcon.BUILDING_O.create();
+    public static final Icon VIEW_ICON = VaadinIcon.CALC_BOOK.create();
 
     public AccountsView() {
         setId(VIEW_ID);
