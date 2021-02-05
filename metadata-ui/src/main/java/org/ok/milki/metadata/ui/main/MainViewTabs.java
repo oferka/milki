@@ -9,7 +9,7 @@ import com.vaadin.flow.component.tabs.TabsVariant;
 import org.ok.milki.metadata.ui.about.AboutView;
 import org.ok.milki.metadata.ui.hello.HelloView;
 import org.ok.milki.metadata.ui.home.HomeView;
-import org.ok.milki.metadata.ui.tenant.TenantView;
+import org.ok.milki.metadata.ui.tenants.TenantsView;
 
 import java.util.Optional;
 
@@ -26,7 +26,7 @@ public class MainViewTabs extends Tabs {
     private Component[] createTabs() {
         return new Tab[] {
                 new MainViewTab(HomeView.VIEW_ID, HomeView.VIEW_NAME, HomeView.class, HomeView.VIEW_ICON),
-                new MainViewTab(TenantView.VIEW_ID, TenantView.VIEW_NAME, TenantView.class, TenantView.VIEW_ICON),
+                new MainViewTab(TenantsView.VIEW_ID, TenantsView.VIEW_NAME, TenantsView.class, TenantsView.VIEW_ICON),
                 new MainViewTab(HelloView.VIEW_ID, HelloView.VIEW_NAME, HelloView.class, HelloView.VIEW_ICON),
                 new MainViewTab(AboutView.VIEW_ID, AboutView.VIEW_NAME, AboutView.class, AboutView.VIEW_ICON)
         };

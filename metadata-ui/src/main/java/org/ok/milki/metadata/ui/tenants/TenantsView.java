@@ -1,4 +1,4 @@
-package org.ok.milki.metadata.ui.tenant;
+package org.ok.milki.metadata.ui.tenants;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.dependency.CssImport;
@@ -10,19 +10,19 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static org.ok.milki.metadata.ui.tenant.TenantView.ROUTE;
+import static org.ok.milki.metadata.ui.tenants.TenantsView.ROUTE;
 
 @Route(value = ROUTE, layout = MainView.class)
-@PageTitle(TenantView.VIEW_NAME)
-@CssImport("./styles/views/tenant/tenant-view.css")
-public class TenantView extends HorizontalLayout {
+@PageTitle(TenantsView.VIEW_NAME)
+@CssImport("./styles/views/tenants/tenants-view.css")
+public class TenantsView extends HorizontalLayout {
 
-    public static final String ROUTE = "tenant";
-    public static final String VIEW_ID = "tenant-view";
-    public static final String VIEW_NAME = "Tenant";
+    public static final String ROUTE = "tenants";
+    public static final String VIEW_ID = "tenants-view";
+    public static final String VIEW_NAME = "Tenants";
     public static final Icon VIEW_ICON = VaadinIcon.BUILDING_O.create();
 
-    public TenantView() {
+    public TenantsView() {
         setId(VIEW_ID);
         setAlignItems(FlexComponent.Alignment.CENTER);
 
