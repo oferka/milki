@@ -11,6 +11,7 @@ import org.ok.milki.metadata.ui.accounts.AccountsView;
 import org.ok.milki.metadata.ui.feed.FeedView;
 import org.ok.milki.metadata.ui.hello.HelloView;
 import org.ok.milki.metadata.ui.home.HomeView;
+import org.ok.milki.metadata.ui.products.ProductsView;
 import org.ok.milki.metadata.ui.tenants.TenantsView;
 
 import java.util.Optional;
@@ -31,6 +32,7 @@ public class MainViewTabs extends Tabs {
                 new MainViewTab(FeedView.VIEW_ID, FeedView.VIEW_NAME, FeedView.class, FeedView.VIEW_ICON),
                 new MainViewTab(TenantsView.VIEW_ID, TenantsView.VIEW_NAME, TenantsView.class, TenantsView.VIEW_ICON),
                 new MainViewTab(AccountsView.VIEW_ID, AccountsView.VIEW_NAME, AccountsView.class, AccountsView.VIEW_ICON),
+                new MainViewTab(ProductsView.VIEW_ID, ProductsView.VIEW_NAME, ProductsView.class, ProductsView.VIEW_ICON),
                 new MainViewTab(HelloView.VIEW_ID, HelloView.VIEW_NAME, HelloView.class, HelloView.VIEW_ICON),
                 new MainViewTab(AboutView.VIEW_ID, AboutView.VIEW_NAME, AboutView.class, AboutView.VIEW_ICON)
         };

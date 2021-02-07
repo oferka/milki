@@ -1,4 +1,4 @@
-package org.ok.milki.metadata.ui.feed;
+package org.ok.milki.metadata.ui.products;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.dependency.CssImport;
@@ -10,19 +10,19 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static org.ok.milki.metadata.ui.feed.FeedView.ROUTE;
+import static org.ok.milki.metadata.ui.products.ProductsView.ROUTE;
 
 @Route(value = ROUTE, layout = MainView.class)
-@PageTitle(FeedView.VIEW_NAME)
-@CssImport("./styles/views/feed/feed-view.css")
-public class FeedView extends HorizontalLayout {
+@PageTitle(ProductsView.VIEW_NAME)
+@CssImport("./styles/views/products/products-view.css")
+public class ProductsView extends HorizontalLayout {
 
-    public static final String ROUTE = "feed";
-    public static final String VIEW_ID = "feed-view";
-    public static final String VIEW_NAME = "Feed";
-    public static final Icon VIEW_ICON = VaadinIcon.LINES_LIST.create();
+    public static final String ROUTE = "products";
+    public static final String VIEW_ID = "products-view";
+    public static final String VIEW_NAME = "Products";
+    public static final Icon VIEW_ICON = VaadinIcon.COMPILE.create();
 
-    public FeedView() {
+    public ProductsView() {
         setId(VIEW_ID);
         setAlignItems(FlexComponent.Alignment.CENTER);
 
