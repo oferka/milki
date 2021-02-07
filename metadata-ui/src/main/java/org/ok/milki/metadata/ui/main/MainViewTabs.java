@@ -6,7 +6,6 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.tabs.TabsVariant;
-import org.ok.milki.metadata.ui.about.AboutView;
 import org.ok.milki.metadata.ui.accounts.AccountsView;
 import org.ok.milki.metadata.ui.feed.FeedView;
 import org.ok.milki.metadata.ui.hello.HelloView;
@@ -33,8 +32,7 @@ public class MainViewTabs extends Tabs {
                 new MainViewTab(TenantsView.VIEW_ID, TenantsView.VIEW_NAME, TenantsView.class, TenantsView.VIEW_ICON),
                 new MainViewTab(AccountsView.VIEW_ID, AccountsView.VIEW_NAME, AccountsView.class, AccountsView.VIEW_ICON),
                 new MainViewTab(ProductsView.VIEW_ID, ProductsView.VIEW_NAME, ProductsView.class, ProductsView.VIEW_ICON),
-                new MainViewTab(HelloView.VIEW_ID, HelloView.VIEW_NAME, HelloView.class, HelloView.VIEW_ICON),
-                new MainViewTab(AboutView.VIEW_ID, AboutView.VIEW_NAME, AboutView.class, AboutView.VIEW_ICON)
+                new MainViewTab(HelloView.VIEW_ID, HelloView.VIEW_NAME, HelloView.class, HelloView.VIEW_ICON)
         };
     }
 
