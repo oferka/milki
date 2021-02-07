@@ -13,7 +13,6 @@ public class TenantsViewHeader extends HorizontalLayout {
         setId("tenants-view-header");
 
         setWidthFull();
-        setSpacing(false);
         setAlignItems(FlexComponent.Alignment.CENTER);
 
         tenantsViewTitle = new TenantsViewTitle();

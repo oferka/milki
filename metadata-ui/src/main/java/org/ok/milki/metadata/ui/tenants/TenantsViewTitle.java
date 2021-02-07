@@ -9,7 +9,7 @@ public class TenantsViewTitle extends H1 {
 
     public TenantsViewTitle() {
         setId("tenants-view-title");
-        setTitleText("All Services");
+        setTitleText("All Tenants");
     }
 
     public void setTitleText(@NotNull String titleText) {
