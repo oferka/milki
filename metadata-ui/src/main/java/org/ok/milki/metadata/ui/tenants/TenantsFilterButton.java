@@ -19,6 +19,6 @@ public class TenantsFilterButton extends Button {
     }
 
     private void filterClicked(ClickEvent<Button> event) {
-        Notification.show(event.toString(), 4000, MIDDLE);
+        Notification.show(event.toString(), 3000, MIDDLE);
     }
 }
