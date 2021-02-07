@@ -15,7 +15,6 @@ public class MainViewHeader extends HorizontalLayout {
 
     public MainViewHeader() {
         setId("main-view-header");
-        getThemeList().set("dark", true);
         setWidthFull();
         setSpacing(false);
         setAlignItems(FlexComponent.Alignment.CENTER);

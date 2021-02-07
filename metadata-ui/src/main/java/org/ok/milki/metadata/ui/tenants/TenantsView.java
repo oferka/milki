@@ -22,6 +22,7 @@ public class TenantsView extends VerticalLayout {
     public static final Icon VIEW_ICON = VaadinIcon.BUILDING_O.create();
 
     private final TenantsViewHeader tenantsViewHeader;
+    private final TenantsViewBody tenantsViewBody;
 
     public TenantsView() {
         setId(VIEW_ID);
@@ -31,5 +32,8 @@ public class TenantsView extends VerticalLayout {
 
         tenantsViewHeader = new TenantsViewHeader();
         add(tenantsViewHeader);
+
+        tenantsViewBody = new TenantsViewBody();
+        add(tenantsViewBody);
     }
 }

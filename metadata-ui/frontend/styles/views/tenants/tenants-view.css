@@ -1,4 +1,4 @@
 #tenants-view {
-    padding: 2em;
-    background-color: khaki;
+    /*padding: 2em;*/
+    background-color: var(--lumo-primary-color-10pct);
 }

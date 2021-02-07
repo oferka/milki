@@ -1,11 +1,11 @@
 package org.ok.milki.metadata.ui.tenants;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.H2;
 
 import javax.validation.constraints.NotNull;
 @CssImport("./styles/views/tenants/tenants-view-title.css")
-public class TenantsViewTitle extends H1 {
+public class TenantsViewTitle extends H2 {
 
     public TenantsViewTitle() {
         setId("tenants-view-title");

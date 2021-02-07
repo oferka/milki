@@ -14,6 +14,7 @@ public class MainViewDrawer extends VerticalLayout {
     public MainViewDrawer() {
         setId("main-view-drawer");
 
+        getThemeList().set("dark", true);
         setSizeFull();
         setPadding(false);
         setSpacing(false);
