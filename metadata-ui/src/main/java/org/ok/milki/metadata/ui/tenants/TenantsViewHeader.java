@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 @CssImport("./styles/views/tenants/tenants-view-header.css")
 public class TenantsViewHeader extends HorizontalLayout {
 
-    private final TenantsViewTitle tenantsViewTitle;
+    private final TenantsViewHeaderTitle tenantsViewHeaderTitle;
 
     public TenantsViewHeader() {
         setId("tenants-view-header");
@@ -15,7 +15,7 @@ public class TenantsViewHeader extends HorizontalLayout {
         setWidthFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        tenantsViewTitle = new TenantsViewTitle();
-        add(tenantsViewTitle);
+        tenantsViewHeaderTitle = new TenantsViewHeaderTitle();
+        add(tenantsViewHeaderTitle);
     }
 }

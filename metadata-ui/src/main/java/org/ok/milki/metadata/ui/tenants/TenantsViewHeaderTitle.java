@@ -4,11 +4,11 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.H2;
 
 import javax.validation.constraints.NotNull;
-@CssImport("./styles/views/tenants/tenants-view-title.css")
-public class TenantsViewTitle extends H2 {
+@CssImport("./styles/views/tenants/tenants-view-header-title.css")
+public class TenantsViewHeaderTitle extends H2 {
 
-    public TenantsViewTitle() {
-        setId("tenants-view-title");
+    public TenantsViewHeaderTitle() {
+        setId("tenants-view-header-title");
         setTitleText("All Tenants");
     }
 
