@@ -22,11 +22,13 @@ public class TenantsView extends HorizontalLayout {
     public static final String VIEW_NAME = "Tenants";
     public static final Icon VIEW_ICON = VaadinIcon.BUILDING_O.create();
 
+    private final TenantsViewHeader tenantsViewHeader;
+
     public TenantsView() {
         setId(VIEW_ID);
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        Text text = new Text(VIEW_NAME);
-        add(text);
+        tenantsViewHeader = new TenantsViewHeader();
+        add(tenantsViewHeader);
     }
 }
