@@ -18,7 +18,6 @@ public class MainViewDrawer extends VerticalLayout {
         setSizeFull();
         setPadding(false);
         setSpacing(false);
-        getThemeList().set("spacing-s", true);
         setAlignItems(FlexComponent.Alignment.STRETCH);
 
         mainViewTabs = new MainViewTabs();

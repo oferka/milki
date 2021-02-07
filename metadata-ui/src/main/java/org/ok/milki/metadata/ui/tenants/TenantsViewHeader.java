@@ -8,6 +8,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 public class TenantsViewHeader extends HorizontalLayout {
 
     private final TenantsViewHeaderTitle tenantsViewHeaderTitle;
+    private final TenantsViewHeaderActions tenantsViewHeaderActions;
 
     public TenantsViewHeader() {
         setId("tenants-view-header");
@@ -17,5 +18,8 @@ public class TenantsViewHeader extends HorizontalLayout {
 
         tenantsViewHeaderTitle = new TenantsViewHeaderTitle();
         add(tenantsViewHeaderTitle);
+
+        tenantsViewHeaderActions = new TenantsViewHeaderActions();
+        add(tenantsViewHeaderActions);
     }
 }
