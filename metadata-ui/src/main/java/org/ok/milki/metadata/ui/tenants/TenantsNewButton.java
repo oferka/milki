@@ -1,6 +1,8 @@
 package org.ok.milki.metadata.ui.tenants;
 
 import com.vaadin.flow.component.ClickEvent;
+import com.vaadin.flow.component.Key;
+import com.vaadin.flow.component.KeyModifier;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.VaadinIcon;
@@ -18,6 +20,7 @@ public class TenantsNewButton extends Button {
         setText("New Tenant");
         addThemeVariants(LUMO_PRIMARY);
         addClickListener(this::newClicked);
+        addClickShortcut(Key.KEY_N, KeyModifier.ALT);
     }
 
     private void newClicked(ClickEvent<Button> event) {
