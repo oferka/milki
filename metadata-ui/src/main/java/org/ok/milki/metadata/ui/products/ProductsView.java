@@ -12,7 +12,7 @@ import static org.ok.milki.metadata.ui.products.ProductsView.ROUTE;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(ProductsView.VIEW_NAME)
-@CssImport("./styles/views/products/products-view.css")
+@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
 public class ProductsView extends EntitiesView {
 
     public static final String ROUTE = "products";

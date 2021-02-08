@@ -14,7 +14,7 @@ import static org.ok.milki.metadata.ui.feed.FeedView.ROUTE;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(FeedView.VIEW_NAME)
-@CssImport("./styles/views/feed/feed-view.css")
+@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
 public class FeedView extends HorizontalLayout {
 
     public static final String ROUTE = "feed";

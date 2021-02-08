@@ -15,7 +15,7 @@ import static org.ok.milki.metadata.ui.home.HomeView.ROUTE;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(HomeView.VIEW_NAME)
-@CssImport("./styles/views/home/home-view.css")
+@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
 @RouteAlias(value = "", layout = MainView.class)
 public class HomeView extends HorizontalLayout {
 

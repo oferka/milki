@@ -12,7 +12,7 @@ import static org.ok.milki.metadata.ui.tenants.TenantsView.ROUTE;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(TenantsView.VIEW_NAME)
-@CssImport("./styles/views/tenants/tenants-view.css")
+@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
 public class TenantsView extends EntitiesView {
 
     public static final String ROUTE = "tenants";

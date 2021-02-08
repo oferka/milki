@@ -13,7 +13,7 @@ import static org.ok.milki.metadata.ui.services.ServicesView.VIEW_NAME;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/services/services-view.css")
+@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
 public class ServicesView extends EntitiesView {
 
     public static final String ROUTE = "services";
