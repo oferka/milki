@@ -16,7 +16,7 @@ public class TenantsNewButton extends Button {
 
     public TenantsNewButton() {
         setId("tenants-new-button");
-        setIcon(VaadinIcon.PLUS.create());
+        setIcon(VaadinIcon.PLUS_CIRCLE.create());
         setText("New Tenant");
         addThemeVariants(LUMO_PRIMARY);
         addClickListener(this::newClicked);
