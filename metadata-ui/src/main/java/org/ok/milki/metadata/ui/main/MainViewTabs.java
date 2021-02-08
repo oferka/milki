@@ -32,9 +32,9 @@ public class MainViewTabs extends Tabs {
                 new MainViewTab(FeedView.VIEW_ID, FeedView.VIEW_NAME, FeedView.class, FeedView.VIEW_ICON),
                 new MainViewTab(TenantsView.ROUTE, TenantsView.VIEW_NAME, TenantsView.class, TenantsView.VIEW_ICON),
                 new MainViewTab(AccountsView.ROUTE, AccountsView.VIEW_NAME, AccountsView.class, AccountsView.VIEW_ICON),
-                new MainViewTab(ProductsView.VIEW_ID, ProductsView.VIEW_NAME, ProductsView.class, ProductsView.VIEW_ICON),
-                new MainViewTab(ServicesView.VIEW_ID, ServicesView.VIEW_NAME, ServicesView.class, ServicesView.VIEW_ICON),
-                new MainViewTab(TeamsView.VIEW_ID, TeamsView.VIEW_NAME, TeamsView.class, TeamsView.VIEW_ICON)
+                new MainViewTab(ProductsView.ROUTE, ProductsView.VIEW_NAME, ProductsView.class, ProductsView.VIEW_ICON),
+                new MainViewTab(ServicesView.ROUTE, ServicesView.VIEW_NAME, ServicesView.class, ServicesView.VIEW_ICON),
+                new MainViewTab(TeamsView.ROUTE, TeamsView.VIEW_NAME, TeamsView.class, TeamsView.VIEW_ICON)
         };
     }
 
