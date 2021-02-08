@@ -1,4 +1,4 @@
-package org.ok.milki.metadata.ui.tenants;
+package org.ok.milki.metadata.ui.entities;
 
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.Key;
@@ -10,11 +10,16 @@ import com.vaadin.flow.component.notification.Notification;
 
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
 
-@CssImport("./styles/views/tenants/tenants-filter-button.css")
-public class TenantsFilterButton extends Button {
+@CssImport("./styles/views/entities/entities-filter-button.css")
+public class EntitiesFilterButton extends Button {
 
-    public TenantsFilterButton() {
-        setId("tenants-filter-button");
+    private final String idPrefix;
+
+    public EntitiesFilterButton(String idPrefix) {
+        this.idPrefix = idPrefix;
+        setId(idPrefix + "-filter-button");
+        addClassName("entities-filter-button");
+
         setIcon(VaadinIcon.FILTER.create());
         setText("Filter");
         addClickListener(this::filterClicked);
@@ -22,6 +27,6 @@ public class TenantsFilterButton extends Button {
     }
 
     private void filterClicked(ClickEvent<Button> event) {
-        Notification.show(event.toString(), 3000, MIDDLE);
+        Notification.show("Filter " + idPrefix, 3000, MIDDLE);
     }
 }
