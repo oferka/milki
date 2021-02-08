@@ -1,6 +1,8 @@
 package org.ok.milki.metadata.ui.tenants;
 
 import com.vaadin.flow.component.ClickEvent;
+import com.vaadin.flow.component.Key;
+import com.vaadin.flow.component.KeyModifier;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.VaadinIcon;
@@ -16,6 +18,7 @@ public class TenantsFilterButton extends Button {
         setIcon(VaadinIcon.FILTER.create());
         setText("Filter");
         addClickListener(this::filterClicked);
+        addClickShortcut(Key.KEY_F, KeyModifier.ALT);
     }
 
     private void filterClicked(ClickEvent<Button> event) {
