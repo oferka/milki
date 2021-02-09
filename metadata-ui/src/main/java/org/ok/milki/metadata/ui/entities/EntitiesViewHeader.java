@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 @CssImport("./styles/views/entities/entities-view-header.css")
 public class EntitiesViewHeader extends HorizontalLayout {
 
-    private final EntitiesViewHeaderTitle entitiesViewHeaderTitle;
+    private final EntitiesViewHeaderInfo entitiesViewHeaderInfo;
     private final EntitiesViewHeaderActions entitiesViewHeaderActions;
 
     public EntitiesViewHeader(String idPrefix, String titleText, String entityName) {
@@ -17,8 +17,8 @@ public class EntitiesViewHeader extends HorizontalLayout {
         setWidthFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        entitiesViewHeaderTitle = new EntitiesViewHeaderTitle(idPrefix, titleText);
-        add(entitiesViewHeaderTitle);
+        entitiesViewHeaderInfo = new EntitiesViewHeaderInfo(idPrefix, titleText, "bla bla bla bla bla");
+        add(entitiesViewHeaderInfo);
 
         entitiesViewHeaderActions = new EntitiesViewHeaderActions(idPrefix, entityName);
         add(entitiesViewHeaderActions);
