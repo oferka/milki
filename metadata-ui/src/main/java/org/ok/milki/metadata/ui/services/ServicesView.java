@@ -19,6 +19,7 @@ public class ServicesView extends EntitiesView {
     public static final String ROUTE = "services";
     public static final String VIEW_NAME = "Services";
     public static final String ENTITY_NAME ="Service";
+    public static final String VIEW_DESCRIPTION ="Services view description";
     public static final Icon VIEW_ICON = VaadinIcon.CLUSTER.create();
 
     @Override
@@ -29,6 +30,11 @@ public class ServicesView extends EntitiesView {
     @Override
     public String getViewName() {
         return VIEW_NAME;
+    }
+
+    @Override
+    public String getViewDescription() {
+        return VIEW_DESCRIPTION;
     }
 
     @Override

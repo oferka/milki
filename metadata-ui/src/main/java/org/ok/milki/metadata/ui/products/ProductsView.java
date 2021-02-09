@@ -18,6 +18,7 @@ public class ProductsView extends EntitiesView {
     public static final String ROUTE = "products";
     public static final String VIEW_NAME = "Products";
     public static final String ENTITY_NAME ="Product";
+    public static final String VIEW_DESCRIPTION ="Products view description";
     public static final Icon VIEW_ICON = VaadinIcon.COMPILE.create();
 
     @Override
@@ -28,6 +29,11 @@ public class ProductsView extends EntitiesView {
     @Override
     public String getViewName() {
         return VIEW_NAME;
+    }
+
+    @Override
+    public String getViewDescription() {
+        return VIEW_DESCRIPTION;
     }
 
     @Override

@@ -10,14 +10,14 @@ public class EntitiesViewHeader extends HorizontalLayout {
     private final EntitiesViewHeaderInfo entitiesViewHeaderInfo;
     private final EntitiesViewHeaderActions entitiesViewHeaderActions;
 
-    public EntitiesViewHeader(String idPrefix, String titleText, String entityName) {
+    public EntitiesViewHeader(String idPrefix, String titleText, String descriptionText, String entityName) {
         setId("entities-view-header");
         addClassName("entities-view-header");
 
         setWidthFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        entitiesViewHeaderInfo = new EntitiesViewHeaderInfo(idPrefix, titleText, "bla bla bla bla bla");
+        entitiesViewHeaderInfo = new EntitiesViewHeaderInfo(idPrefix, titleText, descriptionText);
         add(entitiesViewHeaderInfo);
 
         entitiesViewHeaderActions = new EntitiesViewHeaderActions(idPrefix, entityName);

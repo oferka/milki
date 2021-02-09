@@ -19,6 +19,7 @@ public class TeamsView extends EntitiesView {
     public static final String ROUTE = "teams";
     public static final String VIEW_NAME = "Teams";
     public static final String ENTITY_NAME ="Team";
+    public static final String VIEW_DESCRIPTION ="Teams view description";
     public static final Icon VIEW_ICON = VaadinIcon.GROUP.create();
 
     @Override
@@ -29,6 +30,11 @@ public class TeamsView extends EntitiesView {
     @Override
     public String getViewName() {
         return VIEW_NAME;
+    }
+
+    @Override
+    public String getViewDescription() {
+        return VIEW_DESCRIPTION;
     }
 
     @Override

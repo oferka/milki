@@ -18,6 +18,7 @@ public class AccountsView extends EntitiesView {
     public static final String ROUTE = "accounts";
     public static final String VIEW_NAME = "Accounts";
     public static final String ENTITY_NAME ="Account";
+    public static final String VIEW_DESCRIPTION ="Accounts view description";
     public static final Icon VIEW_ICON = VaadinIcon.CALC_BOOK.create();
 
     @Override
@@ -28,6 +29,11 @@ public class AccountsView extends EntitiesView {
     @Override
     public String getViewName() {
         return VIEW_NAME;
+    }
+
+    @Override
+    public String getViewDescription() {
+        return VIEW_DESCRIPTION;
     }
 
     @Override
