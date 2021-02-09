@@ -1,7 +1,6 @@
 package org.ok.milki.metadata.ui.entities;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 @CssImport("./styles/views/entities/entities-view-header-info.css")
@@ -13,9 +12,6 @@ public class EntitiesViewHeaderInfo extends VerticalLayout {
     public EntitiesViewHeaderInfo(String idPrefix, String titleText, String descriptionText) {
         setId("entities-view-header-info");
         addClassName("entities-view-header-info");
-
-        setHeightFull();
-        setAlignItems(FlexComponent.Alignment.CENTER);
 
         entitiesViewHeaderTitle = new EntitiesViewHeaderTitle(idPrefix, titleText);
         add(entitiesViewHeaderTitle);
