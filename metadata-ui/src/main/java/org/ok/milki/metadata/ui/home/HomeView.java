@@ -12,9 +12,10 @@ import com.vaadin.flow.router.RouteAlias;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.home.HomeView.ROUTE;
+import static org.ok.milki.metadata.ui.home.HomeView.VIEW_NAME;
 
 @Route(value = ROUTE, layout = MainView.class)
-@PageTitle(HomeView.VIEW_NAME)
+@PageTitle(VIEW_NAME)
 @CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
 @RouteAlias(value = "", layout = MainView.class)
 public class HomeView extends HorizontalLayout {

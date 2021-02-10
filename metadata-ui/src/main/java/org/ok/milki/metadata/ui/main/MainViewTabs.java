@@ -14,6 +14,7 @@ import org.ok.milki.metadata.ui.repositories.RepositoriesView;
 import org.ok.milki.metadata.ui.services.ServicesView;
 import org.ok.milki.metadata.ui.teams.TeamsView;
 import org.ok.milki.metadata.ui.tenants.TenantsView;
+import org.ok.milki.metadata.ui.tools.ToolsView;
 
 import java.util.Optional;
 
@@ -36,7 +37,8 @@ public class MainViewTabs extends Tabs {
                 new MainViewTab(ProductsView.ROUTE, ProductsView.VIEW_NAME, ProductsView.class, ProductsView.VIEW_ICON),
                 new MainViewTab(ServicesView.ROUTE, ServicesView.VIEW_NAME, ServicesView.class, ServicesView.VIEW_ICON),
                 new MainViewTab(RepositoriesView.ROUTE, RepositoriesView.VIEW_NAME, RepositoriesView.class, RepositoriesView.VIEW_ICON),
-                new MainViewTab(TeamsView.ROUTE, TeamsView.VIEW_NAME, TeamsView.class, TeamsView.VIEW_ICON)
+                new MainViewTab(TeamsView.ROUTE, TeamsView.VIEW_NAME, TeamsView.class, TeamsView.VIEW_ICON),
+                new MainViewTab(ToolsView.ROUTE, ToolsView.VIEW_NAME, ToolsView.class, ToolsView.VIEW_ICON)
         };
     }
 

@@ -1,4 +1,4 @@
-package org.ok.milki.metadata.ui.tenants;
+package org.ok.milki.metadata.ui.tools;
 
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.IconFactory;
@@ -8,19 +8,20 @@ import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static org.ok.milki.metadata.ui.tenants.TenantsView.ROUTE;
-import static org.ok.milki.metadata.ui.tenants.TenantsView.VIEW_NAME;
+import static org.ok.milki.metadata.ui.tools.ToolsView.ROUTE;
+import static org.ok.milki.metadata.ui.tools.ToolsView.VIEW_NAME;
+
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
 @CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
-public class TenantsView extends EntitiesView {
+public class ToolsView extends EntitiesView {
 
-    public static final String ROUTE = "tenants";
-    public static final String VIEW_NAME = "Tenants";
-    public static final String ENTITY_NAME = "Tenant";
-    public static final String VIEW_DESCRIPTION ="Tenants view description";
-    public static final IconFactory VIEW_ICON = VaadinIcon.BUILDING_O;
+    public static final String ROUTE = "tools";
+    public static final String VIEW_NAME = "Tools";
+    public static final String ENTITY_NAME = "Tool";
+    public static final String VIEW_DESCRIPTION ="Tools view description";
+    public static final IconFactory VIEW_ICON = VaadinIcon.TOOLS;
 
     @Override
     public String getIdPrefix() {

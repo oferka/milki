@@ -11,9 +11,10 @@ import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.feed.FeedView.ROUTE;
+import static org.ok.milki.metadata.ui.feed.FeedView.VIEW_NAME;
 
 @Route(value = ROUTE, layout = MainView.class)
-@PageTitle(FeedView.VIEW_NAME)
+@PageTitle(VIEW_NAME)
 @CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
 public class FeedView extends HorizontalLayout {
 
