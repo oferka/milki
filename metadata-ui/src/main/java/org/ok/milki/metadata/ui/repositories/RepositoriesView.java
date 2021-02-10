@@ -20,7 +20,7 @@ public class RepositoriesView extends EntitiesView {
     public static final String VIEW_NAME = "Repositories";
     public static final String ENTITY_NAME ="Repository";
     public static final String VIEW_DESCRIPTION ="Repositories view description";
-    public static final IconFactory VIEW_ICON = VaadinIcon.CLUSTER;
+    public static final IconFactory VIEW_ICON = VaadinIcon.ROAD_SPLIT;
 
     @Override
     public String getIdPrefix() {
