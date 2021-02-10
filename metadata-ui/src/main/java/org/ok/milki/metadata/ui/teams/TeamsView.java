@@ -1,7 +1,7 @@
 package org.ok.milki.metadata.ui.teams;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.IconFactory;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -20,7 +20,7 @@ public class TeamsView extends EntitiesView {
     public static final String VIEW_NAME = "Teams";
     public static final String ENTITY_NAME ="Team";
     public static final String VIEW_DESCRIPTION ="Teams view description";
-    public static final Icon VIEW_ICON = VaadinIcon.GROUP.create();
+    public static final IconFactory VIEW_ICON = VaadinIcon.GROUP;
 
     @Override
     public String getIdPrefix() {
@@ -35,6 +35,11 @@ public class TeamsView extends EntitiesView {
     @Override
     public String getViewDescription() {
         return VIEW_DESCRIPTION;
+    }
+
+    @Override
+    public IconFactory getViewIconFactory() {
+        return VIEW_ICON;
     }
 
     @Override

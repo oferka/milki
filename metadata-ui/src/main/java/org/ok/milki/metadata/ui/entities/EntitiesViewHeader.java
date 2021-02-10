@@ -1,6 +1,7 @@
 package org.ok.milki.metadata.ui.entities;
 
 import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.icon.IconFactory;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
@@ -10,14 +11,14 @@ public class EntitiesViewHeader extends HorizontalLayout {
     private final EntitiesViewHeaderInfo entitiesViewHeaderInfo;
     private final EntitiesViewHeaderActions entitiesViewHeaderActions;
 
-    public EntitiesViewHeader(String idPrefix, String titleText, String descriptionText, String entityName) {
+    public EntitiesViewHeader(String idPrefix, String titleText, String descriptionText, String entityName, IconFactory titleIconFactory) {
         setId("entities-view-header");
         addClassName("entities-view-header");
 
         setWidthFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        entitiesViewHeaderInfo = new EntitiesViewHeaderInfo(idPrefix, titleText, descriptionText);
+        entitiesViewHeaderInfo = new EntitiesViewHeaderInfo(idPrefix, titleText, descriptionText, titleIconFactory);
         add(entitiesViewHeaderInfo);
 
         entitiesViewHeaderActions = new EntitiesViewHeaderActions(idPrefix, entityName);

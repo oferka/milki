@@ -1,7 +1,7 @@
 package org.ok.milki.metadata.ui.products;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.IconFactory;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -19,7 +19,7 @@ public class ProductsView extends EntitiesView {
     public static final String VIEW_NAME = "Products";
     public static final String ENTITY_NAME ="Product";
     public static final String VIEW_DESCRIPTION ="Products view description";
-    public static final Icon VIEW_ICON = VaadinIcon.COMPILE.create();
+    public static final IconFactory VIEW_ICON = VaadinIcon.COMPILE;
 
     @Override
     public String getIdPrefix() {
@@ -34,6 +34,11 @@ public class ProductsView extends EntitiesView {
     @Override
     public String getViewDescription() {
         return VIEW_DESCRIPTION;
+    }
+
+    @Override
+    public IconFactory getViewIconFactory() {
+        return VIEW_ICON;
     }
 
     @Override

@@ -1,7 +1,7 @@
 package org.ok.milki.metadata.ui.accounts;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.IconFactory;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -19,7 +19,7 @@ public class AccountsView extends EntitiesView {
     public static final String VIEW_NAME = "Accounts";
     public static final String ENTITY_NAME ="Account";
     public static final String VIEW_DESCRIPTION ="Accounts view description";
-    public static final Icon VIEW_ICON = VaadinIcon.CALC_BOOK.create();
+    public static final IconFactory VIEW_ICON = VaadinIcon.CALC_BOOK;
 
     @Override
     public String getIdPrefix() {
@@ -34,6 +34,11 @@ public class AccountsView extends EntitiesView {
     @Override
     public String getViewDescription() {
         return VIEW_DESCRIPTION;
+    }
+
+    @Override
+    public IconFactory getViewIconFactory() {
+        return VIEW_ICON;
     }
 
     @Override
