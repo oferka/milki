@@ -11,8 +11,7 @@ public class MainViewHeader extends HorizontalLayout {
 
     private final MainViewDrawerToggle mainViewDrawerToggle;
     private final MainViewTitle mainViewTitle;
-    private final MainViewUserNotifications mainViewUserNotifications;
-    private final MainViewUserAvatar mainViewUserAvatar;
+    private final MainViewActions mainViewActions;
 
     public MainViewHeader() {
         setId("main-view-header");
@@ -26,11 +25,8 @@ public class MainViewHeader extends HorizontalLayout {
         mainViewTitle = new MainViewTitle();
         add(mainViewTitle);
 
-        mainViewUserNotifications = new MainViewUserNotifications();
-        add(mainViewUserNotifications);
-
-        mainViewUserAvatar = new MainViewUserAvatar();
-        add(mainViewUserAvatar);
+        mainViewActions = new MainViewActions();
+        add(mainViewActions);
     }
 
     public void setTitleText(@NotNull String titleText) {

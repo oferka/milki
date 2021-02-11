@@ -3,6 +3,7 @@ package org.ok.milki.metadata.ui.main;
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
 
@@ -14,7 +15,9 @@ public class MainViewUserNotifications extends Button {
     public MainViewUserNotifications() {
         setId("main-view-user-notifications");
 
-        setIcon(VaadinIcon.BELL_O.create());
+        Icon notificationsIcon = VaadinIcon.BELL_O.create();
+        notificationsIcon.setColor("var(--lumo-header-text-color)");
+        setIcon(notificationsIcon);
         addClickListener(this::notificationsClicked);
     }
 
