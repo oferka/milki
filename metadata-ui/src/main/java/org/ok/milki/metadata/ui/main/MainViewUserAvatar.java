@@ -16,11 +16,6 @@ public class MainViewUserAvatar extends Avatar {
         setImage("images/Ofer Karp.png");
         setName("Ofer Karp");
 
-//        getElement().addEventListener("click", e -> {
-//            avatarClicked(e);
-//            Notification.show("User avatar clicked", 3000, MIDDLE);
-//        });
-
         getElement().addEventListener("click", this::avatarClicked);
     }
 
