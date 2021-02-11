@@ -16,8 +16,9 @@ public class MainViewUserNotifications extends Button {
         setId("main-view-user-notifications");
 
         Icon notificationsIcon = VaadinIcon.BELL_O.create();
-        notificationsIcon.setColor("var(--lumo-header-text-color)");
+//        notificationsIcon.setColor("var(--lumo-header-text-color)");
         setIcon(notificationsIcon);
+//        getStyle().set("cursor", "pointer");
         addClickListener(this::notificationsClicked);
     }
 
