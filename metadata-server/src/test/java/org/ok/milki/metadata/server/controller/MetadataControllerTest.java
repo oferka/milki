@@ -13,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.ok.milki.metadata.model.MetadataPaths.METADATA_PATH;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 

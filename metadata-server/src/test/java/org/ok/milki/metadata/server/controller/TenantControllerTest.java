@@ -18,7 +18,6 @@ import static java.lang.String.format;
 import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.containsString;
 import static org.ok.milki.metadata.model.MetadataPaths.TENANT_PATH;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
