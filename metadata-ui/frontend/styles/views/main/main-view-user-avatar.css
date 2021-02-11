@@ -1,0 +1,4 @@
+#main-view-user-avatar {
+    cursor: pointer;
+    border: 1px solid var(--lumo-header-text-color);
+}
