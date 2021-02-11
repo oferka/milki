@@ -9,7 +9,7 @@ public class MainViewAvatar extends Avatar {
     public MainViewAvatar() {
         setId("main-view-avatar");
 
-        setImage("images/Ofer_Karp.png");
+        setImage("images/Ofer Karp.png");
         setName("Ofer Karp");
     }
 }
