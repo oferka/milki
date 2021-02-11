@@ -3,6 +3,7 @@ package org.ok.milki.metadata.ui.main;
 import com.vaadin.flow.component.avatar.Avatar;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.dom.DomEvent;
 
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
 
@@ -15,8 +16,15 @@ public class MainViewUserAvatar extends Avatar {
         setImage("images/Ofer Karp.png");
         setName("Ofer Karp");
 
-        getElement().addEventListener("click", e -> {
-            Notification.show("User avatar clicked", 3000, MIDDLE);
-        });
+//        getElement().addEventListener("click", e -> {
+//            avatarClicked(e);
+//            Notification.show("User avatar clicked", 3000, MIDDLE);
+//        });
+
+        getElement().addEventListener("click", this::avatarClicked);
+    }
+
+    private void avatarClicked(DomEvent event) {
+        Notification.show("User avatar clicked", 3000, MIDDLE);
     }
 }
