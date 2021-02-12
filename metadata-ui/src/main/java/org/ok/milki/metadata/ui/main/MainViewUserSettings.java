@@ -15,8 +15,8 @@ public class MainViewUserSettings extends Button {
     public MainViewUserSettings() {
         setId("main-view-user-settings");
 
-        Icon notificationsIcon = VaadinIcon.COG_O.create();
-        setIcon(notificationsIcon);
+        Icon settingsIcon = VaadinIcon.COG_O.create();
+        setIcon(settingsIcon);
         addClickListener(this::settingsClicked);
     }
 

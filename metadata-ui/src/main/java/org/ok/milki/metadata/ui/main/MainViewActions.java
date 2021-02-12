@@ -7,6 +7,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 @CssImport("./styles/views/main/main-view-actions.css")
 public class MainViewActions extends HorizontalLayout {
 
+    private final MainViewUserHelp mainViewUserHelp;
     private final MainViewUserSettings mainViewUserSettings;
     private final MainViewUserNotifications mainViewUserNotifications;
     private final MainViewUserAvatar mainViewUserAvatar;
@@ -14,10 +15,11 @@ public class MainViewActions extends HorizontalLayout {
     public MainViewActions() {
         setId("main-view-actions");
 
+        mainViewUserHelp = new MainViewUserHelp();
         mainViewUserSettings = new MainViewUserSettings();
         mainViewUserNotifications = new MainViewUserNotifications();
         mainViewUserAvatar = new MainViewUserAvatar();
-        add(mainViewUserSettings, mainViewUserNotifications, mainViewUserAvatar);
-        setVerticalComponentAlignment(FlexComponent.Alignment.CENTER, mainViewUserSettings, mainViewUserNotifications, mainViewUserAvatar);
+        add(mainViewUserHelp, mainViewUserSettings, mainViewUserNotifications, mainViewUserAvatar);
+        setVerticalComponentAlignment(FlexComponent.Alignment.CENTER, mainViewUserHelp, mainViewUserSettings, mainViewUserNotifications, mainViewUserAvatar);
     }
 }
