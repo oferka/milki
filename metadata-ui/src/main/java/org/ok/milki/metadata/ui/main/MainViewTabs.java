@@ -32,7 +32,7 @@ public class MainViewTabs extends Tabs {
     }
 
     private Component[] createTabs() {
-        return new Tab[] {
+        return new Component[] {
                 new MainViewTab(HomeView.VIEW_ID, HomeView.VIEW_NAME, HomeView.class, HomeView.VIEW_ICON),
                 new MainViewTab(FeedView.VIEW_ID, FeedView.VIEW_NAME, FeedView.class, FeedView.VIEW_ICON),
                 new MainViewTab(TenantsView.ROUTE, TenantsView.VIEW_NAME, TenantsView.class, TenantsView.VIEW_ICON),
