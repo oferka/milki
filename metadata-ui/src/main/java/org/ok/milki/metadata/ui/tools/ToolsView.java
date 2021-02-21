@@ -24,27 +24,27 @@ public class ToolsView extends EntitiesView {
     public static final IconFactory VIEW_ICON = VaadinIcon.TOOLS;
 
     @Override
-    public String getIdPrefix() {
+    protected String getIdPrefix() {
         return ROUTE;
     }
 
     @Override
-    public String getViewName() {
+    protected String getViewName() {
         return VIEW_NAME;
     }
 
     @Override
-    public String getViewDescription() {
+    protected String getViewDescription() {
         return VIEW_DESCRIPTION;
     }
 
     @Override
-    public IconFactory getViewIconFactory() {
+    protected IconFactory getViewIconFactory() {
         return VIEW_ICON;
     }
 
     @Override
-    public String getEntityName() {
+    protected String getEntityName() {
         return ENTITY_NAME;
     }
 }

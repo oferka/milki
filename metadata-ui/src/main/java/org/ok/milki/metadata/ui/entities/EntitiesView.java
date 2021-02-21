@@ -25,9 +25,9 @@ public abstract class EntitiesView extends VerticalLayout {
         add(entitiesViewBody);
     }
 
-    public abstract String getIdPrefix();
-    public abstract String getViewName();
-    public abstract String getViewDescription();
-    public abstract IconFactory getViewIconFactory();
-    public abstract String getEntityName();
+    protected abstract String getIdPrefix();
+    protected abstract String getViewName();
+    protected abstract String getViewDescription();
+    protected abstract IconFactory getViewIconFactory();
+    protected abstract String getEntityName();
 }
