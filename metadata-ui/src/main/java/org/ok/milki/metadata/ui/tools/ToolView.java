@@ -27,6 +27,7 @@ public class ToolView extends VerticalLayout implements HasUrlParameter<String> 
         setId("tool-view");
 
         text = new Text("some initial value");
+        add(text);
     }
 
     @Override
