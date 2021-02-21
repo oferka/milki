@@ -1,11 +1,13 @@
 package org.ok.milki.metadata.ui.employees;
 
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.IconFactory;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
+import org.ok.milki.metadata.ui.interviews.InterviewsViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.employees.EmployeesView.ROUTE;
@@ -45,5 +47,10 @@ public class EmployeesView extends EntitiesView {
     @Override
     protected String getEntityName() {
         return ENTITY_NAME;
+    }
+
+    @Override
+    protected Component getViewBody() {
+        return new EmployeesViewBody();
     }
 }

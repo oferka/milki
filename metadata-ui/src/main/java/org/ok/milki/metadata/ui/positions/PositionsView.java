@@ -1,5 +1,6 @@
 package org.ok.milki.metadata.ui.positions;
 
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.IconFactory;
 import com.vaadin.flow.component.icon.VaadinIcon;
@@ -45,5 +46,10 @@ public class PositionsView extends EntitiesView {
     @Override
     protected String getEntityName() {
         return ENTITY_NAME;
+    }
+
+    @Override
+    protected Component getViewBody() {
+        return new PositionsViewBody();
     }
 }

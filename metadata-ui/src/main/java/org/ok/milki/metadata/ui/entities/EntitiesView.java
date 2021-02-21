@@ -1,5 +1,6 @@
 package org.ok.milki.metadata.ui.entities;
 
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.IconFactory;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
@@ -21,7 +22,7 @@ public abstract class EntitiesView extends VerticalLayout {
         entitiesViewHeader = new EntitiesViewHeader(getIdPrefix(), getViewName(), getViewDescription(), getEntityName(), getViewIconFactory());
         add(entitiesViewHeader);
 
-        entitiesViewBody = new EntitiesViewBody(getIdPrefix());
+        entitiesViewBody = new EntitiesViewBody(getIdPrefix(), getViewBody());
         add(entitiesViewBody);
     }
 
@@ -30,4 +31,5 @@ public abstract class EntitiesView extends VerticalLayout {
     protected abstract String getViewDescription();
     protected abstract IconFactory getViewIconFactory();
     protected abstract String getEntityName();
+    protected abstract Component getViewBody();
 }
