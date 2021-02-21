@@ -1,5 +1,6 @@
 package org.ok.milki.metadata.ui.entities;
 
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
@@ -15,6 +16,10 @@ public class EntitiesViewBody extends VerticalLayout {
         setHeightFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        add(new Text("Body"));
+        add(getEntitiesViewBodyContent(idPrefix));
+    }
+
+    protected Component getEntitiesViewBodyContent(String idPrefix) {
+        return new Text(idPrefix);
     }
 }
