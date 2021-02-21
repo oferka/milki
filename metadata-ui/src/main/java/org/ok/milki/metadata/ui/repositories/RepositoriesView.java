@@ -8,7 +8,6 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.main.MainView;
-import org.ok.milki.metadata.ui.services.ServicesViewBody;
 
 import static org.ok.milki.metadata.ui.repositories.RepositoriesView.ROUTE;
 import static org.ok.milki.metadata.ui.repositories.RepositoriesView.VIEW_NAME;

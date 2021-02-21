@@ -1,8 +1,9 @@
 package org.ok.milki.metadata.ui.main;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+
+import static com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment.CENTER;
 
 @CssImport("./styles/views/main/main-view-drawer-header.css")
 public class MainViewDrawerHeader extends HorizontalLayout {
@@ -12,7 +13,7 @@ public class MainViewDrawerHeader extends HorizontalLayout {
 
     public MainViewDrawerHeader() {
         setId("main-view-drawer-header");
-        setAlignItems(FlexComponent.Alignment.CENTER);
+        setAlignItems(CENTER);
 
         mainViewDrawerHeaderImage = new MainViewDrawerHeaderImage();
         add(mainViewDrawerHeaderImage);
