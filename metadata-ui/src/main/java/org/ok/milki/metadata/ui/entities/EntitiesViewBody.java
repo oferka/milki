@@ -9,7 +9,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 public class EntitiesViewBody extends VerticalLayout {
 
     public EntitiesViewBody(String idPrefix, Component viewBody) {
-        setId(idPrefix + "-view-body");
+        setId(idPrefix + "-entities-view-body");
         addClassName("entities-view-body");
 
         setHeightFull();
