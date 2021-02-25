@@ -21,4 +21,8 @@ public class EntityViewHeaderTitlePanel extends HorizontalLayout {
         add(icon, entityViewHeaderTitle);
         setVerticalComponentAlignment(FlexComponent.Alignment.CENTER, icon, entityViewHeaderTitle);
     }
+
+    public void selectedEntityChanged(String selectedEntityId) {
+        entityViewHeaderTitle.selectedEntityChanged(selectedEntityId);
+    }
 }

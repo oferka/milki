@@ -11,6 +11,7 @@ public class ToolsViewBody extends VerticalLayout {
 
     public ToolsViewBody() {
         setId("tools-view-body");
+        addClassName("tools-view-body");
 
         for (int i = 1; i <= 10; i++) {
             add(new RouterLink("tool " + i, ToolView.class, valueOf(i)));

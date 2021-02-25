@@ -12,7 +12,7 @@ public class EntityViewHeader extends HorizontalLayout {
     private final EntityViewHeaderActions entityViewHeaderActions;
 
     public EntityViewHeader(String idPrefix, String titleText, String descriptionText, String entityName, IconFactory titleIconFactory) {
-        setId("entity-view-header");
+        setId(idPrefix + "-view-header");
         addClassName("entity-view-header");
 
         setWidthFull();
@@ -23,5 +23,10 @@ public class EntityViewHeader extends HorizontalLayout {
 
         entityViewHeaderActions = new EntityViewHeaderActions(idPrefix, entityName);
         add(entityViewHeaderActions);
+    }
+
+    public void selectedEntityChanged(String selectedEntityId) {
+        entityViewHeaderInfo.selectedEntityChanged(selectedEntityId);
+        entityViewHeaderActions.selectedEntityChanged(selectedEntityId);
     }
 }

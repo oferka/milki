@@ -18,4 +18,8 @@ public class EntityViewHeaderDescription extends Span {
     public void setDescriptionText(@NotNull String descriptionText) {
         setText(descriptionText);
     }
+
+    public void selectedEntityChanged(String selectedEntityId) {
+        System.out.println(selectedEntityId);
+    }
 }

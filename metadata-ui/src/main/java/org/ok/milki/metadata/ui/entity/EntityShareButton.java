@@ -29,4 +29,8 @@ public class EntityShareButton extends Button {
     private void shareClicked(ClickEvent<Button> event) {
         Notification.show("Share " + idPrefix, 3000, MIDDLE);
     }
+
+    public void selectedEntityChanged(String selectedEntityId) {
+        System.out.println(selectedEntityId);
+    }
 }

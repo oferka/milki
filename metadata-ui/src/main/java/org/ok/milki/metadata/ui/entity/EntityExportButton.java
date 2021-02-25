@@ -33,4 +33,8 @@ public class EntityExportButton extends Button {
     private void exportClicked(ClickEvent<Button> event) {
         Notification.show("Export " + entityName, 3000, MIDDLE);
     }
+
+    public void selectedEntityChanged(String selectedEntityId) {
+        System.out.println(selectedEntityId);
+    }
 }

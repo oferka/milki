@@ -18,4 +18,8 @@ public class EntityViewHeaderTitle extends H2 {
     public void setTitleText(@NotNull String titleText) {
         setText(titleText);
     }
+
+    public void selectedEntityChanged(String selectedEntityId) {
+        System.out.println(selectedEntityId);
+    }
 }

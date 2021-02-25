@@ -11,7 +11,7 @@ public class EntityViewHeaderInfo extends VerticalLayout {
     private final EntityViewHeaderDescription entityViewHeaderDescription;
 
     public EntityViewHeaderInfo(String idPrefix, String titleText, String descriptionText, IconFactory titleIconFactory) {
-        setId("entity-view-header-info");
+        setId(idPrefix + "-view-header-info");
         addClassName("entity-view-header-info");
 
         entityViewHeaderTitlePanel = new EntityViewHeaderTitlePanel(idPrefix, titleText, titleIconFactory);
@@ -19,5 +19,10 @@ public class EntityViewHeaderInfo extends VerticalLayout {
 
         entityViewHeaderDescription = new EntityViewHeaderDescription(idPrefix, descriptionText);
         add(entityViewHeaderDescription);
+    }
+
+    public void selectedEntityChanged(String selectedEntityId) {
+        entityViewHeaderTitlePanel.selectedEntityChanged(selectedEntityId);
+        entityViewHeaderDescription.selectedEntityChanged(selectedEntityId);
     }
 }

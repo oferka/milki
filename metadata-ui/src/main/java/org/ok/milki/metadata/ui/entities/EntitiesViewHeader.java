@@ -12,7 +12,7 @@ public class EntitiesViewHeader extends HorizontalLayout {
     private final EntitiesViewHeaderActions entitiesViewHeaderActions;
 
     public EntitiesViewHeader(String idPrefix, String titleText, String descriptionText, String entityName, IconFactory titleIconFactory) {
-        setId("entities-view-header");
+        setId(idPrefix + "-view-header");
         addClassName("entities-view-header");
 
         setWidthFull();

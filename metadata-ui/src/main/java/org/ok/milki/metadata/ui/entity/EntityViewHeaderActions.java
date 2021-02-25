@@ -19,4 +19,9 @@ public class EntityViewHeaderActions extends HorizontalLayout {
         entityExportButton = new EntityExportButton(idPrefix, entityName);
         add(entityExportButton);
     }
+
+    public void selectedEntityChanged(String selectedEntityId) {
+        entityShareButton.selectedEntityChanged(selectedEntityId);
+        entityExportButton.selectedEntityChanged(selectedEntityId);
+    }
 }
