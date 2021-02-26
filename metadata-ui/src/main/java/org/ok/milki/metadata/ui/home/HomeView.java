@@ -11,6 +11,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import org.ok.milki.metadata.ui.main.MainView;
 
+import static com.vaadin.flow.component.icon.VaadinIcon.HOME_O;
 import static org.ok.milki.metadata.ui.home.HomeView.ROUTE;
 import static org.ok.milki.metadata.ui.home.HomeView.VIEW_NAME;
 
@@ -23,7 +24,7 @@ public class HomeView extends HorizontalLayout {
     public static final String ROUTE = "home";
     public static final String VIEW_ID = "home-view";
     public static final String VIEW_NAME = "Home";
-    public static final IconFactory VIEW_ICON = VaadinIcon.HOME_O;
+    public static final VaadinIcon VIEW_ICON = HOME_O;
 
     public HomeView() {
         setId(VIEW_ID);

@@ -10,6 +10,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.main.MainView;
 
+import static com.vaadin.flow.component.icon.VaadinIcon.LINES_LIST;
 import static org.ok.milki.metadata.ui.feed.FeedView.ROUTE;
 import static org.ok.milki.metadata.ui.feed.FeedView.VIEW_NAME;
 
@@ -21,7 +22,7 @@ public class FeedView extends HorizontalLayout {
     public static final String ROUTE = "feed";
     public static final String VIEW_ID = "feed-view";
     public static final String VIEW_NAME = "Feed";
-    public static final IconFactory VIEW_ICON = VaadinIcon.LINES_LIST;
+    public static final VaadinIcon VIEW_ICON = LINES_LIST;
 
     public FeedView() {
         setId(VIEW_ID);
