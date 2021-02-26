@@ -9,6 +9,7 @@ import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.main.MainView;
 
+import static com.vaadin.flow.component.icon.VaadinIcon.SPECIALIST;
 import static org.ok.milki.metadata.ui.interviews.InterviewsView.ROUTE;
 import static org.ok.milki.metadata.ui.interviews.InterviewsView.VIEW_NAME;
 
@@ -21,7 +22,7 @@ public class InterviewsView extends EntitiesView {
     public static final String VIEW_NAME = "Interviews";
     public static final String ENTITY_NAME ="Interview";
     public static final String VIEW_DESCRIPTION ="Interviews view description";
-    public static final IconFactory VIEW_ICON = VaadinIcon.SPECIALIST;
+    public static final VaadinIcon VIEW_ICON = SPECIALIST;
 
     @Override
     protected String getIdPrefix() {
@@ -39,7 +40,7 @@ public class InterviewsView extends EntitiesView {
     }
 
     @Override
-    protected IconFactory getViewIconFactory() {
+    protected VaadinIcon getViewIcon() {
         return VIEW_ICON;
     }
 

@@ -7,7 +7,7 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 @CssImport("./styles/views/entity/entity-view-header-title-panel.css")
-public class EntityViewHeaderTitlePanel extends HorizontalLayout {
+public class EntityViewHeaderTitlePanel                                                      extends HorizontalLayout {
 
     private final EntityViewHeaderTitle entityViewHeaderTitle;
 
