@@ -18,6 +18,7 @@ import static org.ok.milki.metadata.ui.repositories.RepositoriesView.VIEW_NAME;
 public class RepositoriesView extends EntitiesView {
 
     public static final String ROUTE = "repositories";
+    public static final String ID_PREFIX = "repositories";
     public static final String VIEW_NAME = "Repositories";
     public static final String ENTITY_NAME ="Repository";
     public static final String VIEW_DESCRIPTION ="Repositories view description";
@@ -25,7 +26,7 @@ public class RepositoriesView extends EntitiesView {
 
     @Override
     protected String getIdPrefix() {
-        return ROUTE;
+        return ID_PREFIX;
     }
 
     @Override

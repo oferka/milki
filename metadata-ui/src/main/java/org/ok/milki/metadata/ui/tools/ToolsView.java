@@ -19,6 +19,7 @@ import static org.ok.milki.metadata.ui.tools.ToolsView.VIEW_NAME;
 public class ToolsView extends EntitiesView {
 
     public static final String ROUTE = "tools";
+    public static final String ID_PREFIX = "tools";
     public static final String VIEW_NAME = "Tools";
     public static final String ENTITY_NAME = "Tool";
     public static final String VIEW_DESCRIPTION ="Tools view description";
@@ -26,7 +27,7 @@ public class ToolsView extends EntitiesView {
 
     @Override
     protected String getIdPrefix() {
-        return ROUTE;
+        return ID_PREFIX;
     }
 
     @Override

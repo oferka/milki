@@ -18,6 +18,7 @@ import static org.ok.milki.metadata.ui.tenants.TenantsView.VIEW_NAME;
 public class TenantsView extends EntitiesView {
 
     public static final String ROUTE = "tenants";
+    public static final String ID_PREFIX = "tenants";
     public static final String VIEW_NAME = "Tenants";
     public static final String ENTITY_NAME = "Tenant";
     public static final String VIEW_DESCRIPTION ="Tenants view description";
@@ -25,7 +26,7 @@ public class TenantsView extends EntitiesView {
 
     @Override
     protected String getIdPrefix() {
-        return ROUTE;
+        return ID_PREFIX;
     }
 
     @Override

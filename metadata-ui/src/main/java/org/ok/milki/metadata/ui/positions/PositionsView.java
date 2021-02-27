@@ -18,6 +18,7 @@ import static org.ok.milki.metadata.ui.positions.PositionsView.VIEW_NAME;
 public class PositionsView extends EntitiesView {
 
     public static final String ROUTE = "positions";
+    public static final String ID_PREFIX = "positions";
     public static final String VIEW_NAME = "Positions";
     public static final String ENTITY_NAME ="Position";
     public static final String VIEW_DESCRIPTION ="Positions view description";
@@ -25,7 +26,7 @@ public class PositionsView extends EntitiesView {
 
     @Override
     protected String getIdPrefix() {
-        return ROUTE;
+        return ID_PREFIX;
     }
 
     @Override

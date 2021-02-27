@@ -18,6 +18,7 @@ import static org.ok.milki.metadata.ui.products.ProductsView.VIEW_NAME;
 public class ProductsView extends EntitiesView {
 
     public static final String ROUTE = "products";
+    public static final String ID_PREFIX = "products";
     public static final String VIEW_NAME = "Products";
     public static final String ENTITY_NAME ="Product";
     public static final String VIEW_DESCRIPTION ="Products view description";
@@ -25,7 +26,7 @@ public class ProductsView extends EntitiesView {
 
     @Override
     protected String getIdPrefix() {
-        return ROUTE;
+        return ID_PREFIX;
     }
 
     @Override

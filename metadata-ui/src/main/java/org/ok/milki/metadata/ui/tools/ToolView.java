@@ -18,7 +18,7 @@ import static org.ok.milki.metadata.ui.tools.ToolsView.ROUTE;
 public class ToolView extends EntityView {
 
     public static final String ROUTE = "tools";
-    public static final String VIEW_NAME = "Tool";
+    public static final String VIEW_NAME = "Tools";
     public static final String ENTITY_NAME = "Tool";
     public static final String VIEW_DESCRIPTION ="Tool view description";
     public static final VaadinIcon VIEW_ICON = TOOLS;

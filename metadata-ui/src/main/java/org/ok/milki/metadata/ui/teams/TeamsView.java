@@ -18,6 +18,7 @@ import static org.ok.milki.metadata.ui.teams.TeamsView.VIEW_NAME;
 public class TeamsView extends EntitiesView {
 
     public static final String ROUTE = "teams";
+    public static final String ID_PREFIX = "teams";
     public static final String VIEW_NAME = "Teams";
     public static final String ENTITY_NAME ="Team";
     public static final String VIEW_DESCRIPTION ="Teams view description";
@@ -25,7 +26,7 @@ public class TeamsView extends EntitiesView {
 
     @Override
     protected String getIdPrefix() {
-        return ROUTE;
+        return ID_PREFIX;
     }
 
     @Override

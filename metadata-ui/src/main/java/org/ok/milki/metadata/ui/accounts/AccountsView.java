@@ -18,6 +18,7 @@ import static org.ok.milki.metadata.ui.accounts.AccountsView.VIEW_NAME;
 public class AccountsView extends EntitiesView {
 
     public static final String ROUTE = "accounts";
+    public static final String ID_PREFIX = "accounts";
     public static final String VIEW_NAME = "Accounts";
     public static final String ENTITY_NAME ="Account";
     public static final String VIEW_DESCRIPTION ="Accounts view description";
@@ -25,7 +26,7 @@ public class AccountsView extends EntitiesView {
 
     @Override
     protected String getIdPrefix() {
-        return ROUTE;
+        return ID_PREFIX;
     }
 
     @Override

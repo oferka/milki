@@ -18,6 +18,7 @@ import static org.ok.milki.metadata.ui.employees.EmployeesView.VIEW_NAME;
 public class EmployeesView extends EntitiesView {
 
     public static final String ROUTE = "employees";
+    public static final String ID_PREFIX = "employees";
     public static final String VIEW_NAME = "Employees";
     public static final String ENTITY_NAME ="Employee";
     public static final String VIEW_DESCRIPTION ="Employees view description";
@@ -25,7 +26,7 @@ public class EmployeesView extends EntitiesView {
 
     @Override
     protected String getIdPrefix() {
-        return ROUTE;
+        return ID_PREFIX;
     }
 
     @Override

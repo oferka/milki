@@ -18,6 +18,7 @@ import static org.ok.milki.metadata.ui.interviews.InterviewsView.VIEW_NAME;
 public class InterviewsView extends EntitiesView {
 
     public static final String ROUTE = "interviews";
+    public static final String ID_PREFIX = "interviews";
     public static final String VIEW_NAME = "Interviews";
     public static final String ENTITY_NAME ="Interview";
     public static final String VIEW_DESCRIPTION ="Interviews view description";
@@ -25,7 +26,7 @@ public class InterviewsView extends EntitiesView {
 
     @Override
     protected String getIdPrefix() {
-        return ROUTE;
+        return ID_PREFIX;
     }
 
     @Override
