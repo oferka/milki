@@ -1,7 +1,7 @@
 package org.ok.milki.metadata.ui.entity;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.icon.IconFactory;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.BeforeEvent;
@@ -21,7 +21,7 @@ public abstract class EntityView extends VerticalLayout implements HasUrlParamet
         setHeightFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        entityViewHeader = new EntityViewHeader(getIdPrefix(), getViewName(), getViewDescription(), getEntityName(), getViewIconFactory());
+        entityViewHeader = new EntityViewHeader(getIdPrefix(), getViewName(), getViewDescription(), getEntityName(), getViewIcon());
         add(entityViewHeader);
 
         entityViewBody = new EntityViewBody(getIdPrefix(), getViewBody());
@@ -41,7 +41,7 @@ public abstract class EntityView extends VerticalLayout implements HasUrlParamet
     protected abstract String getIdPrefix();
     protected abstract String getViewName();
     protected abstract String getViewDescription();
-    protected abstract IconFactory getViewIconFactory();
+    protected abstract VaadinIcon getViewIcon();
     protected abstract String getEntityName();
     protected abstract EntityComponent getViewBody();
 }

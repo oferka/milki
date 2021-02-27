@@ -17,6 +17,7 @@ public class EntitiesViewHeaderTitlePanel extends HorizontalLayout {
 
         entitiesViewHeaderIcon = new EntitiesViewHeaderIcon(idPrefix, vaadinIcon);
         entitiesViewHeaderTitle = new EntitiesViewHeaderTitle(idPrefix, titleText);
+
         add(entitiesViewHeaderIcon, entitiesViewHeaderTitle);
         setVerticalComponentAlignment(FlexComponent.Alignment.CENTER, entitiesViewHeaderIcon, entitiesViewHeaderTitle);
     }
