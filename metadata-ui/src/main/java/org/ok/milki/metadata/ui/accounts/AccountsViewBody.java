@@ -2,13 +2,13 @@ package org.ok.milki.metadata.ui.accounts;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 
 @CssImport("./styles/views/accounts/accounts-view-body.css")
-public class AccountsViewBody extends VerticalLayout {
+public class AccountsViewBody extends EntitiesViewBody {
 
-    public AccountsViewBody() {
-        setId("accounts-view-body");
+    public AccountsViewBody(String idPrefix) {
+        super(idPrefix);
         add(new Text("accounts new"));
     }
 }

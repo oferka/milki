@@ -1,11 +1,11 @@
 package org.ok.milki.metadata.ui.tenants;
 
-import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
+import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.BUILDING_O;
@@ -56,7 +56,7 @@ public class TenantsView extends EntitiesView {
     }
 
     @Override
-    protected Component getViewBody() {
-        return new TenantsViewBody();
+    protected EntitiesViewBody getViewBody() {
+        return new TenantsViewBody(getIdPrefix());
     }
 }

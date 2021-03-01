@@ -2,13 +2,13 @@ package org.ok.milki.metadata.ui.teams;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 
 @CssImport("./styles/views/teams/teams-view-body.css")
-public class TeamsViewBody extends VerticalLayout {
+public class TeamsViewBody extends EntitiesViewBody {
 
-    public TeamsViewBody() {
-        setId("teams-view-body");
+    public TeamsViewBody(String idPrefix) {
+        super(idPrefix);
         add(new Text("teams new"));
     }
 }

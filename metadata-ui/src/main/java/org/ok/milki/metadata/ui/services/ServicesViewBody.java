@@ -2,13 +2,13 @@ package org.ok.milki.metadata.ui.services;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 
 @CssImport("./styles/views/services/services-view-body.css")
-public class ServicesViewBody extends VerticalLayout {
+public class ServicesViewBody extends EntitiesViewBody {
 
-    public ServicesViewBody() {
-        setId("services-view-body");
+    public ServicesViewBody(String idPrefix) {
+        super(idPrefix);
         add(new Text("services new"));
     }
 }

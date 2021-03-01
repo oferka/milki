@@ -1,11 +1,11 @@
 package org.ok.milki.metadata.ui.repositories;
 
-import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
+import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.ROAD_SPLIT;
@@ -56,7 +56,7 @@ public class RepositoriesView extends EntitiesView {
     }
 
     @Override
-    protected Component getViewBody() {
-        return new RepositoriesViewBody();
+    protected EntitiesViewBody getViewBody() {
+        return new RepositoriesViewBody(getIdPrefix());
     }
 }
