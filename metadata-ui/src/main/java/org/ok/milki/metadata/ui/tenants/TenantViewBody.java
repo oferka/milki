@@ -10,8 +10,8 @@ public class TenantViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
-    public TenantViewBody() {
-        setId("tenant-view-body");
+    public TenantViewBody(String idPrefix) {
+        super(idPrefix);
         add(new RouterLink("tenants", TenantsView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);

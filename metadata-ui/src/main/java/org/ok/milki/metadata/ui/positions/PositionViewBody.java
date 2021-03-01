@@ -10,8 +10,8 @@ public class PositionViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
-    public PositionViewBody() {
-        setId("position-view-body");
+    public PositionViewBody(String idPrefix) {
+        super(idPrefix);
         add(new RouterLink("positions", PositionsView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);

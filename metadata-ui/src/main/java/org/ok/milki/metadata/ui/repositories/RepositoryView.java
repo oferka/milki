@@ -51,6 +51,6 @@ public class RepositoryView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new RepositoryViewBody();
+        return new RepositoryViewBody(getIdPrefix());
     }
 }

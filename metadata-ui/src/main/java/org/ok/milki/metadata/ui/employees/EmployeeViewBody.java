@@ -10,8 +10,8 @@ public class EmployeeViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
-    public EmployeeViewBody() {
-        setId("employee-view-body");
+    public EmployeeViewBody(String idPrefix) {
+        super(idPrefix);
         add(new RouterLink("employees", EmployeesView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);

@@ -51,6 +51,6 @@ public class ToolView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new ToolViewBody();
+        return new ToolViewBody(getIdPrefix());
     }
 }

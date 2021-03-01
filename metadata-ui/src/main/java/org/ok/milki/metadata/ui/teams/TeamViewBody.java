@@ -10,8 +10,8 @@ public class TeamViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
-    public TeamViewBody() {
-        setId("team-view-body");
+    public TeamViewBody(String idPrefix) {
+        super(idPrefix);
         add(new RouterLink("teams", TeamsView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);

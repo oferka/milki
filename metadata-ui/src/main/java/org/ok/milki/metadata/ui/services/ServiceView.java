@@ -51,6 +51,6 @@ public class ServiceView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new ServiceViewBody();
+        return new ServiceViewBody(getIdPrefix());
     }
 }

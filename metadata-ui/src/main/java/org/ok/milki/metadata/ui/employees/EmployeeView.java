@@ -51,6 +51,6 @@ public class EmployeeView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new EmployeeViewBody();
+        return new EmployeeViewBody(getIdPrefix());
     }
 }

@@ -51,6 +51,6 @@ public class InterviewView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new InterviewViewBody();
+        return new InterviewViewBody(getIdPrefix());
     }
 }

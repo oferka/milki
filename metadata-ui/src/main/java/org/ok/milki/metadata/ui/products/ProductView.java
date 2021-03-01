@@ -51,6 +51,6 @@ public class ProductView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new ProductViewBody();
+        return new ProductViewBody(getIdPrefix());
     }
 }

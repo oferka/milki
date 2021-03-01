@@ -10,8 +10,8 @@ public class InterviewViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
-    public InterviewViewBody() {
-        setId("interview-view-body");
+    public InterviewViewBody(String idPrefix) {
+        super(idPrefix);
         add(new RouterLink("interviews", InterviewsView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);

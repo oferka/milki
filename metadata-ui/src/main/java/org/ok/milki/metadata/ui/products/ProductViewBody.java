@@ -10,8 +10,8 @@ public class ProductViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
-    public ProductViewBody() {
-        setId("product-view-body");
+    public ProductViewBody(String idPrefix) {
+        super(idPrefix);
         add(new RouterLink("products", ProductsView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);

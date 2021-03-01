@@ -10,8 +10,8 @@ public class ServiceViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
-    public ServiceViewBody() {
-        setId("service-view-body");
+    public ServiceViewBody(String idPrefix) {
+        super(idPrefix);
         add(new RouterLink("services", ServicesView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);

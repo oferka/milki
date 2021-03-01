@@ -10,8 +10,8 @@ public class ToolViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
-    public ToolViewBody() {
-        setId("tool-view-body");
+    public ToolViewBody(String idPrefix) {
+        super(idPrefix);
         add(new RouterLink("tools", ToolsView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);

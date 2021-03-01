@@ -51,6 +51,6 @@ public class PositionView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new PositionViewBody();
+        return new PositionViewBody(getIdPrefix());
     }
 }

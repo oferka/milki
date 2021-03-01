@@ -10,8 +10,8 @@ public class AccountViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
-    public AccountViewBody() {
-        setId("account-view-body");
+    public AccountViewBody(String idPrefix) {
+        super(idPrefix);
         add(new RouterLink("accounts", AccountsView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);

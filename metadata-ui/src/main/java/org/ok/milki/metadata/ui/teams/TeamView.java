@@ -51,6 +51,6 @@ public class TeamView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new TeamViewBody();
+        return new TeamViewBody(getIdPrefix());
     }
 }

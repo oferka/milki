@@ -10,8 +10,8 @@ public class RepositoryViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
-    public RepositoryViewBody() {
-        setId("repository-view-body");
+    public RepositoryViewBody(String idPrefix) {
+        super(idPrefix);
         add(new RouterLink("repositories", RepositoriesView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);
