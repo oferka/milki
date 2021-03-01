@@ -4,6 +4,7 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import org.ok.milki.metadata.ui.entity.EntityView;
 
 @CssImport("./styles/views/entities/entities-view.css")
 public abstract class EntitiesView extends VerticalLayout {
@@ -32,4 +33,5 @@ public abstract class EntitiesView extends VerticalLayout {
     protected abstract VaadinIcon getViewIcon();
     protected abstract String getEntityName();
     protected abstract EntitiesViewBody getViewBody();
+    protected abstract Class<? extends EntityView> getEntityNavigationTarget();
 }

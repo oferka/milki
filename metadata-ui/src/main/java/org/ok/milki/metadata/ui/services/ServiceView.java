@@ -4,26 +4,24 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import org.ok.milki.metadata.ui.entities.EntitiesView;
-import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.entity.EntityView;
+import org.ok.milki.metadata.ui.main.EntityComponent;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.CLUSTER;
-import static org.apache.commons.lang3.RandomUtils.nextInt;
-import static org.ok.milki.metadata.ui.services.ServicesView.ROUTE;
-import static org.ok.milki.metadata.ui.services.ServicesView.VIEW_NAME;
+import static org.ok.milki.metadata.ui.services.ServiceView.ROUTE;
+import static org.ok.milki.metadata.ui.services.ServiceView.VIEW_NAME;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
-public class ServicesView extends EntitiesView {
+@CssImport("./styles/views/"+ ROUTE + "/" + "service-view.css")
+public class ServiceView extends EntityView {
 
     public static final String ROUTE = "services";
-    public static final String ID_PREFIX = "services";
+    public static final String ID_PREFIX = "service";
     public static final String VIEW_NAME = "Services";
-    public static final String ENTITY_NAME ="Service";
-    public static final String VIEW_DESCRIPTION ="Services view description";
+    public static final String ENTITY_NAME = "Service";
+    public static final String VIEW_DESCRIPTION ="Service view description";
     public static final VaadinIcon VIEW_ICON = CLUSTER;
 
     @Override
@@ -34,11 +32,6 @@ public class ServicesView extends EntitiesView {
     @Override
     protected String getViewName() {
         return VIEW_NAME;
-    }
-
-    @Override
-    protected int getEntityCount() {
-        return nextInt(0, 100);
     }
 
     @Override
@@ -53,16 +46,11 @@ public class ServicesView extends EntitiesView {
 
     @Override
     protected String getEntityName() {
-        return ENTITY_NAME;
+        return VIEW_NAME;
     }
 
     @Override
-    protected EntitiesViewBody getViewBody() {
-        return new ServicesViewBody(getIdPrefix(), getEntityName(), getEntityNavigationTarget());
-    }
-
-    @Override
-    protected Class<? extends EntityView> getEntityNavigationTarget() {
-        return ServiceView.class;
+    protected EntityComponent getViewBody() {
+        return new ServiceViewBody();
     }
 }

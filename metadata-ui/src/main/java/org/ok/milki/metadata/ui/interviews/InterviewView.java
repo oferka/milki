@@ -4,26 +4,24 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import org.ok.milki.metadata.ui.entities.EntitiesView;
-import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.entity.EntityView;
+import org.ok.milki.metadata.ui.main.EntityComponent;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.SPECIALIST;
-import static org.apache.commons.lang3.RandomUtils.nextInt;
-import static org.ok.milki.metadata.ui.interviews.InterviewsView.ROUTE;
-import static org.ok.milki.metadata.ui.interviews.InterviewsView.VIEW_NAME;
+import static org.ok.milki.metadata.ui.interviews.InterviewView.ROUTE;
+import static org.ok.milki.metadata.ui.interviews.InterviewView.VIEW_NAME;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
-public class InterviewsView extends EntitiesView {
+@CssImport("./styles/views/"+ ROUTE + "/" + "interview-view.css")
+public class InterviewView extends EntityView {
 
     public static final String ROUTE = "interviews";
-    public static final String ID_PREFIX = "interviews";
+    public static final String ID_PREFIX = "interview";
     public static final String VIEW_NAME = "Interviews";
-    public static final String ENTITY_NAME ="Interview";
-    public static final String VIEW_DESCRIPTION ="Interviews view description";
+    public static final String ENTITY_NAME = "Interview";
+    public static final String VIEW_DESCRIPTION ="Interview view description";
     public static final VaadinIcon VIEW_ICON = SPECIALIST;
 
     @Override
@@ -34,11 +32,6 @@ public class InterviewsView extends EntitiesView {
     @Override
     protected String getViewName() {
         return VIEW_NAME;
-    }
-
-    @Override
-    protected int getEntityCount() {
-        return nextInt(0, 100);
     }
 
     @Override
@@ -53,16 +46,11 @@ public class InterviewsView extends EntitiesView {
 
     @Override
     protected String getEntityName() {
-        return ENTITY_NAME;
+        return VIEW_NAME;
     }
 
     @Override
-    protected EntitiesViewBody getViewBody() {
-        return new InterviewsViewBody(getIdPrefix(), getEntityName(), getEntityNavigationTarget());
-    }
-
-    @Override
-    protected Class<? extends EntityView> getEntityNavigationTarget() {
-        return InterviewView.class;
+    protected EntityComponent getViewBody() {
+        return new InterviewViewBody();
     }
 }

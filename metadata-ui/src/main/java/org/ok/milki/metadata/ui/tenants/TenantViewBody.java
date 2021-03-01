@@ -1,19 +1,19 @@
-package org.ok.milki.metadata.ui.tools;
+package org.ok.milki.metadata.ui.tenants;
 
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.router.RouterLink;
 import org.ok.milki.metadata.ui.main.EntityComponent;
-import org.ok.milki.metadata.ui.tenants.TenantsView;
+import org.ok.milki.metadata.ui.teams.TeamsView;
 
-@CssImport("./styles/views/tools/tool-view-body.css")
-public class ToolViewBody extends EntityComponent {
+@CssImport("./styles/views/tenants/tenant-view-body.css")
+public class TenantViewBody extends EntityComponent {
 
     private final Label idLabel;
 
-    public ToolViewBody() {
-        setId("tool-view-body");
-        add(new RouterLink("tools", ToolsView.class));
+    public TenantViewBody() {
+        setId("tenant-view-body");
+        add(new RouterLink("tenants", TenantsView.class));
         idLabel = new Label("something meaningless");
         add(idLabel);
     }
