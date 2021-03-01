@@ -7,8 +7,8 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 @CssImport("./styles/views/positions/positions-view-body.css")
 public class PositionsViewBody extends EntitiesViewBody {
 
-    public PositionsViewBody(String idPrefix) {
-        super(idPrefix);
+    public PositionsViewBody(String idPrefix, String entityName) {
+        super(idPrefix, entityName);
         add(new Text("positions new"));
     }
 }

@@ -7,8 +7,8 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 @CssImport("./styles/views/teams/teams-view-body.css")
 public class TeamsViewBody extends EntitiesViewBody {
 
-    public TeamsViewBody(String idPrefix) {
-        super(idPrefix);
+    public TeamsViewBody(String idPrefix, String entityName) {
+        super(idPrefix, entityName);
         add(new Text("teams new"));
     }
 }

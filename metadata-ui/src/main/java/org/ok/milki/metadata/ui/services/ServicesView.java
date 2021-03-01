@@ -57,6 +57,6 @@ public class ServicesView extends EntitiesView {
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new ServicesViewBody(getIdPrefix());
+        return new ServicesViewBody(getIdPrefix(), getEntityName());
     }
 }

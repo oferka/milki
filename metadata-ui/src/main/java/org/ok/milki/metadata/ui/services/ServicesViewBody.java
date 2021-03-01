@@ -7,8 +7,8 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 @CssImport("./styles/views/services/services-view-body.css")
 public class ServicesViewBody extends EntitiesViewBody {
 
-    public ServicesViewBody(String idPrefix) {
-        super(idPrefix);
+    public ServicesViewBody(String idPrefix, String entityName) {
+        super(idPrefix, entityName);
         add(new Text("services new"));
     }
 }

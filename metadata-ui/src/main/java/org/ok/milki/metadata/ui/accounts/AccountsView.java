@@ -57,6 +57,6 @@ public class AccountsView extends EntitiesView {
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new AccountsViewBody(getIdPrefix());
+        return new AccountsViewBody(getIdPrefix(), getEntityName());
     }
 }

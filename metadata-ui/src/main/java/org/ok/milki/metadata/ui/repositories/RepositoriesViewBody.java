@@ -7,8 +7,8 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 @CssImport("./styles/views/repositories/repositories-view-body.css")
 public class RepositoriesViewBody extends EntitiesViewBody {
 
-    public RepositoriesViewBody(String idPrefix) {
-        super(idPrefix);
+    public RepositoriesViewBody(String idPrefix, String entityName) {
+        super(idPrefix, entityName);
         add(new Text("repositories new"));
     }
 }

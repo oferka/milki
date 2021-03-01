@@ -7,8 +7,8 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 @CssImport("./styles/views/accounts/accounts-view-body.css")
 public class AccountsViewBody extends EntitiesViewBody {
 
-    public AccountsViewBody(String idPrefix) {
-        super(idPrefix);
+    public AccountsViewBody(String idPrefix, String entityName) {
+        super(idPrefix, entityName);
         add(new Text("accounts new"));
     }
 }

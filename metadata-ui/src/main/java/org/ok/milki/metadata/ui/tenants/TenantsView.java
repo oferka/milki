@@ -57,6 +57,6 @@ public class TenantsView extends EntitiesView {
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new TenantsViewBody(getIdPrefix());
+        return new TenantsViewBody(getIdPrefix(), getEntityName());
     }
 }
