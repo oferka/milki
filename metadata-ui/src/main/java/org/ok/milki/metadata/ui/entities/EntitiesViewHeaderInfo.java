@@ -10,11 +10,11 @@ public class EntitiesViewHeaderInfo extends VerticalLayout {
     private final EntitiesViewHeaderTitlePanel entitiesViewHeaderTitlePanel;
     private final EntitiesViewHeaderDescription entitiesViewHeaderDescription;
 
-    public EntitiesViewHeaderInfo(String idPrefix, String titleText, String descriptionText, VaadinIcon vaadinIcon) {
+    public EntitiesViewHeaderInfo(String idPrefix, String titleText, int count, String descriptionText, VaadinIcon vaadinIcon) {
         setId(idPrefix + "-view-header-info");
         addClassName("entities-view-header-info");
 
-        entitiesViewHeaderTitlePanel = new EntitiesViewHeaderTitlePanel(idPrefix, titleText, vaadinIcon);
+        entitiesViewHeaderTitlePanel = new EntitiesViewHeaderTitlePanel(idPrefix, titleText, count, vaadinIcon);
         add(entitiesViewHeaderTitlePanel);
 
         entitiesViewHeaderDescription = new EntitiesViewHeaderDescription(idPrefix, descriptionText);

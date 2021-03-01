@@ -9,6 +9,7 @@ import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.HANDS_UP;
+import static org.apache.commons.lang3.RandomUtils.nextInt;
 import static org.ok.milki.metadata.ui.employees.EmployeesView.ROUTE;
 import static org.ok.milki.metadata.ui.employees.EmployeesView.VIEW_NAME;
 
@@ -32,6 +33,11 @@ public class EmployeesView extends EntitiesView {
     @Override
     protected String getViewName() {
         return VIEW_NAME;
+    }
+
+    @Override
+    protected int getEntityCount() {
+        return nextInt(0, 100);
     }
 
     @Override

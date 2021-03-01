@@ -9,6 +9,7 @@ import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.TOOLS;
+import static org.apache.commons.lang3.RandomUtils.nextInt;
 import static org.ok.milki.metadata.ui.tools.ToolsView.ROUTE;
 import static org.ok.milki.metadata.ui.tools.ToolsView.VIEW_NAME;
 
@@ -33,6 +34,11 @@ public class ToolsView extends EntitiesView {
     @Override
     protected String getViewName() {
         return VIEW_NAME;
+    }
+
+    @Override
+    protected int getEntityCount() {
+        return nextInt(0, 100);
     }
 
     @Override

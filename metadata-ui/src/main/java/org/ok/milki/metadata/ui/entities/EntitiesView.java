@@ -19,7 +19,7 @@ public abstract class EntitiesView extends VerticalLayout {
         setHeightFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        entitiesViewHeader = new EntitiesViewHeader(getIdPrefix(), getViewName(), getViewDescription(), getEntityName(), getViewIcon());
+        entitiesViewHeader = new EntitiesViewHeader(getIdPrefix(), getViewName(), getEntityCount(), getViewDescription(), getEntityName(), getViewIcon());
         add(entitiesViewHeader);
 
         entitiesViewBody = new EntitiesViewBody(getIdPrefix(), getViewBody());
@@ -28,6 +28,7 @@ public abstract class EntitiesView extends VerticalLayout {
 
     protected abstract String getIdPrefix();
     protected abstract String getViewName();
+    protected abstract int getEntityCount();
     protected abstract String getViewDescription();
     protected abstract VaadinIcon getViewIcon();
     protected abstract String getEntityName();

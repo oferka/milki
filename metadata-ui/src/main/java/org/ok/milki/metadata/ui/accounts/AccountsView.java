@@ -9,6 +9,8 @@ import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.CALC_BOOK;
+import static java.lang.Math.abs;
+import static org.apache.commons.lang3.RandomUtils.nextInt;
 import static org.ok.milki.metadata.ui.accounts.AccountsView.ROUTE;
 import static org.ok.milki.metadata.ui.accounts.AccountsView.VIEW_NAME;
 
@@ -32,6 +34,11 @@ public class AccountsView extends EntitiesView {
     @Override
     protected String getViewName() {
         return VIEW_NAME;
+    }
+
+    @Override
+    protected int getEntityCount() {
+        return nextInt(0, 100);
     }
 
     @Override

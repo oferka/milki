@@ -9,6 +9,7 @@ import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.BUILDING_O;
+import static org.apache.commons.lang3.RandomUtils.nextInt;
 import static org.ok.milki.metadata.ui.tenants.TenantsView.ROUTE;
 import static org.ok.milki.metadata.ui.tenants.TenantsView.VIEW_NAME;
 
@@ -32,6 +33,11 @@ public class TenantsView extends EntitiesView {
     @Override
     protected String getViewName() {
         return VIEW_NAME;
+    }
+
+    @Override
+    protected int getEntityCount() {
+        return nextInt(0, 100);
     }
 
     @Override

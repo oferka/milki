@@ -12,7 +12,7 @@
       "@vaadin/vaadin-split-layout": "4.3.0",
       "@vaadin/vaadin-combo-box": "5.4.7",
       "@vaadin/vaadin-cookie-consent": "1.2.0",
-      "@vaadin/vaadin-core-shrinkwrap": "14.4.7",
+      "@vaadin/vaadin-core-shrinkwrap": "14.4.6",
       "@vaadin/vaadin-upload": "4.4.1",
       "@vaadin/vaadin-dialog": "2.5.2",
       "@vaadin/vaadin-select": "2.4.0",
@@ -20,7 +20,7 @@
       "@vaadin/vaadin-item": "2.3.0",
       "@vaadin/vaadin-board": "2.2.0",
       "@vaadin/vaadin-charts": "6.3.1",
-      "@vaadin/vaadin-notification": "1.6.1",
+      "@vaadin/vaadin-notification": "1.6.0",
       "@vaadin/vaadin-grid-pro": "2.2.2",
       "@vaadin/vaadin-progress-bar": "1.3.0",
       "@vaadin/vaadin-shrinkwrap": "14.4.6",
@@ -58,11 +58,11 @@
       "raw-loader": "3.1.0",
       "webpack-cli": "3.3.11",
       "webpack": "4.42.0",
-      "chokidar": "^3.5.0",
+      "chokidar": "^3.4.0",
       "webpack-merge": "4.2.2",
       "webpack-dev-server": "3.11.0"
     },
-    "hash": "e9b0766212a2c2e0f5dc346b57ad5aea86e72ee4d3555c55dcea4c245c3171fc"
+    "hash": "d0e280eedf6f1a42a4a403a7a566fdba9335b90a83439d7e317749f2c10eff17"
   },
   "dependencies": {
     "@polymer/iron-icon": "3.0.1",
@@ -75,7 +75,7 @@
     "@vaadin/vaadin-checkbox": "2.5.0",
     "@vaadin/vaadin-combo-box": "5.4.7",
     "@vaadin/vaadin-context-menu": "4.5.0",
-    "@vaadin/vaadin-core-shrinkwrap": "14.4.7",
+    "@vaadin/vaadin-core-shrinkwrap": "14.4.6",
     "@vaadin/vaadin-custom-field": "1.3.0",
     "@vaadin/vaadin-date-picker": "4.4.1",
     "@vaadin/vaadin-date-time-picker": "1.4.0",
@@ -90,7 +90,7 @@
     "@vaadin/vaadin-lumo-styles": "1.6.0",
     "@vaadin/vaadin-material-styles": "1.3.2",
     "@vaadin/vaadin-menu-bar": "1.2.1",
-    "@vaadin/vaadin-notification": "1.6.1",
+    "@vaadin/vaadin-notification": "1.6.0",
     "@vaadin/vaadin-ordered-layout": "1.4.0",
     "@vaadin/vaadin-progress-bar": "1.3.0",
     "@vaadin/vaadin-radio-button": "1.5.1",
@@ -105,7 +105,7 @@
     "open": "^7.2.1"
   },
   "devDependencies": {
-    "chokidar": "^3.5.0",
+    "chokidar": "^3.4.0",
     "compression-webpack-plugin": "4.0.1",
     "copy-webpack-plugin": "5.1.2",
     "raw-loader": "3.1.0",
