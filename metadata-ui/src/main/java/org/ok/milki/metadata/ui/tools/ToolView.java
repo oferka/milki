@@ -5,7 +5,7 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.entity.EntityView;
-import org.ok.milki.metadata.ui.main.EntityComponent;
+import org.ok.milki.metadata.ui.main.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.TOOLS;
@@ -50,7 +50,7 @@ public class ToolView extends EntityView {
     }
 
     @Override
-    protected EntityComponent getViewBody() {
+    protected EntityViewBody getViewBody() {
         return new ToolViewBody();
     }
 }

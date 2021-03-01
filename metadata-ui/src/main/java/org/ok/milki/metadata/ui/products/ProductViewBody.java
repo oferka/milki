@@ -3,10 +3,10 @@ package org.ok.milki.metadata.ui.products;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.router.RouterLink;
-import org.ok.milki.metadata.ui.main.EntityComponent;
+import org.ok.milki.metadata.ui.main.EntityViewBody;
 
 @CssImport("./styles/views/products/product-view-body.css")
-public class ProductViewBody extends EntityComponent {
+public class ProductViewBody extends EntityViewBody {
 
     private final Label idLabel;
 
