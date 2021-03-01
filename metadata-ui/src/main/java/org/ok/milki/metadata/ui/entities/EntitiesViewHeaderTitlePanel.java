@@ -9,16 +9,16 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 public class EntitiesViewHeaderTitlePanel extends HorizontalLayout {
 
     private final EntitiesViewHeaderIcon entitiesViewHeaderIcon;
-    private final EntitiesViewHeaderTitle entitiesViewHeaderTitle;
+    private final EntitiesViewHeaderType entitiesViewHeaderType;
 
     public EntitiesViewHeaderTitlePanel(String idPrefix, String titleText, VaadinIcon vaadinIcon) {
         setId(idPrefix + "-view-header-title-panel");
         addClassName("entities-view-header-title-panel");
 
         entitiesViewHeaderIcon = new EntitiesViewHeaderIcon(idPrefix, vaadinIcon);
-        entitiesViewHeaderTitle = new EntitiesViewHeaderTitle(idPrefix, titleText);
+        entitiesViewHeaderType = new EntitiesViewHeaderType(idPrefix, titleText + " (61)");
 
-        add(entitiesViewHeaderIcon, entitiesViewHeaderTitle);
-        setVerticalComponentAlignment(FlexComponent.Alignment.CENTER, entitiesViewHeaderIcon, entitiesViewHeaderTitle);
+        add(entitiesViewHeaderIcon, entitiesViewHeaderType);
+        setVerticalComponentAlignment(FlexComponent.Alignment.CENTER, entitiesViewHeaderIcon, entitiesViewHeaderType);
     }
 }

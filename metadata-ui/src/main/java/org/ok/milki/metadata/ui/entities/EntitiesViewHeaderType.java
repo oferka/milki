@@ -5,12 +5,12 @@ import com.vaadin.flow.component.html.H2;
 
 import javax.validation.constraints.NotNull;
 
-@CssImport("./styles/views/entities/entities-view-header-title.css")
-public class EntitiesViewHeaderTitle extends H2 {
+@CssImport("./styles/views/entities/entities-view-header-type.css")
+public class EntitiesViewHeaderType extends H2 {
 
-    public EntitiesViewHeaderTitle(String idPrefix, String titleText) {
-        setId(idPrefix + "-view-header-title");
-        addClassName("entities-view-header-title");
+    public EntitiesViewHeaderType(String idPrefix, String titleText) {
+        setId(idPrefix + "-view-header-type");
+        addClassName("entities-view-header-type");
 
         setTitleText(titleText);
     }
