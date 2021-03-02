@@ -14,7 +14,7 @@ public abstract class EntityViewBody extends VerticalLayout {
     protected final RouterLink entitiesRouterLink;
 
     public EntityViewBody(String idPrefix, String entitiesViewName) {
-        setId(idPrefix + "-view-body");
+        setId(idPrefix + "-view-body ");
         addClassName("entity-view-body");
         addClassName(idPrefix + "-view-body");
 
