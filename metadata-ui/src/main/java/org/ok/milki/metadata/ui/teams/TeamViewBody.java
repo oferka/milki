@@ -2,13 +2,13 @@ package org.ok.milki.metadata.ui.teams;
 
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.router.RouterLink;
-import org.ok.milki.metadata.ui.main.EntityViewBody;
+import org.ok.milki.metadata.ui.entity.EntityViewBody;
 
 @CssImport("./styles/views/teams/team-view-body.css")
 public class TeamViewBody extends EntityViewBody {
 
-    public TeamViewBody(String idPrefix) {
-        super(idPrefix);
+    public TeamViewBody(String idPrefix, String entitiesViewName) {
+        super(idPrefix, entitiesViewName);
         add(new RouterLink("teams", TeamsView.class));
     }
 

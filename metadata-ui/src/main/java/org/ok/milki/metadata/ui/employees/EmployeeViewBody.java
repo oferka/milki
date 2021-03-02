@@ -2,13 +2,13 @@ package org.ok.milki.metadata.ui.employees;
 
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.router.RouterLink;
-import org.ok.milki.metadata.ui.main.EntityViewBody;
+import org.ok.milki.metadata.ui.entity.EntityViewBody;
 
 @CssImport("./styles/views/employees/employee-view-body.css")
 public class EmployeeViewBody extends EntityViewBody {
 
-    public EmployeeViewBody(String idPrefix) {
-        super(idPrefix);
+    public EmployeeViewBody(String idPrefix, String entitiesViewName) {
+        super(idPrefix, entitiesViewName);
         add(new RouterLink("employees", EmployeesView.class));
     }
 

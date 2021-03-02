@@ -6,13 +6,12 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.BeforeEvent;
 import com.vaadin.flow.router.HasUrlParameter;
-import org.ok.milki.metadata.ui.main.EntityViewBody;
 
 @CssImport("./styles/views/entity/entity-view.css")
 public abstract class EntityView extends VerticalLayout implements HasUrlParameter<String> {
 
     private final EntityViewHeader entityViewHeader;
-    private final org.ok.milki.metadata.ui.entity.EntityViewBody entityViewBody;
+    private final EntityViewBody entityViewBody;
 
     public EntityView() {
         setId(getIdPrefix() + "-view");
@@ -24,7 +23,7 @@ public abstract class EntityView extends VerticalLayout implements HasUrlParamet
         entityViewHeader = new EntityViewHeader(getIdPrefix(), getViewName(), getViewDescription(), getEntityName(), getViewIcon());
         add(entityViewHeader);
 
-        entityViewBody = new org.ok.milki.metadata.ui.entity.EntityViewBody(getIdPrefix(), getViewBody());
+        entityViewBody = getViewBody();
         add(entityViewBody);
     }
 
@@ -44,4 +43,5 @@ public abstract class EntityView extends VerticalLayout implements HasUrlParamet
     protected abstract VaadinIcon getViewIcon();
     protected abstract String getEntityName();
     protected abstract EntityViewBody getViewBody();
+    protected abstract String getEntitiesRoute();
 }

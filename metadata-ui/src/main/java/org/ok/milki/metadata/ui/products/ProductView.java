@@ -5,7 +5,7 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.entity.EntityView;
-import org.ok.milki.metadata.ui.main.EntityViewBody;
+import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.COMPILE;
@@ -51,6 +51,11 @@ public class ProductView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new ProductViewBody(getIdPrefix());
+        return new ProductViewBody(getIdPrefix(), getViewName());
+    }
+
+    @Override
+    protected String getEntitiesRoute() {
+        return ROUTE;
     }
 }
