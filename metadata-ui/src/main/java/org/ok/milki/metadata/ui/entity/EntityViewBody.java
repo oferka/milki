@@ -22,7 +22,7 @@ public abstract class EntityViewBody extends VerticalLayout {
         setHeightFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        selectedIdLabel = new Label("something meaningless");
+        selectedIdLabel = new Label("");
         add(selectedIdLabel);
 
         entitiesRouterLink = new RouterLink(entitiesViewName, entitiesNavigationTarget);
