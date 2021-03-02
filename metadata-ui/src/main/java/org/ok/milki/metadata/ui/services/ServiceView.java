@@ -4,6 +4,7 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
@@ -51,11 +52,16 @@ public class ServiceView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new ServiceViewBody(getIdPrefix(), getViewName());
+        return new ServiceViewBody(getIdPrefix(), getViewName(), getEntitiesNavigationTarget());
     }
 
     @Override
     protected String getEntitiesRoute() {
         return ROUTE;
+    }
+
+    @Override
+    protected Class<? extends EntitiesView> getEntitiesNavigationTarget() {
+        return ServicesView.class;
     }
 }
