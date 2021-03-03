@@ -5,14 +5,13 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.RouterLink;
-import org.ok.milki.metadata.ui.accounts.AccountsView;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 
 @CssImport("./styles/views/entity/entity-view-body.css")
 public abstract class EntityViewBody extends VerticalLayout {
 
-    protected final Label selectedIdLabel;
-    protected final RouterLink entitiesRouterLink;
+    private final Label selectedIdLabel;
+    private final RouterLink entitiesRouterLink;
 
     public EntityViewBody(String idPrefix, String entitiesViewName, Class<? extends EntitiesView> entitiesNavigationTarget) {
         setId(idPrefix + "-view-body");
@@ -22,12 +21,14 @@ public abstract class EntityViewBody extends VerticalLayout {
         setHeightFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        selectedIdLabel = new Label("");
+        selectedIdLabel = new Label();
         add(selectedIdLabel);
 
         entitiesRouterLink = new RouterLink(entitiesViewName, entitiesNavigationTarget);
         add(entitiesRouterLink);
     }
 
-    public abstract void selectedEntityChanged(String selectedEntityId);
+    public void selectedEntityChanged(String selectedEntityId) {
+        selectedIdLabel.setText(selectedEntityId);
+    }
 }
