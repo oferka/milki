@@ -1,10 +1,9 @@
 package org.ok.milki.metadata.ui.services;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import org.ok.milki.metadata.ui.entities.EntitiesView;
+import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
@@ -22,42 +21,12 @@ public class ServiceView extends EntityView {
     public static final String VIEW_NAME = "Services";
 
     @Override
-    protected String getIdPrefix() {
-        return SERVICE.getEntityIdPrefix();
-    }
-
-    @Override
-    protected String getViewName() {
-        return SERVICE.getEntityViewName();
-    }
-
-    @Override
-    protected String getViewDescription() {
-        return SERVICE.getEntityViewDescription();
-    }
-
-    @Override
-    protected VaadinIcon getViewIcon() {
-        return SERVICE.getEntitiesViewIcon();
-    }
-
-    @Override
-    protected String getEntityName() {
-        return SERVICE.getEntityViewName();
+    protected EntityType getEntityType() {
+        return SERVICE;
     }
 
     @Override
     protected EntityViewBody getViewBody() {
         return new ServiceViewBody();
-    }
-
-    @Override
-    protected String getEntitiesRoute() {
-        return SERVICE.getRoute();
-    }
-
-    @Override
-    protected Class<? extends EntitiesView> getEntitiesNavigationTarget() {
-        return SERVICE.getEntitiesViewClass();
     }
 }
