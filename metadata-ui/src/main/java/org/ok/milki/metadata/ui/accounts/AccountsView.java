@@ -9,60 +9,55 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.CALC_BOOK;
-import static org.apache.commons.lang3.RandomUtils.nextInt;
+import static org.ok.milki.metadata.ui.EntityType.ACCOUNT;
 import static org.ok.milki.metadata.ui.accounts.AccountsView.ROUTE;
 import static org.ok.milki.metadata.ui.accounts.AccountsView.VIEW_NAME;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
+@CssImport("./styles/views/" + ROUTE + "/" + ROUTE + "-view.css")
 public class AccountsView extends EntitiesView {
 
     public static final String ROUTE = "accounts";
-    public static final String ID_PREFIX = "accounts";
     public static final String VIEW_NAME = "Accounts";
-    public static final String ENTITY_NAME ="Account";
-    public static final String VIEW_DESCRIPTION ="Accounts view description";
-    public static final VaadinIcon VIEW_ICON = CALC_BOOK;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return ACCOUNT.getEntitiesIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return ACCOUNT.getEntitiesViewName();
     }
 
     @Override
     protected int getEntityCount() {
-        return nextInt(0, 100);
+        return ACCOUNT.getEntityCount();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return ACCOUNT.getEntitiesViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return ACCOUNT.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return ENTITY_NAME;
+        return ACCOUNT.getEntityName();
     }
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new AccountsViewBody(getIdPrefix(), getEntityName(), getEntityNavigationTarget());
+        return new AccountsViewBody(ACCOUNT.getEntitiesIdPrefix(), ACCOUNT.getEntityName(), ACCOUNT.getEntityViewClass());
     }
 
     @Override
     protected Class<? extends EntityView> getEntityNavigationTarget() {
-        return AccountView.class;
+        return ACCOUNT.getEntityViewClass();
     }
 }

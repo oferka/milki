@@ -6,20 +6,12 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.component.tabs.TabsVariant;
-import org.ok.milki.metadata.ui.accounts.AccountsView;
-import org.ok.milki.metadata.ui.employees.EmployeesView;
 import org.ok.milki.metadata.ui.feed.FeedView;
 import org.ok.milki.metadata.ui.home.HomeView;
-import org.ok.milki.metadata.ui.interviews.InterviewsView;
-import org.ok.milki.metadata.ui.positions.PositionsView;
-import org.ok.milki.metadata.ui.products.ProductsView;
-import org.ok.milki.metadata.ui.repositories.RepositoriesView;
-import org.ok.milki.metadata.ui.services.ServicesView;
-import org.ok.milki.metadata.ui.teams.TeamsView;
-import org.ok.milki.metadata.ui.tenants.TenantsView;
-import org.ok.milki.metadata.ui.tools.ToolsView;
 
 import java.util.Optional;
+
+import static org.ok.milki.metadata.ui.EntityType.*;
 
 @CssImport("./styles/views/main/main-view-tabs.css")
 public class MainViewTabs extends Tabs {
@@ -35,16 +27,16 @@ public class MainViewTabs extends Tabs {
         return new Component[] {
                 new MainViewTab(HomeView.VIEW_ID, HomeView.VIEW_NAME, HomeView.class, HomeView.VIEW_ICON),
                 new MainViewTab(FeedView.VIEW_ID, FeedView.VIEW_NAME, FeedView.class, FeedView.VIEW_ICON),
-                new MainViewTab(TenantsView.ROUTE, TenantsView.VIEW_NAME, TenantsView.class, TenantsView.VIEW_ICON),
-                new MainViewTab(AccountsView.ROUTE, AccountsView.VIEW_NAME, AccountsView.class, AccountsView.VIEW_ICON),
-                new MainViewTab(ProductsView.ROUTE, ProductsView.VIEW_NAME, ProductsView.class, ProductsView.VIEW_ICON),
-                new MainViewTab(ServicesView.ROUTE, ServicesView.VIEW_NAME, ServicesView.class, ServicesView.VIEW_ICON),
-                new MainViewTab(RepositoriesView.ROUTE, RepositoriesView.VIEW_NAME, RepositoriesView.class, RepositoriesView.VIEW_ICON),
-                new MainViewTab(TeamsView.ROUTE, TeamsView.VIEW_NAME, TeamsView.class, TeamsView.VIEW_ICON),
-                new MainViewTab(EmployeesView.ROUTE, EmployeesView.VIEW_NAME, EmployeesView.class, EmployeesView.VIEW_ICON),
-                new MainViewTab(PositionsView.ROUTE, PositionsView.VIEW_NAME, PositionsView.class, PositionsView.VIEW_ICON),
-                new MainViewTab(InterviewsView.ROUTE, InterviewsView.VIEW_NAME, InterviewsView.class, InterviewsView.VIEW_ICON),
-                new MainViewTab(ToolsView.ROUTE, ToolsView.VIEW_NAME, ToolsView.class, ToolsView.VIEW_ICON)
+                new MainViewTab(TENANT.getRoute(), TENANT.getEntitiesViewName(), TENANT.getEntitiesViewClass(), TENANT.getEntitiesViewIcon()),
+                new MainViewTab(ACCOUNT.getRoute(), ACCOUNT.getEntitiesViewName(), ACCOUNT.getEntitiesViewClass(), ACCOUNT.getEntitiesViewIcon()),
+                new MainViewTab(PRODUCT.getRoute(), PRODUCT.getEntitiesViewName(), PRODUCT.getEntitiesViewClass(), PRODUCT.getEntitiesViewIcon()),
+                new MainViewTab(SERVICE.getRoute(), SERVICE.getEntitiesViewName(), SERVICE.getEntitiesViewClass(), SERVICE.getEntitiesViewIcon()),
+                new MainViewTab(REPOSITORY.getRoute(), REPOSITORY.getEntitiesViewName(), REPOSITORY.getEntitiesViewClass(), REPOSITORY.getEntitiesViewIcon()),
+                new MainViewTab(TEAM.getRoute(), TEAM.getEntitiesViewName(), TEAM.getEntitiesViewClass(), TEAM.getEntitiesViewIcon()),
+                new MainViewTab(EMPLOYEE.getRoute(), EMPLOYEE.getEntitiesViewName(), EMPLOYEE.getEntitiesViewClass(), EMPLOYEE.getEntitiesViewIcon()),
+                new MainViewTab(POSITION.getRoute(), POSITION.getEntitiesViewName(), POSITION.getEntitiesViewClass(), POSITION.getEntitiesViewIcon()),
+                new MainViewTab(INTERVIEW.getRoute(), INTERVIEW.getEntitiesViewName(), INTERVIEW.getEntitiesViewClass(), INTERVIEW.getEntitiesViewIcon()),
+                new MainViewTab(TOOL.getRoute(), TOOL.getEntitiesViewName(), TOOL.getEntitiesViewClass(), TOOL.getEntitiesViewIcon())
         };
     }
 

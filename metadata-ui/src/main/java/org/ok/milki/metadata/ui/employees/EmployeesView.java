@@ -9,8 +9,7 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.HANDS_UP;
-import static org.apache.commons.lang3.RandomUtils.nextInt;
+import static org.ok.milki.metadata.ui.EntityType.EMPLOYEE;
 import static org.ok.milki.metadata.ui.employees.EmployeesView.ROUTE;
 import static org.ok.milki.metadata.ui.employees.EmployeesView.VIEW_NAME;
 
@@ -20,49 +19,45 @@ import static org.ok.milki.metadata.ui.employees.EmployeesView.VIEW_NAME;
 public class EmployeesView extends EntitiesView {
 
     public static final String ROUTE = "employees";
-    public static final String ID_PREFIX = "employees";
     public static final String VIEW_NAME = "Employees";
-    public static final String ENTITY_NAME ="Employee";
-    public static final String VIEW_DESCRIPTION ="Employees view description";
-    public static final VaadinIcon VIEW_ICON = HANDS_UP;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return EMPLOYEE.getEntitiesIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return EMPLOYEE.getEntitiesViewName();
     }
 
     @Override
     protected int getEntityCount() {
-        return nextInt(0, 100);
+        return EMPLOYEE.getEntityCount();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return EMPLOYEE.getEntitiesViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return EMPLOYEE.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return ENTITY_NAME;
+        return EMPLOYEE.getEntityName();
     }
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new EmployeesViewBody(getIdPrefix(), getEntityName(), getEntityNavigationTarget());
+        return new EmployeesViewBody(EMPLOYEE.getEntitiesIdPrefix(), EMPLOYEE.getEntityName(), EMPLOYEE.getEntityViewClass());
     }
 
     @Override
     protected Class<? extends EntityView> getEntityNavigationTarget() {
-        return EmployeeView.class;
+        return EMPLOYEE.getEntityViewClass();
     }
 }

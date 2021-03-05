@@ -9,7 +9,7 @@ import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.CLUSTER;
+import static org.ok.milki.metadata.ui.EntityType.SERVICE;
 import static org.ok.milki.metadata.ui.services.ServiceView.ROUTE;
 import static org.ok.milki.metadata.ui.services.ServiceView.VIEW_NAME;
 
@@ -19,49 +19,45 @@ import static org.ok.milki.metadata.ui.services.ServiceView.VIEW_NAME;
 public class ServiceView extends EntityView {
 
     public static final String ROUTE = "services";
-    public static final String ID_PREFIX = "service";
     public static final String VIEW_NAME = "Services";
-    public static final String ENTITY_NAME = "Service";
-    public static final String VIEW_DESCRIPTION ="Service view description";
-    public static final VaadinIcon VIEW_ICON = CLUSTER;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return SERVICE.getEntityIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return SERVICE.getEntityViewName();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return SERVICE.getEntityViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return SERVICE.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return VIEW_NAME;
+        return SERVICE.getEntityViewName();
     }
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new ServiceViewBody(getIdPrefix(), getViewName(), getEntitiesNavigationTarget());
+        return new ServiceViewBody(SERVICE.getEntityIdPrefix(), SERVICE.getEntitiesViewName(), SERVICE.getEntitiesViewClass());
     }
 
     @Override
     protected String getEntitiesRoute() {
-        return ROUTE;
+        return SERVICE.getRoute();
     }
 
     @Override
     protected Class<? extends EntitiesView> getEntitiesNavigationTarget() {
-        return ServicesView.class;
+        return SERVICE.getEntitiesViewClass();
     }
 }

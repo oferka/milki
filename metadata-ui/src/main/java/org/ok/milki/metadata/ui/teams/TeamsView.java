@@ -9,8 +9,7 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.GROUP;
-import static org.apache.commons.lang3.RandomUtils.nextInt;
+import static org.ok.milki.metadata.ui.EntityType.TEAM;
 import static org.ok.milki.metadata.ui.teams.TeamsView.ROUTE;
 import static org.ok.milki.metadata.ui.teams.TeamsView.VIEW_NAME;
 
@@ -20,49 +19,45 @@ import static org.ok.milki.metadata.ui.teams.TeamsView.VIEW_NAME;
 public class TeamsView extends EntitiesView {
 
     public static final String ROUTE = "teams";
-    public static final String ID_PREFIX = "teams";
     public static final String VIEW_NAME = "Teams";
-    public static final String ENTITY_NAME ="Team";
-    public static final String VIEW_DESCRIPTION ="Teams view description";
-    public static final VaadinIcon VIEW_ICON = GROUP;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return TEAM.getEntitiesIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return TEAM.getEntitiesViewName();
     }
 
     @Override
     protected int getEntityCount() {
-        return nextInt(0, 100);
+        return TEAM.getEntityCount();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return TEAM.getEntitiesViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return TEAM.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return ENTITY_NAME;
+        return TEAM.getEntityName();
     }
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new TeamsViewBody(getIdPrefix(), getEntityName(), getEntityNavigationTarget());
+        return new TeamsViewBody(TEAM.getEntitiesIdPrefix(), TEAM.getEntityName(), TEAM.getEntityViewClass());
     }
 
     @Override
     protected Class<? extends EntityView> getEntityNavigationTarget() {
-        return TeamView.class;
+        return TEAM.getEntityViewClass();
     }
 }

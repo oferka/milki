@@ -9,8 +9,7 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.TOOLS;
-import static org.apache.commons.lang3.RandomUtils.nextInt;
+import static org.ok.milki.metadata.ui.EntityType.TOOL;
 import static org.ok.milki.metadata.ui.tools.ToolsView.ROUTE;
 import static org.ok.milki.metadata.ui.tools.ToolsView.VIEW_NAME;
 
@@ -21,49 +20,45 @@ import static org.ok.milki.metadata.ui.tools.ToolsView.VIEW_NAME;
 public class ToolsView extends EntitiesView {
 
     public static final String ROUTE = "tools";
-    public static final String ID_PREFIX = "tools";
     public static final String VIEW_NAME = "Tools";
-    public static final String ENTITY_NAME = "Tool";
-    public static final String VIEW_DESCRIPTION ="Tools view description";
-    public static final VaadinIcon VIEW_ICON = TOOLS;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return TOOL.getEntitiesIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return TOOL.getEntitiesViewName();
     }
 
     @Override
     protected int getEntityCount() {
-        return nextInt(0, 100);
+        return TOOL.getEntityCount();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return TOOL.getEntitiesViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return TOOL.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return ENTITY_NAME;
+        return TOOL.getEntityName();
     }
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new ToolsViewBody(getIdPrefix(), getEntityName(), getEntityNavigationTarget());
+        return new ToolsViewBody(TOOL.getEntitiesIdPrefix(), TOOL.getEntityName(), TOOL.getEntityViewClass());
     }
 
     @Override
     protected Class<? extends EntityView> getEntityNavigationTarget() {
-        return ToolView.class;
+        return TOOL.getEntityViewClass();
     }
 }

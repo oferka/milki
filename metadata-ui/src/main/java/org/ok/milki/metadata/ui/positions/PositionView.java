@@ -9,7 +9,7 @@ import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.USER_CHECK;
+import static org.ok.milki.metadata.ui.EntityType.POSITION;
 import static org.ok.milki.metadata.ui.positions.PositionView.ROUTE;
 import static org.ok.milki.metadata.ui.positions.PositionView.VIEW_NAME;
 
@@ -19,49 +19,45 @@ import static org.ok.milki.metadata.ui.positions.PositionView.VIEW_NAME;
 public class PositionView extends EntityView {
 
     public static final String ROUTE = "positions";
-    public static final String ID_PREFIX = "position";
     public static final String VIEW_NAME = "Positions";
-    public static final String ENTITY_NAME = "Position";
-    public static final String VIEW_DESCRIPTION ="Position view description";
-    public static final VaadinIcon VIEW_ICON = USER_CHECK;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return POSITION.getEntityIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return POSITION.getEntityViewName();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return POSITION.getEntityViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return POSITION.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return VIEW_NAME;
+        return POSITION.getEntityName();
     }
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new PositionViewBody(getIdPrefix(), getViewName(), getEntitiesNavigationTarget());
+        return new PositionViewBody(POSITION.getEntityIdPrefix(), POSITION.getEntitiesViewName(), POSITION.getEntitiesViewClass());
     }
 
     @Override
     protected String getEntitiesRoute() {
-        return ROUTE;
+        return POSITION.getRoute();
     }
 
     @Override
     protected Class<? extends EntitiesView> getEntitiesNavigationTarget() {
-        return PositionsView.class;
+        return POSITION.getEntitiesViewClass();
     }
 }

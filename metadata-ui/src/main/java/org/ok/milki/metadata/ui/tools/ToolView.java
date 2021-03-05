@@ -9,7 +9,7 @@ import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.TOOLS;
+import static org.ok.milki.metadata.ui.EntityType.TOOL;
 import static org.ok.milki.metadata.ui.tools.ToolView.VIEW_NAME;
 import static org.ok.milki.metadata.ui.tools.ToolsView.ROUTE;
 
@@ -19,49 +19,45 @@ import static org.ok.milki.metadata.ui.tools.ToolsView.ROUTE;
 public class ToolView extends EntityView {
 
     public static final String ROUTE = "tools";
-    public static final String ID_PREFIX = "tool";
     public static final String VIEW_NAME = "Tools";
-    public static final String ENTITY_NAME = "Tool";
-    public static final String VIEW_DESCRIPTION ="Tool view description";
-    public static final VaadinIcon VIEW_ICON = TOOLS;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return TOOL.getEntityIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return TOOL.getEntityViewName();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return TOOL.getEntityViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return TOOL.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return VIEW_NAME;
+        return TOOL.getEntityName();
     }
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new ToolViewBody(getIdPrefix(), getViewName(), getEntitiesNavigationTarget());
+        return new ToolViewBody(TOOL.getEntityIdPrefix(), TOOL.getEntitiesViewName(), TOOL.getEntitiesViewClass());
     }
 
     @Override
     protected String getEntitiesRoute() {
-        return ROUTE;
+        return TOOL.getRoute();
     }
 
     @Override
     protected Class<? extends EntitiesView> getEntitiesNavigationTarget() {
-        return ToolsView.class;
+        return TOOL.getEntitiesViewClass();
     }
 }

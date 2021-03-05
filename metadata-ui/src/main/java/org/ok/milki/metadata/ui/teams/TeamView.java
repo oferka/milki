@@ -9,7 +9,7 @@ import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.GROUP;
+import static org.ok.milki.metadata.ui.EntityType.TEAM;
 import static org.ok.milki.metadata.ui.teams.TeamView.ROUTE;
 import static org.ok.milki.metadata.ui.teams.TeamView.VIEW_NAME;
 
@@ -19,49 +19,45 @@ import static org.ok.milki.metadata.ui.teams.TeamView.VIEW_NAME;
 public class TeamView extends EntityView {
 
     public static final String ROUTE = "teams";
-    public static final String ID_PREFIX = "team";
     public static final String VIEW_NAME = "Teams";
-    public static final String ENTITY_NAME = "Team";
-    public static final String VIEW_DESCRIPTION ="Team view description";
-    public static final VaadinIcon VIEW_ICON = GROUP;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return TEAM.getEntityIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return TEAM.getEntityViewName();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return TEAM.getEntityViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return TEAM.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return VIEW_NAME;
+        return TEAM.getEntityName();
     }
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new TeamViewBody(getIdPrefix(), getViewName(), getEntitiesNavigationTarget());
+        return new TeamViewBody(TEAM.getEntityIdPrefix(), TEAM.getEntitiesViewName(), TEAM.getEntitiesViewClass());
     }
 
     @Override
     protected String getEntitiesRoute() {
-        return ROUTE;
+        return TEAM.getRoute();
     }
 
     @Override
     protected Class<? extends EntitiesView> getEntitiesNavigationTarget() {
-        return TeamsView.class;
+        return TEAM.getEntitiesViewClass();
     }
 }

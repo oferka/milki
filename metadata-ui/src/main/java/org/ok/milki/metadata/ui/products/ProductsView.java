@@ -9,8 +9,7 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.COMPILE;
-import static org.apache.commons.lang3.RandomUtils.nextInt;
+import static org.ok.milki.metadata.ui.EntityType.PRODUCT;
 import static org.ok.milki.metadata.ui.products.ProductsView.ROUTE;
 import static org.ok.milki.metadata.ui.products.ProductsView.VIEW_NAME;
 
@@ -20,49 +19,45 @@ import static org.ok.milki.metadata.ui.products.ProductsView.VIEW_NAME;
 public class ProductsView extends EntitiesView {
 
     public static final String ROUTE = "products";
-    public static final String ID_PREFIX = "products";
     public static final String VIEW_NAME = "Products";
-    public static final String ENTITY_NAME ="Product";
-    public static final String VIEW_DESCRIPTION ="Products view description";
-    public static final VaadinIcon VIEW_ICON = COMPILE;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return PRODUCT.getEntitiesIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return PRODUCT.getEntitiesViewName();
     }
 
     @Override
     protected int getEntityCount() {
-        return nextInt(0, 100);
+        return PRODUCT.getEntityCount();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return PRODUCT.getEntitiesViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return PRODUCT.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return ENTITY_NAME;
+        return PRODUCT.getEntityName();
     }
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new ProductsViewBody(getIdPrefix(), getEntityName(), getEntityNavigationTarget());
+        return new ProductsViewBody(PRODUCT.getEntitiesIdPrefix(), PRODUCT.getEntityName(), PRODUCT.getEntityViewClass());
     }
 
     @Override
     protected Class<? extends EntityView> getEntityNavigationTarget() {
-        return ProductView.class;
+        return PRODUCT.getEntityViewClass();
     }
 }

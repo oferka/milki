@@ -9,7 +9,7 @@ import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.SPECIALIST;
+import static org.ok.milki.metadata.ui.EntityType.INTERVIEW;
 import static org.ok.milki.metadata.ui.interviews.InterviewView.ROUTE;
 import static org.ok.milki.metadata.ui.interviews.InterviewView.VIEW_NAME;
 
@@ -19,49 +19,45 @@ import static org.ok.milki.metadata.ui.interviews.InterviewView.VIEW_NAME;
 public class InterviewView extends EntityView {
 
     public static final String ROUTE = "interviews";
-    public static final String ID_PREFIX = "interview";
     public static final String VIEW_NAME = "Interviews";
-    public static final String ENTITY_NAME = "Interview";
-    public static final String VIEW_DESCRIPTION ="Interview view description";
-    public static final VaadinIcon VIEW_ICON = SPECIALIST;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return INTERVIEW.getEntityIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return INTERVIEW.getEntityViewName();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return INTERVIEW.getEntityViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return INTERVIEW.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return VIEW_NAME;
+        return INTERVIEW.getEntityName();
     }
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new InterviewViewBody(getIdPrefix(), getViewName(), getEntitiesNavigationTarget());
+        return new InterviewViewBody(INTERVIEW.getEntityIdPrefix(), INTERVIEW.getEntitiesViewName(), INTERVIEW.getEntitiesViewClass());
     }
 
     @Override
     protected String getEntitiesRoute() {
-        return ROUTE;
+        return INTERVIEW.getRoute();
     }
 
     @Override
     protected Class<? extends EntitiesView> getEntitiesNavigationTarget() {
-        return InterviewsView.class;
+        return INTERVIEW.getEntitiesViewClass();
     }
 }

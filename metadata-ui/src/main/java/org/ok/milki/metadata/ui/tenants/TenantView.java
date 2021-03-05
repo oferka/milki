@@ -9,7 +9,7 @@ import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.BUILDING_O;
+import static org.ok.milki.metadata.ui.EntityType.TENANT;
 import static org.ok.milki.metadata.ui.tenants.TenantView.ROUTE;
 import static org.ok.milki.metadata.ui.tenants.TenantView.VIEW_NAME;
 
@@ -19,49 +19,45 @@ import static org.ok.milki.metadata.ui.tenants.TenantView.VIEW_NAME;
 public class TenantView extends EntityView {
 
     public static final String ROUTE = "tenants";
-    public static final String ID_PREFIX = "tenant";
     public static final String VIEW_NAME = "Tenants";
-    public static final String ENTITY_NAME = "Tenant";
-    public static final String VIEW_DESCRIPTION ="Tenant view description";
-    public static final VaadinIcon VIEW_ICON = BUILDING_O;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return TENANT.getEntityIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return TENANT.getEntityViewName();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return TENANT.getEntityViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return TENANT.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return VIEW_NAME;
+        return TENANT.getEntityName();
     }
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new TenantViewBody(getIdPrefix(), getViewName(), getEntitiesNavigationTarget());
+        return new TenantViewBody(TENANT.getEntitiesIdPrefix(), TENANT.getEntitiesViewName(), TENANT.getEntitiesViewClass());
     }
 
     @Override
     protected String getEntitiesRoute() {
-        return ROUTE;
+        return TENANT.getRoute();
     }
 
     @Override
     protected Class<? extends EntitiesView> getEntitiesNavigationTarget() {
-        return TenantsView.class;
+        return TENANT.getEntitiesViewClass();
     }
 }

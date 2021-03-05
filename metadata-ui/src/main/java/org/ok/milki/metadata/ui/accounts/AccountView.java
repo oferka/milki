@@ -9,59 +9,55 @@ import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.CALC_BOOK;
+import static org.ok.milki.metadata.ui.EntityType.ACCOUNT;
 import static org.ok.milki.metadata.ui.accounts.AccountView.ROUTE;
 import static org.ok.milki.metadata.ui.accounts.AccountView.VIEW_NAME;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/"+ ROUTE + "/" + "account-view.css")
+@CssImport("./styles/views/" + ROUTE + "/" + "account-view.css")
 public class AccountView extends EntityView {
 
     public static final String ROUTE = "accounts";
-    public static final String ID_PREFIX = "account";
     public static final String VIEW_NAME = "Accounts";
-    public static final String ENTITY_NAME = "Account";
-    public static final String VIEW_DESCRIPTION ="Account view description";
-    public static final VaadinIcon VIEW_ICON = CALC_BOOK;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return ACCOUNT.getEntityIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return ACCOUNT.getEntityViewName();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return ACCOUNT.getEntityViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return ACCOUNT.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return VIEW_NAME;
+        return ACCOUNT.getEntityViewName();
     }
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new AccountViewBody(getIdPrefix(), getViewName(), getEntitiesNavigationTarget());
+        return new AccountViewBody(ACCOUNT.getEntityIdPrefix(), ACCOUNT.getEntitiesViewName(), ACCOUNT.getEntitiesViewClass());
     }
 
     @Override
     protected String getEntitiesRoute() {
-        return ROUTE;
+        return ACCOUNT.getRoute();
     }
 
     @Override
     protected Class<? extends EntitiesView> getEntitiesNavigationTarget() {
-        return AccountsView.class;
+        return ACCOUNT.getEntitiesViewClass();
     }
 }

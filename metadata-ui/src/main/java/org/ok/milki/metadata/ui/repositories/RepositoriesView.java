@@ -9,8 +9,7 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.main.MainView;
 
-import static com.vaadin.flow.component.icon.VaadinIcon.ROAD_SPLIT;
-import static org.apache.commons.lang3.RandomUtils.nextInt;
+import static org.ok.milki.metadata.ui.EntityType.REPOSITORY;
 import static org.ok.milki.metadata.ui.repositories.RepositoriesView.ROUTE;
 import static org.ok.milki.metadata.ui.repositories.RepositoriesView.VIEW_NAME;
 
@@ -20,49 +19,45 @@ import static org.ok.milki.metadata.ui.repositories.RepositoriesView.VIEW_NAME;
 public class RepositoriesView extends EntitiesView {
 
     public static final String ROUTE = "repositories";
-    public static final String ID_PREFIX = "repositories";
     public static final String VIEW_NAME = "Repositories";
-    public static final String ENTITY_NAME ="Repository";
-    public static final String VIEW_DESCRIPTION ="Repositories view description";
-    public static final VaadinIcon VIEW_ICON = ROAD_SPLIT;
 
     @Override
     protected String getIdPrefix() {
-        return ID_PREFIX;
+        return REPOSITORY.getEntitiesIdPrefix();
     }
 
     @Override
     protected String getViewName() {
-        return VIEW_NAME;
+        return REPOSITORY.getEntitiesViewName();
     }
 
     @Override
     protected int getEntityCount() {
-        return nextInt(0, 100);
+        return REPOSITORY.getEntityCount();
     }
 
     @Override
     protected String getViewDescription() {
-        return VIEW_DESCRIPTION;
+        return REPOSITORY.getEntitiesViewDescription();
     }
 
     @Override
     protected VaadinIcon getViewIcon() {
-        return VIEW_ICON;
+        return REPOSITORY.getEntitiesViewIcon();
     }
 
     @Override
     protected String getEntityName() {
-        return ENTITY_NAME;
+        return REPOSITORY.getEntityName();
     }
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new RepositoriesViewBody(getIdPrefix(), getEntityName(), getEntityNavigationTarget());
+        return new RepositoriesViewBody(REPOSITORY.getEntitiesIdPrefix(), REPOSITORY.getEntityName(), REPOSITORY.getEntityViewClass());
     }
 
     @Override
     protected Class<? extends EntityView> getEntityNavigationTarget() {
-        return RepositoryView.class;
+        return REPOSITORY.getEntityViewClass();
     }
 }
