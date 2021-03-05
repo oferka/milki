@@ -1,12 +1,11 @@
 package org.ok.milki.metadata.ui.repositories;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
-import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.EntityType.REPOSITORY;
@@ -22,42 +21,12 @@ public class RepositoriesView extends EntitiesView {
     public static final String VIEW_NAME = "Repositories";
 
     @Override
-    protected String getIdPrefix() {
-        return REPOSITORY.getEntitiesIdPrefix();
-    }
-
-    @Override
-    protected String getViewName() {
-        return REPOSITORY.getEntitiesViewName();
-    }
-
-    @Override
-    protected int getEntityCount() {
-        return REPOSITORY.getEntityCount();
-    }
-
-    @Override
-    protected String getViewDescription() {
-        return REPOSITORY.getEntitiesViewDescription();
-    }
-
-    @Override
-    protected VaadinIcon getViewIcon() {
-        return REPOSITORY.getEntitiesViewIcon();
-    }
-
-    @Override
-    protected String getEntityName() {
-        return REPOSITORY.getEntityName();
+    protected EntityType getEntityType() {
+        return REPOSITORY;
     }
 
     @Override
     protected EntitiesViewBody getViewBody() {
         return new RepositoriesViewBody();
-    }
-
-    @Override
-    protected Class<? extends EntityView> getEntityNavigationTarget() {
-        return REPOSITORY.getEntityViewClass();
     }
 }

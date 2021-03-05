@@ -1,10 +1,9 @@
 package org.ok.milki.metadata.ui.entities;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import org.ok.milki.metadata.ui.entity.EntityView;
+import org.ok.milki.metadata.ui.EntityType;
 
 @CssImport("./styles/views/entities/entities-view.css")
 public abstract class EntitiesView extends VerticalLayout {
@@ -13,25 +12,26 @@ public abstract class EntitiesView extends VerticalLayout {
     private final EntitiesViewBody entitiesViewBody;
 
     public EntitiesView() {
-        setId(getIdPrefix() + "-view");
+        setId(getEntityType().getEntitiesIdPrefix() + "-view");
         addClassName("entities-view");
 
         setHeightFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        entitiesViewHeader = new EntitiesViewHeader(getIdPrefix(), getViewName(), getEntityCount(), getViewDescription(), getEntityName(), getViewIcon());
+        entitiesViewHeader = new EntitiesViewHeader(
+                getEntityType().getEntitiesIdPrefix(),
+                getEntityType().getEntitiesViewName(),
+                getEntityType().getEntityCount(),
+                getEntityType().getEntitiesViewDescription(),
+                getEntityType().getEntityName(),
+                getEntityType().getEntitiesViewIcon()
+        );
         add(entitiesViewHeader);
 
         entitiesViewBody = getViewBody();
         add(entitiesViewBody);
     }
 
-    protected abstract String getIdPrefix();
-    protected abstract String getViewName();
-    protected abstract int getEntityCount();
-    protected abstract String getViewDescription();
-    protected abstract VaadinIcon getViewIcon();
-    protected abstract String getEntityName();
+    protected abstract EntityType getEntityType();
     protected abstract EntitiesViewBody getViewBody();
-    protected abstract Class<? extends EntityView> getEntityNavigationTarget();
 }

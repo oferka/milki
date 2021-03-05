@@ -1,12 +1,11 @@
 package org.ok.milki.metadata.ui.positions;
 
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
-import org.ok.milki.metadata.ui.entity.EntityView;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.EntityType.POSITION;
@@ -22,42 +21,12 @@ public class PositionsView extends EntitiesView {
     public static final String VIEW_NAME = "Positions";
 
     @Override
-    protected String getIdPrefix() {
-        return POSITION.getEntitiesIdPrefix();
-    }
-
-    @Override
-    protected String getViewName() {
-        return POSITION.getEntitiesViewName();
-    }
-
-    @Override
-    protected int getEntityCount() {
-        return POSITION.getEntityCount();
-    }
-
-    @Override
-    protected String getViewDescription() {
-        return POSITION.getEntitiesViewDescription();
-    }
-
-    @Override
-    protected VaadinIcon getViewIcon() {
-        return POSITION.getEntitiesViewIcon();
-    }
-
-    @Override
-    protected String getEntityName() {
-        return POSITION.getEntityName();
+    protected EntityType getEntityType() {
+        return POSITION;
     }
 
     @Override
     protected EntitiesViewBody getViewBody() {
         return new PositionsViewBody();
-    }
-
-    @Override
-    protected Class<? extends EntityView> getEntityNavigationTarget() {
-        return POSITION.getEntityViewClass();
     }
 }
