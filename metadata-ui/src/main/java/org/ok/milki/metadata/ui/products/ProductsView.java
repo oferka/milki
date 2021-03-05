@@ -53,7 +53,7 @@ public class ProductsView extends EntitiesView {
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new ProductsViewBody(PRODUCT.getEntitiesIdPrefix(), PRODUCT.getEntityName(), PRODUCT.getEntityViewClass());
+        return new ProductsViewBody();
     }
 
     @Override

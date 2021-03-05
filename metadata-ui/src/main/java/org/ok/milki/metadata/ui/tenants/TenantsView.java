@@ -53,7 +53,7 @@ public class TenantsView extends EntitiesView {
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new TenantsViewBody(TENANT.getEntitiesIdPrefix(), TENANT.getEntityName(), TENANT.getEntityViewClass());
+        return new TenantsViewBody();
     }
 
     @Override

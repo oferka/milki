@@ -54,7 +54,7 @@ public class ToolsView extends EntitiesView {
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new ToolsViewBody(TOOL.getEntitiesIdPrefix(), TOOL.getEntityName(), TOOL.getEntityViewClass());
+        return new ToolsViewBody();
     }
 
     @Override

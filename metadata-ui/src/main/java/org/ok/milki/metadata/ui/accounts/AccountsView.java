@@ -53,7 +53,7 @@ public class AccountsView extends EntitiesView {
 
     @Override
     protected EntitiesViewBody getViewBody() {
-        return new AccountsViewBody(ACCOUNT.getEntitiesIdPrefix(), ACCOUNT.getEntityName(), ACCOUNT.getEntityViewClass());
+        return new AccountsViewBody();
     }
 
     @Override
