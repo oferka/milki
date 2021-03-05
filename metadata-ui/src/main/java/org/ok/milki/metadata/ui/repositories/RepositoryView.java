@@ -48,7 +48,7 @@ public class RepositoryView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new RepositoryViewBody(REPOSITORY.getEntityIdPrefix(), REPOSITORY.getEntitiesViewName(), REPOSITORY.getEntitiesViewClass());
+        return new RepositoryViewBody();
     }
 
     @Override

@@ -48,7 +48,7 @@ public class AccountView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new AccountViewBody(ACCOUNT.getEntityIdPrefix(), ACCOUNT.getEntitiesViewName(), ACCOUNT.getEntitiesViewClass());
+        return new AccountViewBody();
     }
 
     @Override

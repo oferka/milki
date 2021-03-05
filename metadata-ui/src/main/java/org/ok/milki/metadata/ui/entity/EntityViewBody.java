@@ -5,6 +5,7 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.RouterLink;
+import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 
 @CssImport("./styles/views/entity/entity-view-body.css")
@@ -26,6 +27,10 @@ public abstract class EntityViewBody extends VerticalLayout {
 
         entitiesRouterLink = new RouterLink(entitiesViewName, entitiesNavigationTarget);
         add(entitiesRouterLink);
+    }
+
+    public EntityViewBody(EntityType entityType) {
+        this(entityType.getEntityIdPrefix(), entityType.getEntitiesViewName(), entityType.getEntitiesViewClass());
     }
 
     public void selectedEntityChanged(String selectedEntityId) {

@@ -48,7 +48,7 @@ public class ServiceView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new ServiceViewBody(SERVICE.getEntityIdPrefix(), SERVICE.getEntitiesViewName(), SERVICE.getEntitiesViewClass());
+        return new ServiceViewBody();
     }
 
     @Override

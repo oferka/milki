@@ -48,7 +48,7 @@ public class TeamView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new TeamViewBody(TEAM.getEntityIdPrefix(), TEAM.getEntitiesViewName(), TEAM.getEntitiesViewClass());
+        return new TeamViewBody();
     }
 
     @Override

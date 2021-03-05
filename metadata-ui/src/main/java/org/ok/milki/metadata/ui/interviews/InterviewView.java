@@ -48,7 +48,7 @@ public class InterviewView extends EntityView {
 
     @Override
     protected EntityViewBody getViewBody() {
-        return new InterviewViewBody(INTERVIEW.getEntityIdPrefix(), INTERVIEW.getEntitiesViewName(), INTERVIEW.getEntitiesViewClass());
+        return new InterviewViewBody();
     }
 
     @Override
