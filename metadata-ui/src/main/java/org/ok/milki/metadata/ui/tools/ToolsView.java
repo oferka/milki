@@ -9,17 +9,17 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.EntityType.TOOL;
-import static org.ok.milki.metadata.ui.tools.ToolsView.ROUTE;
-import static org.ok.milki.metadata.ui.tools.ToolsView.VIEW_NAME;
+import static org.ok.milki.metadata.ui.tools.ToolsView.*;
 
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
+@CssImport("./styles/views/"+ ROUTE + "/" + ID_PREFIX + "-view.css")
 public class ToolsView extends EntitiesView {
 
     public static final String ROUTE = "tools";
     public static final String VIEW_NAME = "Tools";
+    public static final String ID_PREFIX = "tools";
 
     @Override
     protected EntityType getEntityType() {

@@ -9,16 +9,16 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.EntityType.POSITION;
-import static org.ok.milki.metadata.ui.positions.PositionsView.ROUTE;
-import static org.ok.milki.metadata.ui.positions.PositionsView.VIEW_NAME;
+import static org.ok.milki.metadata.ui.positions.PositionsView.*;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
+@CssImport("./styles/views/"+ ROUTE + "/" + ID_PREFIX + "-view.css")
 public class PositionsView extends EntitiesView {
 
     public static final String ROUTE = "positions";
     public static final String VIEW_NAME = "Positions";
+    public static final String ID_PREFIX = "positions";
 
     @Override
     protected EntityType getEntityType() {

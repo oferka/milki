@@ -9,16 +9,17 @@ import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.EntityType.ACCOUNT;
-import static org.ok.milki.metadata.ui.accounts.AccountView.ROUTE;
+import static org.ok.milki.metadata.ui.accounts.AccountView.ID_PREFIX;
 import static org.ok.milki.metadata.ui.accounts.AccountView.VIEW_NAME;
+import static org.ok.milki.metadata.ui.accounts.AccountsView.ROUTE;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/" + ROUTE + "/" + "account-view.css")
+@CssImport("./styles/views/" + ROUTE + "/" + ID_PREFIX + "-view.css")
 public class AccountView extends EntityView {
 
-    public static final String ROUTE = "accounts";
-    public static final String VIEW_NAME = "Accounts";
+    public static final String VIEW_NAME = "Account";
+    public static final String ID_PREFIX = "account";
 
     @Override
     protected EntityType getEntityType() {

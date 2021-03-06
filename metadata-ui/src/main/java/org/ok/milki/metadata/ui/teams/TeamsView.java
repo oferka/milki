@@ -9,16 +9,16 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.EntityType.TEAM;
-import static org.ok.milki.metadata.ui.teams.TeamsView.ROUTE;
-import static org.ok.milki.metadata.ui.teams.TeamsView.VIEW_NAME;
+import static org.ok.milki.metadata.ui.teams.TeamsView.*;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
+@CssImport("./styles/views/"+ ROUTE + "/" + ID_PREFIX + "-view.css")
 public class TeamsView extends EntitiesView {
 
     public static final String ROUTE = "teams";
     public static final String VIEW_NAME = "Teams";
+    public static final String ID_PREFIX = "teams";
 
     @Override
     protected EntityType getEntityType() {

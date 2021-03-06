@@ -9,16 +9,16 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.EntityType.REPOSITORY;
-import static org.ok.milki.metadata.ui.repositories.RepositoriesView.ROUTE;
-import static org.ok.milki.metadata.ui.repositories.RepositoriesView.VIEW_NAME;
+import static org.ok.milki.metadata.ui.repositories.RepositoriesView.*;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
+@CssImport("./styles/views/"+ ROUTE + "/" + ID_PREFIX + "-view.css")
 public class RepositoriesView extends EntitiesView {
 
     public static final String ROUTE = "repositories";
     public static final String VIEW_NAME = "Repositories";
+    public static final String ID_PREFIX = "repositories";
 
     @Override
     protected EntityType getEntityType() {

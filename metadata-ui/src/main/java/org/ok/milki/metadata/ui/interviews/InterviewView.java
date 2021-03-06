@@ -9,16 +9,16 @@ import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.EntityType.INTERVIEW;
-import static org.ok.milki.metadata.ui.interviews.InterviewView.ROUTE;
-import static org.ok.milki.metadata.ui.interviews.InterviewView.VIEW_NAME;
+import static org.ok.milki.metadata.ui.interviews.InterviewView.*;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/"+ ROUTE + "/" + "interview-view.css")
+@CssImport("./styles/views/"+ ROUTE + "/" + ID_PREFIX + "-view.css")
 public class InterviewView extends EntityView {
 
     public static final String ROUTE = "interviews";
-    public static final String VIEW_NAME = "Interviews";
+    public static final String VIEW_NAME = "Interview";
+    public static final String ID_PREFIX = "interview";
 
     @Override
     protected EntityType getEntityType() {
