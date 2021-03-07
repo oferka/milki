@@ -6,14 +6,15 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
 
-@CssImport(STYLES_FOLDER + "entities/entities-view-header-icon" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + "-view-header-icon" + CSS_FILE_EXTENSION)
 public class EntitiesViewHeaderIcon extends Icon {
 
     public EntitiesViewHeaderIcon(String idPrefix, VaadinIcon vaadinIcon) {
         super(vaadinIcon);
         setSize("60px");
         setId(idPrefix + "-view-header-icon");
-        addClassName("entities-view-header-icon");
+        addClassName(ENTITIES_ID_PREFIX + "-view-header-icon");
     }
 }

@@ -10,13 +10,14 @@ import org.ok.milki.metadata.ui.entity.EntityView;
 import static java.lang.String.valueOf;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
 
-@CssImport(STYLES_FOLDER + "entities/entities-view-body" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + "-view-body" + CSS_FILE_EXTENSION)
 public abstract class EntitiesViewBody extends VerticalLayout {
 
     public EntitiesViewBody(String idPrefix, String entityName, Class<? extends EntityView> entityNavigationTarget) {
         setId(idPrefix + "-view-body");
-        addClassName("entities-view-body");
+        addClassName(ENTITIES_ID_PREFIX + "-view-body");
         addClassName(idPrefix + "-view-body");
 
         setHeightFull();

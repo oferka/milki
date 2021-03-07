@@ -7,8 +7,9 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
 
-@CssImport(STYLES_FOLDER + "entities/entities-view-header-title-panel" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + "-view-header-title-panel" + CSS_FILE_EXTENSION)
 public class EntitiesViewHeaderTitlePanel extends HorizontalLayout {
 
     private final EntitiesViewHeaderIcon entitiesViewHeaderIcon;
@@ -17,7 +18,7 @@ public class EntitiesViewHeaderTitlePanel extends HorizontalLayout {
 
     public EntitiesViewHeaderTitlePanel(String idPrefix, String titleText, int count, VaadinIcon vaadinIcon) {
         setId(idPrefix + "-view-header-title-panel");
-        addClassName("entities-view-header-title-panel");
+        addClassName(ENTITIES_ID_PREFIX + "-view-header-title-panel");
 
         entitiesViewHeaderIcon = new EntitiesViewHeaderIcon(idPrefix, vaadinIcon);
         entitiesViewHeaderType = new EntitiesViewHeaderType(idPrefix, titleText);

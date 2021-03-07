@@ -11,8 +11,9 @@ import com.vaadin.flow.component.notification.Notification;
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
 
-@CssImport(STYLES_FOLDER + "entities/entities-filter-button" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + "-filter-button" + CSS_FILE_EXTENSION)
 public class EntitiesFilterButton extends Button {
 
     private final String idPrefix;
@@ -20,7 +21,7 @@ public class EntitiesFilterButton extends Button {
     public EntitiesFilterButton(String idPrefix) {
         this.idPrefix = idPrefix;
         setId(idPrefix + "-filter-button");
-        addClassName("entities-filter-button");
+        addClassName(ENTITIES_ID_PREFIX + "-filter-button");
 
         setIcon(VaadinIcon.FILTER.create());
         setText("Filter");

@@ -16,7 +16,7 @@ import static org.ok.milki.metadata.ui.tools.ToolsView.*;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + "-view" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class ToolsView extends EntitiesView {
 
     public static final String ROUTE = "tools";

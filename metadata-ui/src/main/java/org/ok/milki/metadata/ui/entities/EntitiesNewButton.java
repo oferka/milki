@@ -12,8 +12,9 @@ import static com.vaadin.flow.component.button.ButtonVariant.LUMO_PRIMARY;
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
 
-@CssImport(STYLES_FOLDER + "entities/entities-new-button" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + "-new-button" + CSS_FILE_EXTENSION)
 public class EntitiesNewButton extends Button {
 
     private final String idPrefix;
@@ -23,7 +24,7 @@ public class EntitiesNewButton extends Button {
         this.idPrefix = idPrefix;
         this.entityName = entityName;
         setId(idPrefix + "-new-button");
-        addClassName("entities-new-button");
+        addClassName(ENTITIES_ID_PREFIX + "-new-button");
 
         setIcon(VaadinIcon.PLUS_CIRCLE.create());
         setText("New " + entityName);
