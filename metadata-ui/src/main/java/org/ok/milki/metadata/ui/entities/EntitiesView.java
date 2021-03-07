@@ -5,9 +5,10 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import org.ok.milki.metadata.ui.EntityType;
 
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "entities/entities-view.css")
+@CssImport(STYLES_FOLDER + "entities/entities-view" + CSS_FILE_EXTENSION)
 public abstract class EntitiesView extends VerticalLayout {
 
     private final EntitiesViewHeader entitiesViewHeader;

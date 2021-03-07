@@ -3,9 +3,10 @@ package org.ok.milki.metadata.ui.entity;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "entity/entity-view-header-actions.css")
+@CssImport(STYLES_FOLDER + "entity/entity-view-header-actions" + CSS_FILE_EXTENSION)
 public class EntityViewHeaderActions extends HorizontalLayout {
 
     private final EntityShareButton entityShareButton;

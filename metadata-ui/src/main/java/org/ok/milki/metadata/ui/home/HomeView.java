@@ -11,13 +11,14 @@ import com.vaadin.flow.router.RouteAlias;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.HOME_O;
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.home.HomeView.ROUTE;
 import static org.ok.milki.metadata.ui.home.HomeView.VIEW_NAME;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ROUTE + "-view.css")
+@CssImport(STYLES_FOLDER + ROUTE + "/" + ROUTE + "-view" + CSS_FILE_EXTENSION)
 @RouteAlias(value = "", layout = MainView.class)
 public class HomeView extends HorizontalLayout {
 

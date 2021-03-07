@@ -7,9 +7,10 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "main/main-view-tab-router-link-content.css")
+@CssImport(STYLES_FOLDER + "main/main-view-tab-router-link-content" + CSS_FILE_EXTENSION)
 public class MainViewTabRouterLinkContent extends HorizontalLayout {
 
     public static String ID_SUFFIX = "-content";

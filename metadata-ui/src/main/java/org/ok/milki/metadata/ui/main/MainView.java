@@ -6,9 +6,10 @@ import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.server.PWA;
 
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "main/main-view.css")
+@CssImport(STYLES_FOLDER + "main/main-view" + CSS_FILE_EXTENSION)
 @PWA(name = "Milki", shortName = "Milki", enableInstallPrompt = false)
 @JsModule("./styles/shared-styles.js")
 public class MainView extends AppLayout {

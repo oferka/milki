@@ -4,9 +4,10 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "entity/entity-view-header-icon.css")
+@CssImport(STYLES_FOLDER + "entity/entity-view-header-icon" + CSS_FILE_EXTENSION)
 public class EntityViewHeaderIcon extends Icon {
 
     public EntityViewHeaderIcon(String idPrefix, VaadinIcon vaadinIcon) {

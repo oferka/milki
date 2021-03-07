@@ -5,9 +5,10 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "main/main-view-drawer.css")
+@CssImport(STYLES_FOLDER + "main/main-view-drawer" + CSS_FILE_EXTENSION)
 public class MainViewDrawer extends VerticalLayout {
 
     private final MainViewDrawerHeader mainViewDrawerHeader;

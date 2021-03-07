@@ -8,9 +8,10 @@ import com.vaadin.flow.router.RouterLink;
 import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "entity/entity-view-body.css")
+@CssImport(STYLES_FOLDER + "entity/entity-view-body" + CSS_FILE_EXTENSION)
 public abstract class EntityViewBody extends VerticalLayout {
 
     private final Label selectedIdLabel;

@@ -4,9 +4,10 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.H2;
 
 import static java.lang.String.format;
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "entities/entities-view-header-count.css")
+@CssImport(STYLES_FOLDER + "entities/entities-view-header-count" + CSS_FILE_EXTENSION)
 public class EntitiesViewHeaderCount extends H2 {
 
     public EntitiesViewHeaderCount(String idPrefix, int count) {

@@ -10,9 +10,10 @@ import com.vaadin.flow.component.notification.Notification;
 
 import static com.vaadin.flow.component.button.ButtonVariant.LUMO_PRIMARY;
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "entity/entity-export-button.css")
+@CssImport(STYLES_FOLDER + "entity/entity-export-button" + CSS_FILE_EXTENSION)
 public class EntityExportButton extends Button {
 
     private final String idPrefix;

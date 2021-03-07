@@ -5,9 +5,10 @@ import com.vaadin.flow.component.html.H2;
 
 import javax.validation.constraints.NotNull;
 
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "entities/entities-view-header-type.css")
+@CssImport(STYLES_FOLDER + "entities/entities-view-header-type" + CSS_FILE_EXTENSION)
 public class EntitiesViewHeaderType extends H2 {
 
     public EntitiesViewHeaderType(String idPrefix, String titleText) {

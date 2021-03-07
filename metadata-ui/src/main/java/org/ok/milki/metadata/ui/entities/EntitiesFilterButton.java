@@ -9,9 +9,10 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
 
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "entities/entities-filter-button.css")
+@CssImport(STYLES_FOLDER + "entities/entities-filter-button" + CSS_FILE_EXTENSION)
 public class EntitiesFilterButton extends Button {
 
     private final String idPrefix;

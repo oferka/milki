@@ -7,9 +7,10 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.tabs.Tab;
 import org.ok.milki.metadata.ui.EntityType;
 
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "main/main-view-tab.css")
+@CssImport(STYLES_FOLDER + "main/main-view-tab" + CSS_FILE_EXTENSION)
 public class MainViewTab extends Tab {
 
     public static String ID_SUFFIX = "-tab";

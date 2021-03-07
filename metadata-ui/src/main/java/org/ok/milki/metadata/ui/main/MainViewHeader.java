@@ -6,9 +6,10 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 import javax.validation.constraints.NotNull;
 
+import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport(STYLES_FOLDER + "main/main-view-header.css")
+@CssImport(STYLES_FOLDER + "main/main-view-header" + CSS_FILE_EXTENSION)
 public class MainViewHeader extends HorizontalLayout {
 
     private final MainViewDrawerToggle mainViewDrawerToggle;
