@@ -12,18 +12,18 @@ import static org.ok.milki.metadata.ui.EntityType.TOOL;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.entity.EntityView.VIEW_ID_SUFFIX;
-import static org.ok.milki.metadata.ui.tools.ToolView.ID_PREFIX;
-import static org.ok.milki.metadata.ui.tools.ToolView.VIEW_NAME;
-import static org.ok.milki.metadata.ui.tools.ToolsView.ROUTE;
+import static org.ok.milki.metadata.ui.tools.ToolView.TOOL_ID_PREFIX;
+import static org.ok.milki.metadata.ui.tools.ToolView.TOOL_VIEW_NAME;
+import static org.ok.milki.metadata.ui.tools.ToolsView.TOOLS_ID_PREFIX;
+import static org.ok.milki.metadata.ui.tools.ToolsView.TOOLS_ROUTE;
 
-@Route(value = ROUTE, layout = MainView.class)
-@PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@Route(value = TOOLS_ROUTE, layout = MainView.class)
+@PageTitle(TOOL_VIEW_NAME)
+@CssImport(STYLES_FOLDER + TOOLS_ID_PREFIX + "/" + TOOL_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class ToolView extends EntityView {
 
-    public static final String ROUTE = "tools";
-    public static final String VIEW_NAME = "Tool";
-    public static final String ID_PREFIX = "tool";
+    public static final String TOOL_VIEW_NAME = "Tool";
+    public static final String TOOL_ID_PREFIX = "tool";
 
     @Override
     protected EntityType getEntityType() {

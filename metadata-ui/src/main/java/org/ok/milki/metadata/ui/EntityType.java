@@ -52,6 +52,15 @@ import static org.ok.milki.metadata.ui.repositories.RepositoryView.REPOSITORY_VI
 import static org.ok.milki.metadata.ui.services.ServiceView.SERVICE_ID_PREFIX;
 import static org.ok.milki.metadata.ui.services.ServiceView.SERVICE_VIEW_NAME;
 import static org.ok.milki.metadata.ui.services.ServicesView.*;
+import static org.ok.milki.metadata.ui.teams.TeamView.TEAM_ID_PREFIX;
+import static org.ok.milki.metadata.ui.teams.TeamView.TEAM_VIEW_NAME;
+import static org.ok.milki.metadata.ui.teams.TeamsView.*;
+import static org.ok.milki.metadata.ui.tenants.TenantView.TENANT_ID_PREFIX;
+import static org.ok.milki.metadata.ui.tenants.TenantView.TENANT_VIEW_NAME;
+import static org.ok.milki.metadata.ui.tenants.TenantsView.*;
+import static org.ok.milki.metadata.ui.tools.ToolView.TOOL_ID_PREFIX;
+import static org.ok.milki.metadata.ui.tools.ToolView.TOOL_VIEW_NAME;
+import static org.ok.milki.metadata.ui.tools.ToolsView.*;
 
 @ToString
 @AllArgsConstructor
@@ -165,11 +174,11 @@ public enum EntityType {
     TEAM (
             "Team",
             "Teams",
-            TeamsView.ROUTE,
-            TeamsView.ID_PREFIX,
-            TeamView.ID_PREFIX,
-            TeamsView.VIEW_NAME,
-            TeamView.VIEW_NAME,
+            TEAMS_ROUTE,
+            TEAMS_ID_PREFIX,
+            TEAM_ID_PREFIX,
+            TEAMS_VIEW_NAME,
+            TEAM_VIEW_NAME,
             "Teams view description",
             "Team view description",
             GROUP,
@@ -180,11 +189,11 @@ public enum EntityType {
     TENANT (
             "Tenant",
             "Tenants",
-            TenantsView.ROUTE,
-            TenantsView.ID_PREFIX,
-            TenantView.ID_PREFIX,
-            TenantsView.VIEW_NAME,
-            TenantView.VIEW_NAME,
+            TENANTS_ROUTE,
+            TENANTS_ID_PREFIX,
+            TENANT_ID_PREFIX,
+            TENANTS_VIEW_NAME,
+            TENANT_VIEW_NAME,
             "Tenants view description",
             "Tenant view description",
             BUILDING_O,
@@ -195,11 +204,11 @@ public enum EntityType {
     TOOL (
             "Tool",
             "Tools",
-            ToolsView.ROUTE,
-            ToolsView.ID_PREFIX,
-            ToolView.ID_PREFIX,
-            ToolsView.VIEW_NAME,
-            ToolView.VIEW_NAME,
+            TOOLS_ROUTE,
+            TOOLS_ID_PREFIX,
+            TOOL_ID_PREFIX,
+            TOOLS_VIEW_NAME,
+            TOOL_VIEW_NAME,
             "Tools view description",
             "Tool view description",
             TOOLS,

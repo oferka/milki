@@ -13,14 +13,14 @@ import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.teams.TeamsView.*;
 
-@Route(value = ROUTE, layout = MainView.class)
-@PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@Route(value = TEAMS_ROUTE, layout = MainView.class)
+@PageTitle(TEAMS_VIEW_NAME)
+@CssImport(STYLES_FOLDER + TEAMS_ID_PREFIX + "/" + TEAMS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class TeamsView extends EntitiesView {
 
-    public static final String ROUTE = "teams";
-    public static final String VIEW_NAME = "Teams";
-    public static final String ID_PREFIX = "teams";
+    public static final String TEAMS_ROUTE = "teams";
+    public static final String TEAMS_VIEW_NAME = "Teams";
+    public static final String TEAMS_ID_PREFIX = "teams";
 
     @Override
     protected EntityType getEntityType() {

@@ -14,14 +14,14 @@ import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.tools.ToolsView.*;
 
 
-@Route(value = ROUTE, layout = MainView.class)
-@PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@Route(value = TOOLS_ROUTE, layout = MainView.class)
+@PageTitle(TOOLS_VIEW_NAME)
+@CssImport(STYLES_FOLDER + TOOLS_ID_PREFIX + "/" + TOOLS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class ToolsView extends EntitiesView {
 
-    public static final String ROUTE = "tools";
-    public static final String VIEW_NAME = "Tools";
-    public static final String ID_PREFIX = "tools";
+    public static final String TOOLS_ROUTE = "tools";
+    public static final String TOOLS_VIEW_NAME = "Tools";
+    public static final String TOOLS_ID_PREFIX = "tools";
 
     @Override
     protected EntityType getEntityType() {
