@@ -7,7 +7,9 @@ import com.vaadin.flow.router.BeforeEvent;
 import com.vaadin.flow.router.HasUrlParameter;
 import org.ok.milki.metadata.ui.EntityType;
 
-@CssImport("./styles/views/entity/entity-view.css")
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+
+@CssImport(STYLES_FOLDER + "entity/entity-view.css")
 public abstract class EntityView extends VerticalLayout implements HasUrlParameter<String> {
 
     private final EntityViewHeader entityViewHeader;

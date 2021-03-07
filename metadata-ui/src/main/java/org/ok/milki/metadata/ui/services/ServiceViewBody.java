@@ -4,8 +4,9 @@ import com.vaadin.flow.component.dependency.CssImport;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 
 import static org.ok.milki.metadata.ui.EntityType.SERVICE;
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport("./styles/views/services/service-view-body.css")
+@CssImport(STYLES_FOLDER + "services/service-view-body.css")
 public class ServiceViewBody extends EntityViewBody {
 
     public ServiceViewBody() {

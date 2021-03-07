@@ -8,8 +8,9 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
 
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport("./styles/views/main/main-view-user-help.css")
+@CssImport(STYLES_FOLDER + "main/main-view-user-help.css")
 public class MainViewUserHelp extends Button {
 
     public MainViewUserHelp() {

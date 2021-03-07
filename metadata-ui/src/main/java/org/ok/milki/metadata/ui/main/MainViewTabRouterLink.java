@@ -5,7 +5,9 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.RouterLink;
 
-@CssImport("./styles/views/main/main-view-tab-router-link.css")
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+
+@CssImport(STYLES_FOLDER + "main/main-view-tab-router-link.css")
 public class MainViewTabRouterLink extends RouterLink {
 
     public static String ID_SUFFIX = "-router-link";

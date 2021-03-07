@@ -8,8 +8,9 @@ import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entity.EntityView;
 
 import static java.lang.String.valueOf;
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport("./styles/views/entities/entities-view-body.css")
+@CssImport(STYLES_FOLDER + "entities/entities-view-body.css")
 public abstract class EntitiesViewBody extends VerticalLayout {
 
     public EntitiesViewBody(String idPrefix, String entityName, Class<? extends EntityView> entityNavigationTarget) {

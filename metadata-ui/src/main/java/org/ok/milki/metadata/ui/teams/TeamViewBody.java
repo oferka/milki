@@ -4,8 +4,9 @@ import com.vaadin.flow.component.dependency.CssImport;
 import org.ok.milki.metadata.ui.entity.EntityViewBody;
 
 import static org.ok.milki.metadata.ui.EntityType.TEAM;
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport("./styles/views/teams/team-view-body.css")
+@CssImport(STYLES_FOLDER + "teams/team-view-body.css")
 public class TeamViewBody extends EntityViewBody {
 
     public TeamViewBody() {

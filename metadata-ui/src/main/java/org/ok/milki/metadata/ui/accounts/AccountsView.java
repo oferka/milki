@@ -9,11 +9,12 @@ import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static org.ok.milki.metadata.ui.EntityType.ACCOUNT;
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.accounts.AccountsView.*;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/" + ROUTE + "/" + ID_PREFIX + "-view.css")
+@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + "-view.css")
 public class AccountsView extends EntitiesView {
 
     public static final String ROUTE = "accounts";

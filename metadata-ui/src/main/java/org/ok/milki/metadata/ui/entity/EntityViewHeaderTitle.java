@@ -5,7 +5,9 @@ import com.vaadin.flow.component.html.H2;
 
 import javax.validation.constraints.NotNull;
 
-@CssImport("./styles/views/entity/entity-view-header-title.css")
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+
+@CssImport(STYLES_FOLDER + "entity/entity-view-header-title.css")
 public class EntityViewHeaderTitle extends H2 {
 
     public EntityViewHeaderTitle(String idPrefix, String titleText) {

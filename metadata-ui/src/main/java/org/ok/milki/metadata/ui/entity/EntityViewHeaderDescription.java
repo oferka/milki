@@ -5,7 +5,9 @@ import com.vaadin.flow.component.html.Span;
 
 import javax.validation.constraints.NotNull;
 
-@CssImport("./styles/views/entity/entity-view-header-description.css")
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+
+@CssImport(STYLES_FOLDER + "entity/entity-view-header-description.css")
 public class EntityViewHeaderDescription extends Span {
 
     public EntityViewHeaderDescription(String idPrefix, String descriptionText) {

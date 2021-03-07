@@ -3,7 +3,9 @@ package org.ok.milki.metadata.ui.main;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.CssImport;
 
-@CssImport("./styles/views/main/main-view-drawer-toggle.css")
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+
+@CssImport(STYLES_FOLDER + "main/main-view-drawer-toggle.css")
 public class MainViewDrawerToggle extends DrawerToggle {
 
     public MainViewDrawerToggle() {

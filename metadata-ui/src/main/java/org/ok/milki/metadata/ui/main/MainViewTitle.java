@@ -5,7 +5,9 @@ import com.vaadin.flow.component.html.H1;
 
 import javax.validation.constraints.NotNull;
 
-@CssImport("./styles/views/main/main-view-title.css")
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+
+@CssImport(STYLES_FOLDER + "main/main-view-title.css")
 public class MainViewTitle extends H1 {
 
     public MainViewTitle() {

@@ -6,8 +6,9 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.dom.DomEvent;
 
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport("./styles/views/main/main-view-user-avatar.css")
+@CssImport(STYLES_FOLDER + "main/main-view-user-avatar.css")
 public class MainViewUserAvatar extends Avatar {
 
     public MainViewUserAvatar() {

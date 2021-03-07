@@ -5,7 +5,9 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
-@CssImport("./styles/views/entities/entities-view-header.css")
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+
+@CssImport(STYLES_FOLDER + "entities/entities-view-header.css")
 public class EntitiesViewHeader extends HorizontalLayout {
 
     private final EntitiesViewHeaderInfo entitiesViewHeaderInfo;

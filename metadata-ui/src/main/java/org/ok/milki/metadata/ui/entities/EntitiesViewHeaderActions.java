@@ -3,7 +3,9 @@ package org.ok.milki.metadata.ui.entities;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
-@CssImport("./styles/views/entities/entities-view-header-actions.css")
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+
+@CssImport(STYLES_FOLDER + "entities/entities-view-header-actions.css")
 public class EntitiesViewHeaderActions extends HorizontalLayout {
 
     private final EntitiesFilterButton entitiesFilterButton;

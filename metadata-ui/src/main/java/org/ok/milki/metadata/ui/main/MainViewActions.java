@@ -4,7 +4,9 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
-@CssImport("./styles/views/main/main-view-actions.css")
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+
+@CssImport(STYLES_FOLDER + "main/main-view-actions.css")
 public class MainViewActions extends HorizontalLayout {
 
     private final MainViewUserHelp mainViewUserHelp;

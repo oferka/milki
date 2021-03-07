@@ -10,8 +10,9 @@ import com.vaadin.flow.component.notification.Notification;
 
 import static com.vaadin.flow.component.button.ButtonVariant.LUMO_PRIMARY;
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport("./styles/views/entities/entities-new-button.css")
+@CssImport(STYLES_FOLDER + "entities/entities-new-button.css")
 public class EntitiesNewButton extends Button {
 
     private final String idPrefix;

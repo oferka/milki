@@ -10,12 +10,13 @@ import com.vaadin.flow.router.Route;
 import org.ok.milki.metadata.ui.main.MainView;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.LINES_LIST;
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.feed.FeedView.ROUTE;
 import static org.ok.milki.metadata.ui.feed.FeedView.VIEW_NAME;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport("./styles/views/"+ ROUTE + "/" + ROUTE + "-view.css")
+@CssImport(STYLES_FOLDER + ROUTE + "/" + ROUTE + "-view.css")
 public class FeedView extends HorizontalLayout {
 
     public static final String ROUTE = "feed";

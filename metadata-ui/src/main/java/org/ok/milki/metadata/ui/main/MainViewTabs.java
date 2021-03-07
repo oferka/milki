@@ -12,8 +12,9 @@ import org.ok.milki.metadata.ui.home.HomeView;
 import java.util.Optional;
 
 import static org.ok.milki.metadata.ui.EntityType.*;
+import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 
-@CssImport("./styles/views/main/main-view-tabs.css")
+@CssImport(STYLES_FOLDER + "main/main-view-tabs.css")
 public class MainViewTabs extends Tabs {
 
     public MainViewTabs() {
