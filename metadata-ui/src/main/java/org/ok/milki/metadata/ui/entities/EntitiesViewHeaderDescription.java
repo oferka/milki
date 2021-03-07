@@ -6,9 +6,9 @@ import com.vaadin.flow.component.html.Span;
 import javax.validation.constraints.NotNull;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
-import static org.ok.milki.metadata.ui.entities.EntitiesViewHeaderDescription.VIEW_HEADER_DESCRIPTION_ID_SUFFIX;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
+import static org.ok.milki.metadata.ui.entities.EntitiesViewHeaderDescription.VIEW_HEADER_DESCRIPTION_ID_SUFFIX;
 
 @CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + VIEW_HEADER_DESCRIPTION_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class EntitiesViewHeaderDescription extends Span {

@@ -4,7 +4,6 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
-import org.ok.milki.metadata.data.EntityDataProvider;
 import org.ok.milki.metadata.ui.accounts.AccountView;
 import org.ok.milki.metadata.ui.accounts.AccountsView;
 import org.ok.milki.metadata.ui.employees.EmployeeView;
@@ -27,12 +26,12 @@ import org.ok.milki.metadata.ui.tenants.TenantView;
 import org.ok.milki.metadata.ui.tenants.TenantsView;
 import org.ok.milki.metadata.ui.tools.ToolView;
 import org.ok.milki.metadata.ui.tools.ToolsView;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.*;
-import static org.apache.commons.lang3.RandomUtils.nextInt;
 import static org.ok.milki.metadata.ui.accounts.AccountView.ACCOUNT_ID_PREFIX;
 import static org.ok.milki.metadata.ui.accounts.AccountView.ACCOUNT_VIEW_NAME;
 import static org.ok.milki.metadata.ui.accounts.AccountsView.*;

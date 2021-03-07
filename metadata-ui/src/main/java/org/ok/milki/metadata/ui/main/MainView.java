@@ -7,10 +7,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.server.PWA;
 
 import static org.ok.milki.metadata.ui.Styles.*;
-import static org.ok.milki.metadata.ui.main.MainView.VIEW_ID_PREFIX;
-import static org.ok.milki.metadata.ui.main.MainView.APPLICATION_NAME;
-import static org.ok.milki.metadata.ui.main.MainView.APPLICATION_SHORT_NAME;
-import static org.ok.milki.metadata.ui.main.MainView.VIEW_ID_SUFFIX;
+import static org.ok.milki.metadata.ui.main.MainView.*;
 
 @CssImport(STYLES_FOLDER + VIEW_ID_PREFIX + "/" + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 @PWA(name = APPLICATION_NAME, shortName = APPLICATION_SHORT_NAME, enableInstallPrompt = false)

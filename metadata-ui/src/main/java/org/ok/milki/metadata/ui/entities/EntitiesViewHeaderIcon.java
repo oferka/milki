@@ -5,9 +5,9 @@ import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
-import static org.ok.milki.metadata.ui.entities.EntitiesViewHeaderIcon.VIEW_HEADER_ICON_ID_SUFFIX;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
+import static org.ok.milki.metadata.ui.entities.EntitiesViewHeaderIcon.VIEW_HEADER_ICON_ID_SUFFIX;
 
 @CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + VIEW_HEADER_ICON_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class EntitiesViewHeaderIcon extends Icon {

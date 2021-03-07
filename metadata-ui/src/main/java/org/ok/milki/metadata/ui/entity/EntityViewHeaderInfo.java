@@ -6,7 +6,6 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
-import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
 import static org.ok.milki.metadata.ui.entity.EntityView.ENTITY_ID_PREFIX;
 import static org.ok.milki.metadata.ui.entity.EntityViewHeaderInfo.VIEW_HEADER_INFO_ID_SUFFIX;
 
