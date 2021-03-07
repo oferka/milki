@@ -11,8 +11,9 @@ import static java.lang.String.valueOf;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
+import static org.ok.milki.metadata.ui.entities.EntitiesViewBody.VIEW_BODY_ID_SUFFIX;
 
-@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + "-view-body" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + VIEW_BODY_ID_SUFFIX + CSS_FILE_EXTENSION)
 public abstract class EntitiesViewBody extends VerticalLayout {
 
     public static final String VIEW_BODY_ID_SUFFIX = "-view-body";
