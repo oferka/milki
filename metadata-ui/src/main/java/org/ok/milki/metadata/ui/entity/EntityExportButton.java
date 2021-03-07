@@ -12,9 +12,13 @@ import static com.vaadin.flow.component.button.ButtonVariant.LUMO_PRIMARY;
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entity.EntityExportButton.EXPORT_BUTTON_ID_SUFFIX;
+import static org.ok.milki.metadata.ui.entity.EntityView.ENTITY_ID_PREFIX;
 
-@CssImport(STYLES_FOLDER + "entity/entity-export-button" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITY_ID_PREFIX + "/" + ENTITY_ID_PREFIX + EXPORT_BUTTON_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class EntityExportButton extends Button {
+
+    public static final String EXPORT_BUTTON_ID_SUFFIX = "-export-button";
 
     private final String idPrefix;
     private final String entityName;
@@ -22,8 +26,8 @@ public class EntityExportButton extends Button {
     public EntityExportButton(String idPrefix, String entityName) {
         this.idPrefix = idPrefix;
         this.entityName = entityName;
-        setId(idPrefix + "-export-button");
-        addClassName("entity-export-button");
+        setId(idPrefix + EXPORT_BUTTON_ID_SUFFIX);
+        addClassName(ENTITY_ID_PREFIX + EXPORT_BUTTON_ID_SUFFIX);
 
         setIcon(VaadinIcon.DOWNLOAD.create());
         setText("Export " + entityName);

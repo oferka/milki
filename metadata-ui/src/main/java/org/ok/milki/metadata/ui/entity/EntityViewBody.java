@@ -10,8 +10,11 @@ import org.ok.milki.metadata.ui.entities.EntitiesView;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
+import static org.ok.milki.metadata.ui.entity.EntityView.ENTITY_ID_PREFIX;
+import static org.ok.milki.metadata.ui.entity.EntityViewBody.VIEW_BODY_ID_SUFFIX;
 
-@CssImport(STYLES_FOLDER + "entity/entity-view-body" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITY_ID_PREFIX + "/" + ENTITY_ID_PREFIX + VIEW_BODY_ID_SUFFIX + CSS_FILE_EXTENSION)
 public abstract class EntityViewBody extends VerticalLayout {
 
     public static final String VIEW_BODY_ID_SUFFIX = "-view-body";
@@ -20,9 +23,9 @@ public abstract class EntityViewBody extends VerticalLayout {
     private final RouterLink entitiesRouterLink;
 
     public EntityViewBody(String idPrefix, String entitiesViewName, Class<? extends EntitiesView> entitiesNavigationTarget) {
-        setId(idPrefix + "-view-body");
-        addClassName("entity-view-body");
-        addClassName(idPrefix + "-view-body");
+        setId(idPrefix + VIEW_BODY_ID_SUFFIX);
+        addClassName(ENTITY_ID_PREFIX + VIEW_BODY_ID_SUFFIX);
+        addClassName(idPrefix + VIEW_BODY_ID_SUFFIX);
 
         setHeightFull();
         setAlignItems(FlexComponent.Alignment.CENTER);

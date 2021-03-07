@@ -11,16 +11,20 @@ import com.vaadin.flow.component.notification.Notification;
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entity.EntityShareButton.SHARE_BUTTON_ID_SUFFIX;
+import static org.ok.milki.metadata.ui.entity.EntityView.ENTITY_ID_PREFIX;
 
-@CssImport(STYLES_FOLDER + "entity/entity-share-button" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITY_ID_PREFIX + "/" + ENTITY_ID_PREFIX + SHARE_BUTTON_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class EntityShareButton extends Button {
+
+    public static final String SHARE_BUTTON_ID_SUFFIX = "-share-button";
 
     private final String idPrefix;
 
     public EntityShareButton(String idPrefix) {
         this.idPrefix = idPrefix;
-        setId(idPrefix + "-share-button");
-        addClassName("entity-share-button");
+        setId(idPrefix + SHARE_BUTTON_ID_SUFFIX);
+        addClassName(ENTITY_ID_PREFIX + SHARE_BUTTON_ID_SUFFIX);
 
         setIcon(VaadinIcon.SHARE.create());
         setText("Share");

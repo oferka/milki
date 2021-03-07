@@ -7,16 +7,20 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entity.EntityView.ENTITY_ID_PREFIX;
+import static org.ok.milki.metadata.ui.entity.EntityViewHeaderTitlePanel.VIEW_HEADER_TITLE_PANEL_ID_SUFFIX;
 
-@CssImport(STYLES_FOLDER + "entity/entity-view-header-title-panel" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITY_ID_PREFIX + "/" + ENTITY_ID_PREFIX + VIEW_HEADER_TITLE_PANEL_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class EntityViewHeaderTitlePanel extends HorizontalLayout {
+
+    public static final String VIEW_HEADER_TITLE_PANEL_ID_SUFFIX = "-view-header-title-panel";
 
     private final EntityViewHeaderIcon entityViewHeaderIcon;
     private final EntityViewHeaderTitle entityViewHeaderTitle;
 
     public EntityViewHeaderTitlePanel(String idPrefix, String titleText, VaadinIcon vaadinIcon) {
-        setId(idPrefix + "-view-header-title-panel");
-        addClassName("entity-view-header-title-panel");
+        setId(idPrefix + VIEW_HEADER_TITLE_PANEL_ID_SUFFIX);
+        addClassName(ENTITY_ID_PREFIX + VIEW_HEADER_TITLE_PANEL_ID_SUFFIX);
 
         entityViewHeaderIcon = new EntityViewHeaderIcon(idPrefix, vaadinIcon);
         entityViewHeaderTitle = new EntityViewHeaderTitle(idPrefix, titleText);

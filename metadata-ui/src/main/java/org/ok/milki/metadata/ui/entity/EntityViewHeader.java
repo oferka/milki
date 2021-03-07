@@ -7,16 +7,21 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
+import static org.ok.milki.metadata.ui.entity.EntityView.ENTITY_ID_PREFIX;
+import static org.ok.milki.metadata.ui.entity.EntityViewHeader.VIEW_HEADER_ID_SUFFIX;
 
-@CssImport(STYLES_FOLDER + "entity/entity-view-header" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITY_ID_PREFIX + "/" + ENTITY_ID_PREFIX + VIEW_HEADER_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class EntityViewHeader extends HorizontalLayout {
+
+    public static final String VIEW_HEADER_ID_SUFFIX = "-view-header";
 
     private final EntityViewHeaderInfo entityViewHeaderInfo;
     private final EntityViewHeaderActions entityViewHeaderActions;
 
     public EntityViewHeader(String idPrefix, String titleText, String descriptionText, String entityName, VaadinIcon vaadinIcon) {
-        setId(idPrefix + "-view-header");
-        addClassName("entity-view-header");
+        setId(idPrefix + VIEW_HEADER_ID_SUFFIX);
+        addClassName(ENTITY_ID_PREFIX + VIEW_HEADER_ID_SUFFIX);
 
         setWidthFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
