@@ -46,6 +46,9 @@ import static org.ok.milki.metadata.ui.positions.PositionsView.*;
 import static org.ok.milki.metadata.ui.products.ProductView.PRODUCT_ID_PREFIX;
 import static org.ok.milki.metadata.ui.products.ProductView.PRODUCT_VIEW_NAME;
 import static org.ok.milki.metadata.ui.products.ProductsView.*;
+import static org.ok.milki.metadata.ui.repositories.RepositoriesView.*;
+import static org.ok.milki.metadata.ui.repositories.RepositoryView.REPOSITORY_ID_PREFIX;
+import static org.ok.milki.metadata.ui.repositories.RepositoryView.REPOSITORY_VIEW_NAME;
 
 @ToString
 @AllArgsConstructor
@@ -129,11 +132,11 @@ public enum EntityType {
     REPOSITORY (
             "Repository",
             "Repositories",
-            RepositoriesView.ROUTE,
-            RepositoriesView.ID_PREFIX,
-            RepositoryView.ID_PREFIX,
-            RepositoriesView.VIEW_NAME,
-            RepositoryView.VIEW_NAME,
+            REPOSITORIES_ROUTE,
+            REPOSITORIES_ID_PREFIX,
+            REPOSITORY_ID_PREFIX,
+            REPOSITORIES_VIEW_NAME,
+            REPOSITORY_VIEW_NAME,
             "Repositories view description",
             "Repository view description",
             ROAD_SPLIT,

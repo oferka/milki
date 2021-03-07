@@ -13,14 +13,14 @@ import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.repositories.RepositoriesView.*;
 
-@Route(value = ROUTE, layout = MainView.class)
-@PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@Route(value = REPOSITORIES_ROUTE, layout = MainView.class)
+@PageTitle(REPOSITORIES_VIEW_NAME)
+@CssImport(STYLES_FOLDER + REPOSITORIES_ID_PREFIX + "/" + REPOSITORIES_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class RepositoriesView extends EntitiesView {
 
-    public static final String ROUTE = "repositories";
-    public static final String VIEW_NAME = "Repositories";
-    public static final String ID_PREFIX = "repositories";
+    public static final String REPOSITORIES_ROUTE = "repositories";
+    public static final String REPOSITORIES_VIEW_NAME = "Repositories";
+    public static final String REPOSITORIES_ID_PREFIX = "repositories";
 
     @Override
     protected EntityType getEntityType() {
