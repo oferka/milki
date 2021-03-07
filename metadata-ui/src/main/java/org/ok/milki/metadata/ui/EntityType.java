@@ -49,6 +49,9 @@ import static org.ok.milki.metadata.ui.products.ProductsView.*;
 import static org.ok.milki.metadata.ui.repositories.RepositoriesView.*;
 import static org.ok.milki.metadata.ui.repositories.RepositoryView.REPOSITORY_ID_PREFIX;
 import static org.ok.milki.metadata.ui.repositories.RepositoryView.REPOSITORY_VIEW_NAME;
+import static org.ok.milki.metadata.ui.services.ServiceView.SERVICE_ID_PREFIX;
+import static org.ok.milki.metadata.ui.services.ServiceView.SERVICE_VIEW_NAME;
+import static org.ok.milki.metadata.ui.services.ServicesView.*;
 
 @ToString
 @AllArgsConstructor
@@ -147,11 +150,11 @@ public enum EntityType {
     SERVICE (
             "Service",
             "Services",
-            ServicesView.ROUTE,
-            ServicesView.ID_PREFIX,
-            ServiceView.ID_PREFIX,
-            ServicesView.VIEW_NAME,
-            ServiceView.VIEW_NAME,
+            SERVICES_ROUTE,
+            SERVICES_ID_PREFIX,
+            SERVICE_ID_PREFIX,
+            SERVICES_VIEW_NAME,
+            SERVICE_VIEW_NAME,
             "Services view description",
             "Service view description",
             CLUSTER,
