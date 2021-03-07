@@ -12,15 +12,16 @@ import static org.ok.milki.metadata.ui.EntityType.POSITION;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.positions.PositionView.*;
+import static org.ok.milki.metadata.ui.positions.PositionsView.POSITIONS_ID_PREFIX;
+import static org.ok.milki.metadata.ui.positions.PositionsView.POSITIONS_ROUTE;
 
-@Route(value = ROUTE, layout = MainView.class)
-@PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@Route(value = POSITIONS_ROUTE, layout = MainView.class)
+@PageTitle(POSITION_VIEW_NAME)
+@CssImport(STYLES_FOLDER + POSITIONS_ID_PREFIX + "/" + POSITION_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class PositionView extends EntityView {
 
-    public static final String ROUTE = "positions";
-    public static final String VIEW_NAME = "Position";
-    public static final String ID_PREFIX = "position";
+    public static final String POSITION_VIEW_NAME = "Position";
+    public static final String POSITION_ID_PREFIX = "position";
 
     @Override
     protected EntityType getEntityType() {

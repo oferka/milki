@@ -37,6 +37,12 @@ import static org.ok.milki.metadata.ui.accounts.AccountsView.*;
 import static org.ok.milki.metadata.ui.employees.EmployeeView.EMPLOYEE_ID_PREFIX;
 import static org.ok.milki.metadata.ui.employees.EmployeeView.EMPLOYEE_VIEW_NAME;
 import static org.ok.milki.metadata.ui.employees.EmployeesView.*;
+import static org.ok.milki.metadata.ui.interviews.InterviewView.INTERVIEW_ID_PREFIX;
+import static org.ok.milki.metadata.ui.interviews.InterviewView.INTERVIEW_VIEW_NAME;
+import static org.ok.milki.metadata.ui.interviews.InterviewsView.*;
+import static org.ok.milki.metadata.ui.positions.PositionView.POSITION_ID_PREFIX;
+import static org.ok.milki.metadata.ui.positions.PositionView.POSITION_VIEW_NAME;
+import static org.ok.milki.metadata.ui.positions.PositionsView.*;
 
 @ToString
 @AllArgsConstructor
@@ -75,11 +81,11 @@ public enum EntityType {
     INTERVIEW (
             "Interview",
             "Interviews",
-            InterviewsView.INTERVIEWS_ROUTE,
-            InterviewsView.INTERVIEWS_ID_PREFIX,
-            InterviewView.INTERVIEW_ID_PREFIX,
-            InterviewsView.INTERVIEWS_VIEW_NAME,
-            InterviewView.INTERVIEW_VIEW_NAME,
+            INTERVIEWS_ROUTE,
+            INTERVIEWS_ID_PREFIX,
+            INTERVIEW_ID_PREFIX,
+            INTERVIEWS_VIEW_NAME,
+            INTERVIEW_VIEW_NAME,
             "Interviews view description",
             "Interview view description",
             SPECIALIST,
@@ -90,11 +96,11 @@ public enum EntityType {
     POSITION (
             "Position",
             "Positions",
-            PositionsView.ROUTE,
-            PositionsView.ID_PREFIX,
-            PositionView.ID_PREFIX,
-            PositionsView.VIEW_NAME,
-            PositionView.VIEW_NAME,
+            POSITIONS_ROUTE,
+            POSITIONS_ID_PREFIX,
+            POSITION_ID_PREFIX,
+            POSITIONS_VIEW_NAME,
+            POSITION_VIEW_NAME,
             "Positions view description",
             "Position view description",
             USER_CHECK,
