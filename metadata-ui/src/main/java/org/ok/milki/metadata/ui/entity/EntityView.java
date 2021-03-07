@@ -9,16 +9,21 @@ import org.ok.milki.metadata.ui.EntityType;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entity.EntityView.ENTITY_ID_PREFIX;
+import static org.ok.milki.metadata.ui.entity.EntityView.VIEW_ID_SUFFIX;
 
-@CssImport(STYLES_FOLDER + "entity/entity-view" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITY_ID_PREFIX + "/" + ENTITY_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public abstract class EntityView extends VerticalLayout implements HasUrlParameter<String> {
+
+    public static final String ENTITY_ID_PREFIX = "entity";
+    public static final String VIEW_ID_SUFFIX = "-view";
 
     private final EntityViewHeader entityViewHeader;
     private final EntityViewBody entityViewBody;
 
     public EntityView() {
-        setId(getEntityType().getEntityIdPrefix() + "-view");
-        addClassName("entity-view");
+        setId(getEntityType().getEntityIdPrefix() + VIEW_ID_SUFFIX);
+        addClassName(ENTITY_ID_PREFIX + VIEW_ID_SUFFIX);
 
         setHeightFull();
         setAlignItems(FlexComponent.Alignment.CENTER);

@@ -14,10 +14,11 @@ import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.accounts.AccountView.ID_PREFIX;
 import static org.ok.milki.metadata.ui.accounts.AccountView.VIEW_NAME;
 import static org.ok.milki.metadata.ui.accounts.AccountsView.ROUTE;
+import static org.ok.milki.metadata.ui.entity.EntityView.VIEW_ID_SUFFIX;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + "-view" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class AccountView extends EntityView {
 
     public static final String VIEW_NAME = "Account";

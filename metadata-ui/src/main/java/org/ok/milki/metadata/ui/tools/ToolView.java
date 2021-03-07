@@ -11,13 +11,14 @@ import org.ok.milki.metadata.ui.main.MainView;
 import static org.ok.milki.metadata.ui.EntityType.TOOL;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.entity.EntityView.VIEW_ID_SUFFIX;
 import static org.ok.milki.metadata.ui.tools.ToolView.ID_PREFIX;
 import static org.ok.milki.metadata.ui.tools.ToolView.VIEW_NAME;
 import static org.ok.milki.metadata.ui.tools.ToolsView.ROUTE;
 
 @Route(value = ROUTE, layout = MainView.class)
 @PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + "-view" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class ToolView extends EntityView {
 
     public static final String ROUTE = "tools";
