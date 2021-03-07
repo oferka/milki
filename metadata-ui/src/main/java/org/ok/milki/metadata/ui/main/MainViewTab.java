@@ -9,10 +9,13 @@ import org.ok.milki.metadata.ui.EntityType;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.main.MainView.VIEW_ID_PREFIX;
+import static org.ok.milki.metadata.ui.main.MainViewTab.VIEW_ID_SUFFIX;
 
-@CssImport(STYLES_FOLDER + "main/main-view-tab" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + VIEW_ID_PREFIX + "/" + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class MainViewTab extends Tab {
 
+    public static final String VIEW_ID_SUFFIX = "main-view-tab";
     public static String ID_SUFFIX = "-tab";
 
     private final MainViewTabRouterLink mainViewTabRouterLink;

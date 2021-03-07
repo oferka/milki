@@ -8,16 +8,20 @@ import javax.validation.constraints.NotNull;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.main.MainView.VIEW_ID_PREFIX;
+import static org.ok.milki.metadata.ui.main.MainViewHeader.VIEW_ID_SUFFIX;
 
-@CssImport(STYLES_FOLDER + "main/main-view-header" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + VIEW_ID_PREFIX + "/" + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class MainViewHeader extends HorizontalLayout {
+
+    public static final String VIEW_ID_SUFFIX = "main-view-header";
 
     private final MainViewDrawerToggle mainViewDrawerToggle;
     private final MainViewTitle mainViewTitle;
     private final MainViewActions mainViewActions;
 
     public MainViewHeader() {
-        setId("main-view-header");
+        setId(VIEW_ID_SUFFIX);
         setWidthFull();
         setSpacing(false);
         setAlignItems(FlexComponent.Alignment.CENTER);

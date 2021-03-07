@@ -10,12 +10,16 @@ import com.vaadin.flow.component.notification.Notification;
 import static com.vaadin.flow.component.notification.Notification.Position.MIDDLE;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.main.MainView.VIEW_ID_PREFIX;
+import static org.ok.milki.metadata.ui.main.MainViewUserNotifications.VIEW_ID_SUFFIX;
 
-@CssImport(STYLES_FOLDER + "main/main-view-user-notifications" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + VIEW_ID_PREFIX + "/" + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class MainViewUserNotifications extends Button {
 
+    public static final String VIEW_ID_SUFFIX = "main-view-user-notifications";
+
     public MainViewUserNotifications() {
-        setId("main-view-user-notifications");
+        setId(VIEW_ID_SUFFIX);
 
         Icon notificationsIcon = VaadinIcon.BELL_O.create();
         setIcon(notificationsIcon);

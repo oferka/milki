@@ -6,9 +6,13 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.main.MainView.VIEW_ID_PREFIX;
+import static org.ok.milki.metadata.ui.main.MainViewActions.VIEW_ID_SUFFIX;
 
-@CssImport(STYLES_FOLDER + "main/main-view-actions" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + VIEW_ID_PREFIX + "/" + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class MainViewActions extends HorizontalLayout {
+
+    public static final String VIEW_ID_SUFFIX = "main-view-actions";
 
     private final MainViewUserHelp mainViewUserHelp;
     private final MainViewUserSettings mainViewUserSettings;
@@ -16,7 +20,7 @@ public class MainViewActions extends HorizontalLayout {
     private final MainViewUserAvatar mainViewUserAvatar;
 
     public MainViewActions() {
-        setId("main-view-actions");
+        setId(VIEW_ID_SUFFIX);
 
         mainViewUserHelp = new MainViewUserHelp();
         mainViewUserSettings = new MainViewUserSettings();
