@@ -6,18 +6,21 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
+import static org.ok.milki.metadata.ui.entities.EntitiesViewHeader.VIEW_HEADER_ID_SUFFIX;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
 
-@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + "-view-header" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + VIEW_HEADER_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class EntitiesViewHeader extends HorizontalLayout {
+
+    public static final String VIEW_HEADER_ID_SUFFIX = "-view-header";
 
     private final EntitiesViewHeaderInfo entitiesViewHeaderInfo;
     private final EntitiesViewHeaderActions entitiesViewHeaderActions;
 
     public EntitiesViewHeader(String idPrefix, String titleText, int count, String descriptionText, String entityName, VaadinIcon vaadinIcon) {
-        setId(idPrefix + "-view-header");
-        addClassName(ENTITIES_ID_PREFIX + "-view-header");
+        setId(idPrefix + VIEW_HEADER_ID_SUFFIX);
+        addClassName(ENTITIES_ID_PREFIX + VIEW_HEADER_ID_SUFFIX);
 
         setWidthFull();
         setAlignItems(FlexComponent.Alignment.CENTER);

@@ -5,15 +5,18 @@ import com.vaadin.flow.component.html.H2;
 
 import static java.lang.String.format;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
+import static org.ok.milki.metadata.ui.entities.EntitiesViewHeaderCount.VIEW_HEADER_COUNT_ID_SUFFIX;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
 
-@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + "-view-header-count" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + VIEW_HEADER_COUNT_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class EntitiesViewHeaderCount extends H2 {
 
+    public static final String VIEW_HEADER_COUNT_ID_SUFFIX = "-view-header-count";
+
     public EntitiesViewHeaderCount(String idPrefix, int count) {
-        setId(idPrefix + "-view-header-count");
-        addClassName(ENTITIES_ID_PREFIX + "-view-header-count");
+        setId(idPrefix + VIEW_HEADER_COUNT_ID_SUFFIX);
+        addClassName(ENTITIES_ID_PREFIX + VIEW_HEADER_COUNT_ID_SUFFIX);
 
         setTitleText(count);
     }

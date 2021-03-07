@@ -18,9 +18,9 @@ public abstract class EntitiesViewBody extends VerticalLayout {
     public static final String VIEW_BODY_ID_SUFFIX = "-view-body";
 
     public EntitiesViewBody(String idPrefix, String entityName, Class<? extends EntityView> entityNavigationTarget) {
-        setId(idPrefix + "-view-body");
-        addClassName(ENTITIES_ID_PREFIX + "-view-body");
-        addClassName(idPrefix + "-view-body");
+        setId(idPrefix + VIEW_BODY_ID_SUFFIX);
+        addClassName(ENTITIES_ID_PREFIX + VIEW_BODY_ID_SUFFIX);
+        addClassName(idPrefix + VIEW_BODY_ID_SUFFIX);
 
         setHeightFull();
         setAlignItems(FlexComponent.Alignment.CENTER);
