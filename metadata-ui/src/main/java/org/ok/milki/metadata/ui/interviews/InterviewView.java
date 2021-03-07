@@ -12,15 +12,16 @@ import static org.ok.milki.metadata.ui.EntityType.INTERVIEW;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.interviews.InterviewView.*;
+import static org.ok.milki.metadata.ui.interviews.InterviewsView.INTERVIEWS_ID_PREFIX;
+import static org.ok.milki.metadata.ui.interviews.InterviewsView.INTERVIEWS_ROUTE;
 
-@Route(value = ROUTE, layout = MainView.class)
-@PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@Route(value = INTERVIEWS_ROUTE, layout = MainView.class)
+@PageTitle(INTERVIEW_VIEW_NAME)
+@CssImport(STYLES_FOLDER + INTERVIEWS_ID_PREFIX + "/" + INTERVIEW_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class InterviewView extends EntityView {
 
-    public static final String ROUTE = "interviews";
-    public static final String VIEW_NAME = "Interview";
-    public static final String ID_PREFIX = "interview";
+    public static final String INTERVIEW_VIEW_NAME = "Interview";
+    public static final String INTERVIEW_ID_PREFIX = "interview";
 
     @Override
     protected EntityType getEntityType() {

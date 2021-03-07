@@ -6,8 +6,10 @@ import org.ok.milki.metadata.ui.entity.EntityViewBody;
 import static org.ok.milki.metadata.ui.EntityType.INTERVIEW;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
+import static org.ok.milki.metadata.ui.interviews.InterviewView.INTERVIEW_ID_PREFIX;
+import static org.ok.milki.metadata.ui.interviews.InterviewsView.INTERVIEWS_ID_PREFIX;
 
-@CssImport(STYLES_FOLDER + "interviews/interview-view-body" + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + INTERVIEWS_ID_PREFIX + "/" + INTERVIEW_ID_PREFIX + "-view-body" + CSS_FILE_EXTENSION)
 public class InterviewViewBody extends EntityViewBody {
 
     public InterviewViewBody() {
