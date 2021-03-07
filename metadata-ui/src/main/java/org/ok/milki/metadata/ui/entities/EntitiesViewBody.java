@@ -15,6 +15,8 @@ import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
 @CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + "-view-body" + CSS_FILE_EXTENSION)
 public abstract class EntitiesViewBody extends VerticalLayout {
 
+    public static final String VIEW_BODY_ID_SUFFIX = "-view-body";
+
     public EntitiesViewBody(String idPrefix, String entityName, Class<? extends EntityView> entityNavigationTarget) {
         setId(idPrefix + "-view-body");
         addClassName(ENTITIES_ID_PREFIX + "-view-body");

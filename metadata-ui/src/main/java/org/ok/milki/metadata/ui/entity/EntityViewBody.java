@@ -14,6 +14,8 @@ import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 @CssImport(STYLES_FOLDER + "entity/entity-view-body" + CSS_FILE_EXTENSION)
 public abstract class EntityViewBody extends VerticalLayout {
 
+    public static final String VIEW_BODY_ID_SUFFIX = "-view-body";
+
     private final Label selectedIdLabel;
     private final RouterLink entitiesRouterLink;
 
