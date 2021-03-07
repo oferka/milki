@@ -13,14 +13,14 @@ import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.accounts.AccountsView.*;
 
-@Route(value = ROUTE, layout = MainView.class)
-@PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@Route(value = ACCOUNTS_ROUTE, layout = MainView.class)
+@PageTitle(ACCOUNTS_VIEW_NAME)
+@CssImport(STYLES_FOLDER + ACCOUNTS_ROUTE + "/" + ACCOUNTS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class AccountsView extends EntitiesView {
 
-    public static final String ROUTE = "accounts";
-    public static final String VIEW_NAME = "Accounts";
-    public static final String ID_PREFIX = "accounts";
+    public static final String ACCOUNTS_ROUTE = "accounts";
+    public static final String ACCOUNTS_VIEW_NAME = "Accounts";
+    public static final String ACCOUNTS_ID_PREFIX = "accounts";
 
     @Override
     protected EntityType getEntityType() {

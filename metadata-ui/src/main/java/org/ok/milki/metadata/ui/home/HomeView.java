@@ -13,25 +13,27 @@ import org.ok.milki.metadata.ui.main.MainView;
 import static com.vaadin.flow.component.icon.VaadinIcon.HOME_O;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
-import static org.ok.milki.metadata.ui.home.HomeView.ROUTE;
-import static org.ok.milki.metadata.ui.home.HomeView.VIEW_NAME;
+import static org.ok.milki.metadata.ui.home.HomeView.HOME_ROUTE;
+import static org.ok.milki.metadata.ui.home.HomeView.HOME_VIEW_NAME;
 
-@Route(value = ROUTE, layout = MainView.class)
-@PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ROUTE + "-view" + CSS_FILE_EXTENSION)
+@Route(value = HOME_ROUTE, layout = MainView.class)
+@PageTitle(HOME_VIEW_NAME)
+@CssImport(STYLES_FOLDER + HomeView.HOME_ID_PREFIX + "/" + HomeView.HOME_VIEW_ID + CSS_FILE_EXTENSION)
 @RouteAlias(value = "", layout = MainView.class)
 public class HomeView extends HorizontalLayout {
 
-    public static final String ROUTE = "home";
-    public static final String VIEW_ID = "home-view";
-    public static final String VIEW_NAME = "Home";
-    public static final VaadinIcon VIEW_ICON = HOME_O;
+    public static final String HOME_ROUTE = "home";
+    public static final String HOME_ID_PREFIX = "home";
+    public static final String HOME_ID_SUFFIX = "-view";
+    public static final String HOME_VIEW_ID = HOME_ID_PREFIX + HOME_ID_SUFFIX;
+    public static final String HOME_VIEW_NAME = "Home";
+    public static final VaadinIcon HOME_VIEW_ICON = HOME_O;
 
     public HomeView() {
-        setId(VIEW_ID);
+        setId(HOME_VIEW_ID);
         setAlignItems(FlexComponent.Alignment.CENTER);
 
-        Text text = new Text(VIEW_NAME);
+        Text text = new Text(HOME_VIEW_NAME);
         add(text);
     }
 }

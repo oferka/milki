@@ -31,6 +31,12 @@ import javax.validation.constraints.*;
 
 import static com.vaadin.flow.component.icon.VaadinIcon.*;
 import static org.apache.commons.lang3.RandomUtils.nextInt;
+import static org.ok.milki.metadata.ui.accounts.AccountView.ACCOUNT_ID_PREFIX;
+import static org.ok.milki.metadata.ui.accounts.AccountView.ACCOUNT_VIEW_NAME;
+import static org.ok.milki.metadata.ui.accounts.AccountsView.*;
+import static org.ok.milki.metadata.ui.employees.EmployeeView.EMPLOYEE_ID_PREFIX;
+import static org.ok.milki.metadata.ui.employees.EmployeeView.EMPLOYEE_VIEW_NAME;
+import static org.ok.milki.metadata.ui.employees.EmployeesView.*;
 
 @ToString
 @AllArgsConstructor
@@ -39,11 +45,11 @@ public enum EntityType {
     ACCOUNT (
             "Account",
             "Accounts",
-            AccountsView.ROUTE,
-            AccountsView.ID_PREFIX,
-            AccountView.ID_PREFIX,
-            AccountsView.VIEW_NAME,
-            AccountView.VIEW_NAME,
+            ACCOUNTS_ROUTE,
+            ACCOUNTS_ID_PREFIX,
+            ACCOUNT_ID_PREFIX,
+            ACCOUNTS_VIEW_NAME,
+            ACCOUNT_VIEW_NAME,
             "Accounts view description",
             "Account view description",
             CALC_BOOK,
@@ -54,11 +60,11 @@ public enum EntityType {
     EMPLOYEE (
             "Employee",
             "Employees",
-            EmployeesView.ROUTE,
-            EmployeesView.ID_PREFIX,
-            EmployeeView.ID_PREFIX,
-            EmployeesView.VIEW_NAME,
-            EmployeeView.VIEW_NAME,
+            EMPLOYEES_ROUTE,
+            EMPLOYEES_ID_PREFIX,
+            EMPLOYEE_ID_PREFIX,
+            EMPLOYEES_VIEW_NAME,
+            EMPLOYEE_VIEW_NAME,
             "Employees view description",
             "Employee view description",
             HANDS_UP,
