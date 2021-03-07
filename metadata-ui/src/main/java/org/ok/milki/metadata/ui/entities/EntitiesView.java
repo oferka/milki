@@ -3,6 +3,7 @@ package org.ok.milki.metadata.ui.entities;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import org.ok.milki.metadata.data.EntityDataProvider;
 import org.ok.milki.metadata.ui.EntityType;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
@@ -19,7 +20,10 @@ public abstract class EntitiesView extends VerticalLayout {
     private final EntitiesViewHeader entitiesViewHeader;
     private final EntitiesViewBody entitiesViewBody;
 
-    public EntitiesView() {
+    private EntityDataProvider entityDataProvider;
+
+    public EntitiesView(EntityDataProvider entityDataProvider) {
+        this.entityDataProvider = entityDataProvider;
         setId(getEntityType().getEntitiesIdPrefix() + VIEW_ID_SUFFIX);
         addClassName(ENTITIES_ID_PREFIX + VIEW_ID_SUFFIX);
 
@@ -29,7 +33,7 @@ public abstract class EntitiesView extends VerticalLayout {
         entitiesViewHeader = new EntitiesViewHeader(
                 getEntityType().getEntitiesIdPrefix(),
                 getEntityType().getEntitiesViewName(),
-                getEntityType().getEntityCount(),
+                entityDataProvider.count(getEntityType()),
                 getEntityType().getEntitiesViewDescription(),
                 getEntityType().getEntityName(),
                 getEntityType().getEntitiesViewIcon()

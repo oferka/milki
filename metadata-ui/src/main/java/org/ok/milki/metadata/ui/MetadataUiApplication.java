@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.vaadin.artur.helpers.LaunchUtil;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "org.ok.milki")
 public class MetadataUiApplication {
 
     public static void main(String[] args) {

@@ -3,10 +3,12 @@ package org.ok.milki.metadata.ui.positions;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import org.ok.milki.metadata.data.EntityDataProvider;
 import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.ok.milki.metadata.ui.EntityType.POSITION;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
@@ -21,6 +23,11 @@ public class PositionsView extends EntitiesView {
     public static final String POSITIONS_ROUTE = "positions";
     public static final String POSITIONS_VIEW_NAME = "Positions";
     public static final String POSITIONS_ID_PREFIX = "positions";
+
+    @Autowired
+    public PositionsView(EntityDataProvider entityDataProvider) {
+        super(entityDataProvider);
+    }
 
     @Override
     protected EntityType getEntityType() {

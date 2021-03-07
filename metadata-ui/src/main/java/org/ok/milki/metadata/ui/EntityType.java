@@ -4,6 +4,7 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
+import org.ok.milki.metadata.data.EntityDataProvider;
 import org.ok.milki.metadata.ui.accounts.AccountView;
 import org.ok.milki.metadata.ui.accounts.AccountsView;
 import org.ok.milki.metadata.ui.employees.EmployeeView;
@@ -26,6 +27,7 @@ import org.ok.milki.metadata.ui.tenants.TenantView;
 import org.ok.milki.metadata.ui.tenants.TenantsView;
 import org.ok.milki.metadata.ui.tools.ToolView;
 import org.ok.milki.metadata.ui.tools.ToolsView;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.constraints.*;
 
@@ -78,8 +80,7 @@ public enum EntityType {
             "Account view description",
             CALC_BOOK,
             AccountsView.class,
-            AccountView.class,
-            nextInt(0, 100)
+            AccountView.class
     ),
     EMPLOYEE (
             "Employee",
@@ -93,8 +94,7 @@ public enum EntityType {
             "Employee view description",
             HANDS_UP,
             EmployeesView.class,
-            EmployeeView.class,
-            nextInt(0, 100)
+            EmployeeView.class
     ),
     INTERVIEW (
             "Interview",
@@ -108,8 +108,7 @@ public enum EntityType {
             "Interview view description",
             SPECIALIST,
             InterviewsView.class,
-            InterviewView.class,
-            nextInt(0, 100)
+            InterviewView.class
     ),
     POSITION (
             "Position",
@@ -123,8 +122,7 @@ public enum EntityType {
             "Position view description",
             USER_CHECK,
             PositionsView.class,
-            PositionView.class,
-            nextInt(0, 100)
+            PositionView.class
     ),
     PRODUCT (
             "Product",
@@ -138,8 +136,7 @@ public enum EntityType {
             "Product view description",
             COMPILE,
             ProductsView.class,
-            ProductView.class,
-            nextInt(0, 100)
+            ProductView.class
     ),
     REPOSITORY (
             "Repository",
@@ -153,8 +150,7 @@ public enum EntityType {
             "Repository view description",
             ROAD_SPLIT,
             RepositoriesView.class,
-            RepositoryView.class,
-            nextInt(0, 100)
+            RepositoryView.class
     ),
     SERVICE (
             "Service",
@@ -168,8 +164,7 @@ public enum EntityType {
             "Service view description",
             CLUSTER,
             ServicesView.class,
-            ServiceView.class,
-            nextInt(0, 100)
+            ServiceView.class
     ),
     TEAM (
             "Team",
@@ -183,8 +178,7 @@ public enum EntityType {
             "Team view description",
             GROUP,
             TeamsView.class,
-            TeamView.class,
-            nextInt(0, 100)
+            TeamView.class
     ),
     TENANT (
             "Tenant",
@@ -198,8 +192,7 @@ public enum EntityType {
             "Tenant view description",
             BUILDING_O,
             TenantsView.class,
-            TenantView.class,
-            nextInt(0, 100)
+            TenantView.class
     ),
     TOOL (
             "Tool",
@@ -213,8 +206,7 @@ public enum EntityType {
             "Tool view description",
             TOOLS,
             ToolsView.class,
-            ToolView.class,
-            nextInt(0, 100)
+            ToolView.class
     );
 
     @Getter
@@ -282,10 +274,4 @@ public enum EntityType {
     @Getter
     @NotNull
     private final Class<? extends EntityView> entityViewClass;
-
-    @Getter
-    @NotNull
-    @Min(0)
-    @Max(99)
-    private final int entityCount;
 }
