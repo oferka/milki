@@ -13,14 +13,14 @@ import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.products.ProductsView.*;
 
-@Route(value = ROUTE, layout = MainView.class)
-@PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@Route(value = PRODUCTS_ROUTE, layout = MainView.class)
+@PageTitle(PRODUCTS_VIEW_NAME)
+@CssImport(STYLES_FOLDER + PRODUCTS_ID_PREFIX + "/" + PRODUCTS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class ProductsView extends EntitiesView {
 
-    public static final String ROUTE = "products";
-    public static final String VIEW_NAME = "Products";
-    public static final String ID_PREFIX = "products";
+    public static final String PRODUCTS_ROUTE = "products";
+    public static final String PRODUCTS_VIEW_NAME = "Products";
+    public static final String PRODUCTS_ID_PREFIX = "products";
 
     @Override
     protected EntityType getEntityType() {

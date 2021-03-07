@@ -12,15 +12,16 @@ import static org.ok.milki.metadata.ui.EntityType.PRODUCT;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
 import static org.ok.milki.metadata.ui.Styles.STYLES_FOLDER;
 import static org.ok.milki.metadata.ui.products.ProductView.*;
+import static org.ok.milki.metadata.ui.products.ProductsView.PRODUCTS_ID_PREFIX;
+import static org.ok.milki.metadata.ui.products.ProductsView.PRODUCTS_ROUTE;
 
-@Route(value = ROUTE, layout = MainView.class)
-@PageTitle(VIEW_NAME)
-@CssImport(STYLES_FOLDER + ROUTE + "/" + ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@Route(value = PRODUCTS_ROUTE, layout = MainView.class)
+@PageTitle(PRODUCT_VIEW_NAME)
+@CssImport(STYLES_FOLDER + PRODUCTS_ID_PREFIX + "/" + PRODUCT_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class ProductView extends EntityView {
 
-    public static final String ROUTE = "products";
-    public static final String VIEW_NAME = "Product";
-    public static final String ID_PREFIX = "product";
+    public static final String PRODUCT_VIEW_NAME = "Product";
+    public static final String PRODUCT_ID_PREFIX = "product";
 
     @Override
     protected EntityType getEntityType() {

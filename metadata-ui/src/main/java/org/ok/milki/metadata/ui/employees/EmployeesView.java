@@ -15,7 +15,7 @@ import static org.ok.milki.metadata.ui.employees.EmployeesView.*;
 
 @Route(value = EMPLOYEES_ROUTE, layout = MainView.class)
 @PageTitle(EMPLOYEES_VIEW_NAME)
-@CssImport(STYLES_FOLDER + EMPLOYEES_ROUTE + "/" + EMPLOYEES_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + EMPLOYEES_ID_PREFIX + "/" + EMPLOYEES_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class EmployeesView extends EntitiesView {
 
     public static final String EMPLOYEES_ROUTE = "employees";

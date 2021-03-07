@@ -15,7 +15,7 @@ import static org.ok.milki.metadata.ui.accounts.AccountsView.*;
 
 @Route(value = ACCOUNTS_ROUTE, layout = MainView.class)
 @PageTitle(ACCOUNTS_VIEW_NAME)
-@CssImport(STYLES_FOLDER + ACCOUNTS_ROUTE + "/" + ACCOUNTS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + ACCOUNTS_ID_PREFIX + "/" + ACCOUNTS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class AccountsView extends EntitiesView {
 
     public static final String ACCOUNTS_ROUTE = "accounts";

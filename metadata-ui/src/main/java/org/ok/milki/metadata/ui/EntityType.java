@@ -43,6 +43,9 @@ import static org.ok.milki.metadata.ui.interviews.InterviewsView.*;
 import static org.ok.milki.metadata.ui.positions.PositionView.POSITION_ID_PREFIX;
 import static org.ok.milki.metadata.ui.positions.PositionView.POSITION_VIEW_NAME;
 import static org.ok.milki.metadata.ui.positions.PositionsView.*;
+import static org.ok.milki.metadata.ui.products.ProductView.PRODUCT_ID_PREFIX;
+import static org.ok.milki.metadata.ui.products.ProductView.PRODUCT_VIEW_NAME;
+import static org.ok.milki.metadata.ui.products.ProductsView.*;
 
 @ToString
 @AllArgsConstructor
@@ -111,11 +114,11 @@ public enum EntityType {
     PRODUCT (
             "Product",
             "Products",
-            ProductsView.ROUTE,
-            ProductsView.ID_PREFIX,
-            ProductView.ID_PREFIX,
-            ProductsView.VIEW_NAME,
-            ProductView.VIEW_NAME,
+            PRODUCTS_ROUTE,
+            PRODUCTS_ID_PREFIX,
+            PRODUCT_ID_PREFIX,
+            PRODUCTS_VIEW_NAME,
+            PRODUCT_VIEW_NAME,
             "Products view description",
             "Product view description",
             COMPILE,

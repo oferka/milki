@@ -15,7 +15,7 @@ import static org.ok.milki.metadata.ui.interviews.InterviewsView.*;
 
 @Route(value = INTERVIEWS_ROUTE, layout = MainView.class)
 @PageTitle(INTERVIEWS_VIEW_NAME)
-@CssImport(STYLES_FOLDER + INTERVIEWS_ROUTE + "/" + INTERVIEWS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + INTERVIEWS_ID_PREFIX + "/" + INTERVIEWS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class InterviewsView extends EntitiesView {
 
     public static final String INTERVIEWS_ROUTE = "interviews";

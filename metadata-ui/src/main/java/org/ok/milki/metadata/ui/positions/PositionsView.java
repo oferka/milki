@@ -15,7 +15,7 @@ import static org.ok.milki.metadata.ui.positions.PositionsView.*;
 
 @Route(value = POSITIONS_ROUTE, layout = MainView.class)
 @PageTitle(POSITIONS_VIEW_NAME)
-@CssImport(STYLES_FOLDER + POSITIONS_ROUTE + "/" + POSITIONS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
+@CssImport(STYLES_FOLDER + POSITIONS_ID_PREFIX + "/" + POSITIONS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
 public class PositionsView extends EntitiesView {
 
     public static final String POSITIONS_ROUTE = "positions";
