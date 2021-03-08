@@ -8,7 +8,6 @@ import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.ok.milki.metadata.ui.EntityType.ACCOUNT;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
@@ -24,7 +23,6 @@ public class AccountsView extends EntitiesView {
     public static final String ACCOUNTS_VIEW_NAME = "Accounts";
     public static final String ACCOUNTS_ID_PREFIX = "accounts";
 
-    @Autowired
     public AccountsView(EntityDataProvider entityDataProvider) {
         super(entityDataProvider);
     }

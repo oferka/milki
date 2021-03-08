@@ -8,7 +8,6 @@ import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.ok.milki.metadata.ui.EntityType.TEAM;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
@@ -24,7 +23,6 @@ public class TeamsView extends EntitiesView {
     public static final String TEAMS_VIEW_NAME = "Teams";
     public static final String TEAMS_ID_PREFIX = "teams";
 
-    @Autowired
     public TeamsView(EntityDataProvider entityDataProvider) {
         super(entityDataProvider);
     }

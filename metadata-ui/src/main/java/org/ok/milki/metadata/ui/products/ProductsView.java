@@ -8,7 +8,6 @@ import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.ok.milki.metadata.ui.EntityType.PRODUCT;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
@@ -24,7 +23,6 @@ public class ProductsView extends EntitiesView {
     public static final String PRODUCTS_VIEW_NAME = "Products";
     public static final String PRODUCTS_ID_PREFIX = "products";
 
-    @Autowired
     public ProductsView(EntityDataProvider entityDataProvider) {
         super(entityDataProvider);
     }

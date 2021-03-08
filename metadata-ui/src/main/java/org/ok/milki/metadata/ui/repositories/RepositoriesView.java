@@ -8,7 +8,6 @@ import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.ok.milki.metadata.ui.EntityType.REPOSITORY;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
@@ -24,7 +23,6 @@ public class RepositoriesView extends EntitiesView {
     public static final String REPOSITORIES_VIEW_NAME = "Repositories";
     public static final String REPOSITORIES_ID_PREFIX = "repositories";
 
-    @Autowired
     public RepositoriesView(EntityDataProvider entityDataProvider) {
         super(entityDataProvider);
     }

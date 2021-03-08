@@ -8,7 +8,6 @@ import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.ok.milki.metadata.ui.EntityType.EMPLOYEE;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
@@ -24,7 +23,6 @@ public class EmployeesView extends EntitiesView {
     public static final String EMPLOYEES_VIEW_NAME = "Employees";
     public static final String EMPLOYEES_ID_PREFIX = "employees";
 
-    @Autowired
     public EmployeesView(EntityDataProvider entityDataProvider) {
         super(entityDataProvider);
     }

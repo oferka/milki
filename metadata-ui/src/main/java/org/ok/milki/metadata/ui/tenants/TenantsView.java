@@ -8,7 +8,6 @@ import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
 import org.ok.milki.metadata.ui.main.MainView;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.ok.milki.metadata.ui.EntityType.TENANT;
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
@@ -24,7 +23,6 @@ public class TenantsView extends EntitiesView {
     public static final String TENANTS_VIEW_NAME = "Tenants";
     public static final String TENANTS_ID_PREFIX = "tenants";
 
-    @Autowired
     public TenantsView(EntityDataProvider entityDataProvider) {
         super(entityDataProvider);
     }

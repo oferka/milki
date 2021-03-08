@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 public interface Identifiable {
 
     @NotNull
-    @Size(min = 2, max = 256)
+    @Size(min = 2, max = 64)
     @NotBlank
     String getId();
 }
