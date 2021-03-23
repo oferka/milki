@@ -20,10 +20,7 @@ public abstract class EntitiesView extends VerticalLayout {
     private final EntitiesViewHeader entitiesViewHeader;
     private final EntitiesViewBody entitiesViewBody;
 
-    private EntityDataProvider entityDataProvider;
-
     public EntitiesView(EntityDataProvider entityDataProvider) {
-        this.entityDataProvider = entityDataProvider;
         setId(getEntityType().getEntitiesIdPrefix() + VIEW_ID_SUFFIX);
         addClassName(ENTITIES_ID_PREFIX + VIEW_ID_SUFFIX);
 
