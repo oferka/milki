@@ -3,7 +3,6 @@ package org.ok.milki.metadata.ui.interviews;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import org.ok.milki.metadata.data.EntityDataProvider;
 import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
@@ -17,14 +16,14 @@ import static org.ok.milki.metadata.ui.interviews.InterviewsView.*;
 @Route(value = INTERVIEWS_ROUTE, layout = MainView.class)
 @PageTitle(INTERVIEWS_VIEW_NAME)
 @CssImport(STYLES_FOLDER + INTERVIEWS_ID_PREFIX + "/" + INTERVIEWS_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
-public class InterviewsView extends EntitiesView {
+public class InterviewsView extends EntitiesView<InterviewsDataProvider> {
 
     public static final String INTERVIEWS_ROUTE = "interviews";
     public static final String INTERVIEWS_VIEW_NAME = "Interviews";
     public static final String INTERVIEWS_ID_PREFIX = "interviews";
 
-    public InterviewsView(EntityDataProvider entityDataProvider) {
-        super(entityDataProvider);
+    public InterviewsView(InterviewsDataProvider entitiesDataProvider) {
+        super(entitiesDataProvider);
     }
 
     @Override

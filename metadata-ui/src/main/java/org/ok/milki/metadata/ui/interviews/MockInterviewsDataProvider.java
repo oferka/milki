@@ -1,0 +1,15 @@
+package org.ok.milki.metadata.ui.interviews;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
+@Service
+@Slf4j
+public class MockInterviewsDataProvider implements InterviewsDataProvider {
+
+    @Override
+    public int count() {
+        return 40;
+    }
+}

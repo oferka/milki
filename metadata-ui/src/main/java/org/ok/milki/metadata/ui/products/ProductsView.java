@@ -3,7 +3,6 @@ package org.ok.milki.metadata.ui.products;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import org.ok.milki.metadata.data.EntityDataProvider;
 import org.ok.milki.metadata.ui.EntityType;
 import org.ok.milki.metadata.ui.entities.EntitiesView;
 import org.ok.milki.metadata.ui.entities.EntitiesViewBody;
@@ -23,8 +22,8 @@ public class ProductsView extends EntitiesView {
     public static final String PRODUCTS_VIEW_NAME = "Products";
     public static final String PRODUCTS_ID_PREFIX = "products";
 
-    public ProductsView(EntityDataProvider entityDataProvider) {
-        super(entityDataProvider);
+    public ProductsView(ProductsDataProvider entitiesDataProvider) {
+        super(entitiesDataProvider);
     }
 
     @Override

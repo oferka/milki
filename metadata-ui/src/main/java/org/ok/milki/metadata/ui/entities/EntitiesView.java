@@ -3,7 +3,6 @@ package org.ok.milki.metadata.ui.entities;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import org.ok.milki.metadata.data.EntityDataProvider;
 import org.ok.milki.metadata.ui.EntityType;
 
 import static org.ok.milki.metadata.ui.Styles.CSS_FILE_EXTENSION;
@@ -12,7 +11,7 @@ import static org.ok.milki.metadata.ui.entities.EntitiesView.ENTITIES_ID_PREFIX;
 import static org.ok.milki.metadata.ui.entities.EntitiesView.VIEW_ID_SUFFIX;
 
 @CssImport(STYLES_FOLDER + ENTITIES_ID_PREFIX + "/" + ENTITIES_ID_PREFIX + VIEW_ID_SUFFIX + CSS_FILE_EXTENSION)
-public abstract class EntitiesView extends VerticalLayout {
+public abstract class EntitiesView<T extends EntitiesDataProvider> extends VerticalLayout {
 
     public static final String ENTITIES_ID_PREFIX = "entities";
     public static final String VIEW_ID_SUFFIX = "-view";
@@ -20,7 +19,7 @@ public abstract class EntitiesView extends VerticalLayout {
     private final EntitiesViewHeader entitiesViewHeader;
     private final EntitiesViewBody entitiesViewBody;
 
-    public EntitiesView(EntityDataProvider entityDataProvider) {
+    public EntitiesView(T entitiesDataProvider) {
         setId(getEntityType().getEntitiesIdPrefix() + VIEW_ID_SUFFIX);
         addClassName(ENTITIES_ID_PREFIX + VIEW_ID_SUFFIX);
 
@@ -30,7 +29,7 @@ public abstract class EntitiesView extends VerticalLayout {
         entitiesViewHeader = new EntitiesViewHeader(
                 getEntityType().getEntitiesIdPrefix(),
                 getEntityType().getEntitiesViewName(),
-                entityDataProvider.count(getEntityType()),
+                entitiesDataProvider.count(),
                 getEntityType().getEntitiesViewDescription(),
                 getEntityType().getEntityName(),
                 getEntityType().getEntitiesViewIcon()
