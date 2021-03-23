@@ -1,7 +1,6 @@
 package org.ok.milki.metadata.ui.repositories;
 
 import lombok.extern.slf4j.Slf4j;
-import org.ok.milki.metadata.ui.entities.EntitiesDataProvider;
 import org.springframework.stereotype.Service;
 
 @Service
